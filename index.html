@@ -46,7 +46,7 @@ a.pill:hover{background:var(--accSoft);border-color:rgba(255,255,255,0.8);transf
 .status-attr[hidden]{display:none}
 .status-when{max-width:min(520px,calc(100vw - 48px));font-size:11px;font-weight:400;letter-spacing:0.08em;line-height:1.4;color:rgba(255,255,255,0.6);text-align:center}
 .status-when[hidden]{display:none}
-.latest{margin-top:16px;width:min(440px,calc(100vw - 64px));text-align:center}
+.latest{margin-top:52px;width:min(440px,calc(100vw - 64px));text-align:center}
 .latest[hidden]{display:none !important}
 .latest:not([hidden]){display:flex;flex-direction:column;align-items:center;gap:4px}
 .latest-line{max-width:100%;font-size:14px;font-weight:400;letter-spacing:0.02em;line-height:1.4;color:rgba(255,255,255,0.85)}
@@ -79,9 +79,10 @@ button.chip.is-copied .cl{color:var(--acc)}
 .spot-toggle[hidden]{display:none !important}
 .spot-toggle:hover{border-color:rgba(255,255,255,0.8)}
 .spot-toggle:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
-@media (max-width:1259px){
+@media (max-width:1259px) and (min-width:701px){
   .spot{bottom:108px}
-  main{padding-bottom:280px}
+  main{padding-bottom:300px}
+  .latest{width:min(340px,max(200px,calc(100vw - 760px)));margin-top:40px}
 }
 @media (max-width:700px){
   .spot{left:12px;bottom:16px;width:auto}
@@ -108,16 +109,24 @@ button.chip.is-copied .cl{color:var(--acc)}
   .status{margin-top:18px;gap:4px}
   .status-now{font-size:14px;letter-spacing:0.06em}
   .status-when{font-size:10.5px;letter-spacing:0.05em}
-  .latest{margin-top:14px;width:min(440px,calc(100vw - 48px));gap:3px}
+  .latest{margin-top:28px;width:min(440px,calc(100vw - 48px));gap:3px}
   .latest-line{font-size:13.5px}
   .latest-date{font-size:10.5px;letter-spacing:0.05em}
   .latest-teaser{font-size:12.5px}
   footer{bottom:24px}
 }
 @media (max-width:360px){
-  .status{margin-top:12px}
-  .latest{width:min(440px,calc(100vw - 120px));margin-top:8px;gap:2px}
+  main{padding-top:24px}
+  .pills{margin-top:22px}
+  .status{margin-top:10px}
+  .latest{width:min(440px,calc(100vw - 120px));margin-top:32px;gap:2px}
   .latest-line{display:block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+}
+@media (max-height:640px){
+  html,body{height:auto}
+  main{min-height:100vh;justify-content:flex-start;padding-top:28px;padding-bottom:20px}
+  footer{position:relative;bottom:auto;margin-top:28px}
+  .spot{bottom:16px}
 }
 </style>
 </head>
