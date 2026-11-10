@@ -4,6 +4,13 @@
 // replaced by hyphens (grad school → grad-school). See WRITING.md.
 var POSTS = [
   {
+    slug: "polytopia",
+    title: "Why The Battle of Polytopia Is the Best Strategy Game You’re Not Playing",
+    date: "2026-11-10",
+    teaser: "I grew up on strategy games, and Polytopia is the one that fits in your pocket.",
+    tags: ["games"]
+  },
+  {
     slug: "you-need-a-website",
     title: "Why I Think It’s Important to Have Your Own Website & Domain",
     date: "2026-11-10",
