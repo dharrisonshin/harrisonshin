@@ -10,7 +10,7 @@ The playlist at the lower left is the compact Spotify embed. On wide screens it 
 
 ## Deploy
 
-The site is the repository root (`index.html`, `status.json`, `writing/`, favicons, and `og-image.png`). There is no build step. `.nojekyll` is included so GitHub Pages skips Jekyll and publishes the files as they are. The Pages workflow uploads that root (excluding `.git` and `.github`), so `status.json` and `writing/` ship with the site. See [WRITING.md](WRITING.md) to add a post.
+The site is the repository root (`index.html`, `status.json`, `about/`, `projects/`, `writing/`, favicons, and `og-image.png`). There is no build step. `.nojekyll` is included so GitHub Pages skips Jekyll and publishes the files as they are. The Pages workflow uploads that root (excluding `.git` and `.github`), so `status.json`, `about/`, `projects/`, and `writing/` ship with the site. See [WRITING.md](WRITING.md) to add a post. The about page there is marked as a draft.
 
 Image and icon URLs in the page are relative, so the same files work on the project site:
 
