@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>harrison shin</title>
+    <link>https://harrisonshin.com/writing/</link>
+    <description>Essays and notes by Harrison Shin.</description>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Nov 2026 12:00:00 -0800</lastBuildDate>
+    <item>
+      <title>Grad School Made My Life Worse</title>
+      <link>https://harrisonshin.com/writing/grad-school-made-my-life-worse/</link>
+      <guid isPermaLink="true">https://harrisonshin.com/writing/grad-school-made-my-life-worse/</guid>
+      <pubDate>Mon, 09 Nov 2026 12:00:00 -0800</pubDate>
+      <description>My grad school experience has absolutely sucked.</description>
+    </item>
+  </channel>
+</rss>
