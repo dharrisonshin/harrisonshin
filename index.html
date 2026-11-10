@@ -21,7 +21,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--acc:#d9b45a;--accSoft:rgba(217,180,90,.16)}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -39,8 +39,11 @@ a.pill:hover{background:var(--accSoft);border-color:rgba(255,255,255,0.8);transf
 .status{margin-top:22px;flex-direction:column;align-items:center;gap:5px}
 .status[hidden]{display:none}
 .status:not([hidden]){display:flex}
-.status-now{display:inline-flex;align-items:center;justify-content:center;gap:8px;max-width:min(520px,calc(100vw - 48px));font-size:15px;font-weight:400;letter-spacing:0.08em;line-height:1.45;color:rgba(255,255,255,0.85);text-align:center}
-.status-dot{width:6px;height:6px;border-radius:50%;background:var(--acc);box-shadow:0 0 7px rgba(217,180,90,.65);flex:none;animation:statusPulse 2.8s ease-in-out infinite}
+.status-now{display:block;max-width:min(520px,calc(100vw - 48px));font-size:15px;font-weight:400;letter-spacing:0.08em;line-height:1.45;color:rgba(255,255,255,0.85);text-align:center}
+.status-dot{display:inline-block;width:6px;height:6px;margin:0 8px 0 0;border-radius:50%;background:var(--acc);box-shadow:0 0 7px rgba(217,180,90,.65);vertical-align:0.15em;animation:statusPulse 2.8s ease-in-out infinite}
+.status-label{font-weight:600}
+.status-attr{font-style:italic;font-weight:400}
+.status-attr[hidden]{display:none}
 .status-when{max-width:min(520px,calc(100vw - 48px));font-size:11px;font-weight:400;letter-spacing:0.08em;line-height:1.4;color:rgba(255,255,255,0.6);text-align:center}
 .status-when[hidden]{display:none}
 @keyframes statusPulse{0%,100%{opacity:.55}50%{opacity:1}}
@@ -111,7 +114,7 @@ button.chip.is-copied .cl{color:var(--acc)}
     <a class="pill" href="links/">links</a>
   </nav>
   <div class="status" id="status" hidden>
-    <p class="status-now"><span class="status-dot" aria-hidden="true"></span><span id="status-text"></span></p>
+    <p class="status-now"><span class="status-dot" aria-hidden="true"></span><span class="status-label">currently:</span> <span id="status-text"></span><em class="status-attr" id="status-attr" hidden></em></p>
     <p class="status-when" id="status-when" hidden></p>
   </div>
 </main>
@@ -399,8 +402,9 @@ button.chip.is-copied .cl{color:var(--acc)}
 (function(){
   const root = document.getElementById('status');
   const textEl = document.getElementById('status-text');
+  const attrEl = document.getElementById('status-attr');
   const whenEl = document.getElementById('status-when');
-  if (!root || !textEl || !whenEl) return;
+  if (!root || !textEl || !attrEl || !whenEl) return;
 
   // Full ISO 8601 with a timezone, so display doesn't depend on the viewer's zone.
   const ISO_WITH_ZONE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d{1,9})?)?(?:Z|[+-]\d{2}:\d{2})$/i;
@@ -444,7 +448,12 @@ button.chip.is-copied .cl{color:var(--acc)}
     .then(function(data){
       const text = data && typeof data.text === 'string' ? data.text.trim() : '';
       if (!text) return;
-      textEl.textContent = 'currently: ' + text;
+      textEl.textContent = text;
+      const attribution = data && typeof data.attribution === 'string' ? data.attribution.trim() : '';
+      if (attribution){
+        attrEl.textContent = ' ' + attribution;
+        attrEl.hidden = false;
+      }
       const when = formatUpdated(data.updated);
       if (when){
         whenEl.textContent = 'updated ' + when;
