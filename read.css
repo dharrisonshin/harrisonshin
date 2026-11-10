@@ -102,6 +102,10 @@ h1{
   color:#f6f2ea;
 }
 .prose p{margin:0 0 1.15em}
+.prose h2{margin:1.55em 0 0.65em;font-weight:400;font-size:1.28rem;letter-spacing:0.01em;line-height:1.25;color:#f7f4ec}
+.prose figure{margin:0.2em 0 1.25em}
+.prose figure img{display:block;width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid rgba(255,255,255,0.28)}
+.prose figcaption{margin-top:8px;font-size:13px;letter-spacing:0.06em;line-height:1.4;text-align:center;color:rgba(244,241,234,0.5)}
 .prose blockquote{
   margin:0 0 1.15em;
   padding:0.1em 0 0.1em 0.9em;
