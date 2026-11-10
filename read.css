@@ -128,7 +128,9 @@ h1{
 .prose .stores a:hover{color:#f7f4ec}
 .prose figure{margin:0.2em 0 1.25em}
 .prose figure img{display:block;width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid rgba(255,255,255,0.28)}
-.prose figcaption{margin-top:8px;font-size:13px;letter-spacing:0.06em;line-height:1.4;text-align:center;color:rgba(244,241,234,0.5)}
+.prose figcaption{margin-top:8px;font-size:13px;font-style:italic;letter-spacing:0.04em;line-height:1.45;text-align:center;color:rgba(244,241,234,0.5)}
+.prose figcaption a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.prose figcaption a:hover{color:var(--acc)}
 .prose blockquote{
   margin:0 0 1.15em;
   padding:0.1em 0 0.1em 0.9em;

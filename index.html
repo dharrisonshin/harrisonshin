@@ -25,10 +25,10 @@
 <style>
 :root{--acc:#d9b45a;--accSoft:rgba(217,180,90,.16)}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;background:#000;color:#f4f1ea}
+html,body{background:#000;color:#f4f1ea}
 body{font-family:Inter,system-ui,-apple-system,sans-serif;font-weight:400;min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 canvas#sky{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-main{position:relative;z-index:2;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 24px 160px;text-align:center}
+main{position:relative;z-index:2;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:safe center;padding:48px 24px 56px;text-align:center}
 h1{font-weight:300;font-size:clamp(56px,9.2vw,108px);letter-spacing:0.02em;line-height:1;color:#f7f4ec;text-shadow:0 0 48px rgba(255,255,255,0.12)}
 .rule{width:44px;height:1px;background:var(--acc);margin:22px auto 0;opacity:0.85}
 .tag{margin-top:16px;font-size:12px;font-weight:400;letter-spacing:0.2em;color:var(--acc)}
@@ -60,9 +60,9 @@ a.pill:hover{background:var(--accSoft);border-color:rgba(255,255,255,0.8);transf
 .latest-read{margin-top:1px;font-size:12px;letter-spacing:0.1em;color:var(--acc);text-decoration:none}
 .latest-read:hover{color:#f7f4ec}
 @keyframes statusPulse{0%,100%{opacity:.55}50%{opacity:1}}
-footer{position:absolute;z-index:3;left:0;right:0;bottom:32px;display:flex;flex-direction:column;align-items:center;gap:12px;padding:0 16px}
+footer{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:12px;width:min(440px,100%);margin-top:36px;padding:0}
 .sl{font-size:10.5px;letter-spacing:0.2em;color:rgba(255,255,255,0.75)}
-.sup{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;align-items:center}
+.sup{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;align-items:center;max-width:100%}
 a.chip,button.chip{display:inline-flex;align-items:center;gap:8px;font-family:inherit;font-size:12.5px;font-weight:400;letter-spacing:0.04em;color:rgba(244,241,234,0.88);padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.45);background:rgba(8,8,8,0.55);text-decoration:none;cursor:pointer;line-height:1}
 a.chip svg,button.chip svg{flex:none;opacity:0.85}
 a.chip b,button.chip b{color:var(--acc);font-weight:500;letter-spacing:0.06em}
@@ -71,10 +71,10 @@ button.chip{appearance:none;-webkit-appearance:none}
 button.chip .cl{transition:color .45s ease,opacity .45s ease}
 button.chip.is-copied{border-color:rgba(217,180,90,.6)}
 button.chip.is-copied .cl{color:var(--acc)}
-.spot{position:fixed;z-index:4;left:20px;bottom:20px;width:320px}
-.play{position:fixed;z-index:4;left:20px;bottom:182px;display:flex;flex-direction:column;align-items:flex-start;gap:3px;max-width:280px;color:rgba(244,241,234,0.78)}
+.spot{position:relative;z-index:2;width:min(320px,100%);margin-top:28px}
+.play{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:4px;width:min(320px,100%);margin-top:40px;color:rgba(244,241,234,0.78)}
 .play-k{font-size:10.5px;letter-spacing:0.18em;line-height:1.3;color:rgba(255,255,255,0.55)}
-.play-btn{appearance:none;-webkit-appearance:none;display:inline-flex;align-items:baseline;gap:8px;margin:0;padding:0;border:0;background:none;font:inherit;letter-spacing:0.04em;color:inherit;cursor:pointer;text-align:left;line-height:1.3;white-space:nowrap}
+.play-btn{appearance:none;-webkit-appearance:none;display:inline-flex;align-items:baseline;justify-content:center;flex-wrap:wrap;gap:8px;max-width:100%;margin:0;padding:0;border:0;background:none;font:inherit;letter-spacing:0.04em;color:inherit;cursor:pointer;text-align:center;line-height:1.3}
 .play-btn code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;letter-spacing:0.08em;color:rgba(255,255,255,0.9)}
 .play-btn .cl{font-size:11px;letter-spacing:0.08em;color:rgba(255,255,255,0.45);transition:color .45s ease,opacity .45s ease}
 .play-btn.is-copied .cl{color:var(--acc)}
@@ -85,76 +85,26 @@ button.chip.is-copied .cl{color:var(--acc)}
 .spot-panel{width:100%;height:154px;border:1px solid rgba(255,255,255,0.45);border-radius:14px;overflow:hidden;background:rgba(0,0,0,0.28);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 12px 40px rgba(0,0,0,0.45)}
 .spot-panel[hidden]{display:none !important}
 .spot-panel iframe{display:block;width:100%;height:100%;border:0;opacity:0.94}
-.spot-toggle{display:none;align-items:center;justify-content:center;width:42px;height:42px;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,0.45);background:rgba(8,8,8,0.55);color:#f4f1ea;cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
-.spot-toggle[hidden]{display:none !important}
-.spot-toggle:hover{border-color:rgba(255,255,255,0.8)}
-.spot-toggle:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
-@media (max-width:1259px) and (min-width:701px){
-  .spot{bottom:108px}
-  .play{bottom:270px}
-  main{padding-bottom:300px}
-  .latest{width:min(340px,max(200px,calc(100vw - 760px)));margin-top:40px}
-}
-@media (max-width:700px){
-  .spot{left:12px;bottom:16px;width:auto}
-  .spot-toggle:not([hidden]){display:inline-flex}
-  .spot-panel{position:fixed;left:12px;bottom:136px;width:min(320px,calc(100vw - 24px))}
-  .spot.is-open .spot-panel{z-index:6}
-  .play{left:12px;bottom:146px;max-width:min(240px,calc(100vw - 24px))}
-  body:has(#spot.is-open) .play{visibility:hidden}
-}
-@media (max-width:640px) and (min-width:381px){
-  footer{padding-left:72px}
-}
-@media (max-width:380px){
-  .spot{bottom:132px}
-  .spot-panel{bottom:186px}
-}
 @media (prefers-reduced-motion: reduce){
   button.chip .cl,.play-btn .cl{transition:none}
   .status-dot{animation:none;opacity:1}
 }
 @media (max-width:600px){
-  main{padding:40px 18px 150px}
-  .pills{gap:10px;max-width:300px}
+  main{justify-content:flex-start;padding:36px 18px 40px}
+  .pills{gap:10px;max-width:320px}
   a.pill{padding:10px 16px;font-size:12.5px}
   .tag{font-size:11px;letter-spacing:0.16em}
   .sub{font-size:12.5px;letter-spacing:0.06em}
   .status{margin-top:18px;gap:4px}
   .status-now{font-size:14px;letter-spacing:0.06em}
   .status-when{font-size:10.5px;letter-spacing:0.05em}
-  .latest{margin-top:28px;width:min(440px,calc(100vw - 48px));gap:3px}
+  .latest{margin-top:28px;width:min(440px,100%);gap:3px}
   .latest-line{font-size:13.5px}
   .latest-date{font-size:10.5px;letter-spacing:0.05em}
   .latest-teaser{font-size:12.5px}
-  footer{bottom:24px}
-}
-@media (max-width:360px){
-  main{padding-top:24px}
-  .pills{margin-top:22px}
-  .status{margin-top:10px}
-  .latest{width:min(440px,calc(100vw - 120px));margin-top:32px;gap:2px}
-  .latest-line{display:block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-}
-@media (max-height:640px){
-  html,body{height:auto}
-  main{min-height:100vh;justify-content:flex-start;padding-top:28px;padding-bottom:20px}
-  footer{position:relative;bottom:auto;margin-top:28px}
-  .spot{bottom:16px}
-  .play{position:static;left:auto;bottom:auto;margin:18px auto 0;align-items:center;max-width:100%;visibility:visible}
-}
-@media (max-width:380px) and (min-height:641px){
-  main{justify-content:flex-start;padding:16px 18px 24px}
-  .rule{margin-top:12px}
-  .tag{margin-top:10px}
-  .sub{margin-top:6px}
-  .pills{margin-top:14px}
-  .status{margin-top:8px}
-  .latest{margin-top:16px}
-  footer{position:absolute;bottom:24px;margin:0}
-  .play{position:fixed;left:66px;bottom:130px;margin:0;align-items:flex-start;max-width:calc(100vw - 82px);visibility:visible}
-  .spot{bottom:132px}
-  .spot-panel{bottom:186px}
+  .play{margin-top:28px}
+  .spot{margin-top:22px}
+  footer{margin-top:28px}
 }
 </style>
 </head>
@@ -188,18 +138,17 @@ button.chip.is-copied .cl{color:var(--acc)}
     <button type="button" class="play-btn" data-copy="FYGDU-SERKQ" aria-label="copy polytopia friend code FYGDU-SERKQ"><span>polytopia</span> <code>FYGDU-SERKQ</code> <span class="cl" aria-live="polite">copy</span></button>
     <a class="play-chess" href="https://www.chess.com/member/smackushin" target="_blank" rel="noopener noreferrer">chess.com · smackushin</a>
   </div>
-</main>
-<footer>
-  <div class="sl">support my work</div>
-  <div class="sup">
-    <a class="chip" href="https://ko-fi.com/harrisonshin" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h12v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M16 9h2.2a3.2 3.2 0 0 1 0 6.4H16"/><path d="M8 3c0 1.2-.5 2-1.2 2.6M12 3c0 1.2-.5 2-1.2 2.6"/></svg> <b>ko-fi</b> ko-fi.com/harrisonshin</a>
-    <button type="button" class="chip" data-copy="0xcCbB38316258Ec521ad2f6669c6D0cA3b03182dc" title="copy base wallet address" aria-label="copy base wallet address, smackushin.base.eth"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg> <b>base</b> smackushin.base.eth <span class="cl" aria-live="polite">copy</span></button>
+  <div class="spot" id="spot">
+    <div class="spot-panel" id="spot-panel"></div>
   </div>
-</footer>
-<div class="spot" id="spot">
-  <div class="spot-panel" id="spot-panel" hidden></div>
-  <button type="button" class="spot-toggle" id="spot-toggle" hidden aria-expanded="false" aria-controls="spot-panel" aria-label="open playlist"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17.5V5.2L20 3v12.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.2" cy="17.6" r="2.5" fill="currentColor"/><circle cx="17.2" cy="15.4" r="2.5" fill="currentColor"/></svg></button>
-</div>
+  <footer>
+    <div class="sl">support my work</div>
+    <div class="sup">
+      <a class="chip" href="https://ko-fi.com/harrisonshin" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h12v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M16 9h2.2a3.2 3.2 0 0 1 0 6.4H16"/><path d="M8 3c0 1.2-.5 2-1.2 2.6M12 3c0 1.2-.5 2-1.2 2.6"/></svg> <b>ko-fi</b> ko-fi.com/harrisonshin</a>
+      <button type="button" class="chip" data-copy="0xcCbB38316258Ec521ad2f6669c6D0cA3b03182dc" title="copy base wallet address" aria-label="copy base wallet address, smackushin.base.eth"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg> <b>base</b> smackushin.base.eth <span class="cl" aria-live="polite">copy</span></button>
+    </div>
+  </footer>
+</main>
 <script>
 (function(){
   const canvas = document.getElementById('sky');
@@ -535,57 +484,15 @@ button.chip.is-copied .cl{color:var(--acc)}
     .catch(function(){});
 })();
 (function(){
-  const root = document.getElementById('spot');
   const panel = document.getElementById('spot-panel');
-  const btn = document.getElementById('spot-toggle');
-  if (!root || !panel || !btn) return;
-  const SRC = 'https://open.spotify.com/embed/playlist/6VqynxgBrMa4sRbTb5Hlah?utm_source=generator&theme=0';
-  const narrowMq = matchMedia('(max-width: 700px)');
-
-  function ensureFrame(){
-    if (panel.querySelector('iframe')) return;
-    const frame = document.createElement('iframe');
-    frame.src = SRC;
-    frame.title = 'spotify playlist';
-    frame.loading = 'lazy';
-    frame.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
-    frame.setAttribute('allowfullscreen', '');
-    panel.appendChild(frame);
-  }
-
-  function applyMode(){
-    const narrow = narrowMq.matches;
-    const open = root.classList.contains('is-open');
-    if (!narrow){
-      ensureFrame();
-      panel.hidden = false;
-      btn.hidden = true;
-      btn.setAttribute('aria-expanded', 'false');
-      btn.setAttribute('aria-label', 'open playlist');
-      return;
-    }
-    btn.hidden = false;
-    panel.hidden = !open;
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.setAttribute('aria-label', open ? 'close playlist' : 'open playlist');
-    if (open) ensureFrame();
-  }
-
-  btn.addEventListener('click', function(){
-    root.classList.toggle('is-open', !root.classList.contains('is-open'));
-    applyMode();
-  });
-  document.addEventListener('keydown', function(e){
-    if (e.key !== 'Escape' || !root.classList.contains('is-open') || !narrowMq.matches) return;
-    root.classList.remove('is-open');
-    applyMode();
-    btn.focus();
-  });
-  if (narrowMq.addEventListener) narrowMq.addEventListener('change', function(){
-    if (narrowMq.matches) root.classList.remove('is-open');
-    applyMode();
-  });
-  applyMode();
+  if (!panel || panel.querySelector('iframe')) return;
+  const frame = document.createElement('iframe');
+  frame.src = 'https://open.spotify.com/embed/playlist/6VqynxgBrMa4sRbTb5Hlah?utm_source=generator&theme=0';
+  frame.title = 'spotify playlist';
+  frame.loading = 'lazy';
+  frame.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+  frame.setAttribute('allowfullscreen', '');
+  panel.appendChild(frame);
 })();
 </script>
 <script src="writing/posts.js"></script>
