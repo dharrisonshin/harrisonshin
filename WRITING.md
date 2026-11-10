@@ -8,7 +8,7 @@ Posts are plain HTML. There is no build step and no framework.
 2. Set the title, the lowercase visible date, the `<time datetime="YYYY-MM-DD">`, the meta description, and the canonical / `og:url` (`https://harrisonshin.com/writing/your-slug/`). Remove `noindex` from the template.
 3. Put the essay in `.prose`. Each paragraph is its own `<p>`. A line that is only a quotation can be a `<blockquote><p>…</p></blockquote>`. Keep the wording as written, including curly quotes and dashes.
 4. Add the post to the top of the list in [`writing/index.html`](writing/index.html) so the newest date is first.
-5. Add the same post to the top of `POSTS` in [`writing/posts.js`](writing/posts.js) (`slug`, `title`, `date`). Newest first. Each post page reads that list for the newer/older links at the bottom. With only one neighbor missing, that side stays blank. With no neighbors, the nav stays hidden.
+5. Add the same post to the top of `POSTS` in [`writing/posts.js`](writing/posts.js) (`slug`, `title`, `date`, and a one-sentence `teaser`). Newest first. Each post page reads that list for the newer/older links at the bottom. With only one neighbor missing, that side stays blank. With no neighbors, the nav stays hidden. The homepage shows the first entry under the status line: title, date, teaser, and a read link. A long teaser is one line and ends in an ellipsis. If `teaser` is missing, that line stays hidden. `excerpt` is accepted as another name for the same field.
 6. Add an `<item>` at the top of [`writing/feed.xml`](writing/feed.xml) with the same title, absolute `https://harrisonshin.com` link, and `pubDate`.
 
 The template already includes the “all writing” link at the top and “back to writing” in the footer.
