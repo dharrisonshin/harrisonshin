@@ -34,15 +34,15 @@ h1{font-weight:300;font-size:clamp(56px,9.2vw,108px);letter-spacing:0.02em;line-
 .tag{margin-top:16px;font-size:12px;font-weight:400;letter-spacing:0.2em;color:var(--acc)}
 .sub{margin-top:10px;font-size:13.5px;letter-spacing:0.08em;color:rgba(244,241,234,0.58)}
 .pills{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-a.pill{font-size:13px;font-weight:400;letter-spacing:0.12em;color:#f4f1ea;text-decoration:none;padding:11px 22px;border-radius:999px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:background .2s,border-color .2s,color .2s,transform .2s}
-a.pill:hover{background:var(--accSoft);border-color:var(--acc);transform:translateY(-1px)}
+a.pill{font-size:13px;font-weight:400;letter-spacing:0.12em;color:#f4f1ea;text-decoration:none;padding:11px 22px;border-radius:999px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:background .2s,border-color .2s,color .2s,transform .2s}
+a.pill:hover{background:var(--accSoft);border-color:rgba(255,255,255,0.8);transform:translateY(-1px)}
 footer{position:absolute;z-index:3;left:0;right:0;bottom:32px;display:flex;flex-direction:column;align-items:center;gap:12px;padding:0 16px}
-.sl{font-size:10.5px;letter-spacing:0.2em;color:rgba(244,241,234,0.42)}
+.sl{font-size:10.5px;letter-spacing:0.2em;color:rgba(255,255,255,0.75)}
 .sup{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;align-items:center}
-a.chip,button.chip{display:inline-flex;align-items:center;gap:8px;font-family:inherit;font-size:12.5px;font-weight:400;letter-spacing:0.04em;color:rgba(244,241,234,0.88);padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.14);background:rgba(8,8,8,0.55);text-decoration:none;cursor:pointer;line-height:1}
+a.chip,button.chip{display:inline-flex;align-items:center;gap:8px;font-family:inherit;font-size:12.5px;font-weight:400;letter-spacing:0.04em;color:rgba(244,241,234,0.88);padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.45);background:rgba(8,8,8,0.55);text-decoration:none;cursor:pointer;line-height:1}
 a.chip svg,button.chip svg{flex:none;opacity:0.85}
 a.chip b,button.chip b{color:var(--acc);font-weight:500;letter-spacing:0.06em}
-a.chip:hover,button.chip:hover{border-color:var(--acc)}
+a.chip:hover,button.chip:hover{border-color:rgba(255,255,255,0.8)}
 button.chip{appearance:none;-webkit-appearance:none}
 button.chip .cl{transition:color .45s ease,opacity .45s ease}
 button.chip.is-copied{border-color:rgba(217,180,90,.6)}
@@ -68,16 +68,16 @@ button.chip.is-copied .cl{color:var(--acc)}
   <p class="tag">educator. builder. stoic.</p>
   <p class="sub">working in higher ed · irvine, ca</p>
   <nav class="pills">
-    <a class="pill" href="https://x.com/dharrisonshin">x</a>
-    <a class="pill" href="https://syllabust.io/" target="_blank" rel="noopener">syllabust</a>
-    <a class="pill" href="https://voidrunnerz.netlify.app/" target="_blank" rel="noopener">voidrunnerz</a>
-    <a class="pill" href="https://substack.com/@harrisonshin">writing</a>
+    <a class="pill" href="https://x.com/dharrisonshin" target="_blank" rel="noopener noreferrer">x</a>
+    <a class="pill" href="https://syllabust.io/" target="_blank" rel="noopener noreferrer">syllabust</a>
+    <a class="pill" href="https://voidrunnerz.netlify.app/" target="_blank" rel="noopener noreferrer">voidrunnerz</a>
+    <a class="pill" href="https://substack.com/@harrisonshin" target="_blank" rel="noopener noreferrer">writing</a>
   </nav>
 </main>
 <footer>
   <div class="sl">support my work</div>
   <div class="sup">
-    <a class="chip" href="https://ko-fi.com/harrisonshin"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h12v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M16 9h2.2a3.2 3.2 0 0 1 0 6.4H16"/><path d="M8 3c0 1.2-.5 2-1.2 2.6M12 3c0 1.2-.5 2-1.2 2.6"/></svg> <b>ko-fi</b> ko-fi.com/harrisonshin</a>
+    <a class="chip" href="https://ko-fi.com/harrisonshin" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h12v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M16 9h2.2a3.2 3.2 0 0 1 0 6.4H16"/><path d="M8 3c0 1.2-.5 2-1.2 2.6M12 3c0 1.2-.5 2-1.2 2.6"/></svg> <b>ko-fi</b> ko-fi.com/harrisonshin</a>
     <button type="button" class="chip" data-copy="0xcCbB38316258Ec521ad2f6669c6D0cA3b03182dc" title="copy base wallet address" aria-label="copy base wallet address, smackushin.base.eth"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg> <b>base</b> smackushin.base.eth <span class="cl" aria-live="polite">copy</span></button>
   </div>
 </footer>
