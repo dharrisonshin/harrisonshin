@@ -7,9 +7,38 @@ Posts are plain HTML. There is no build step and no framework.
 1. Copy [`writing/template.html`](writing/template.html) to `writing/your-slug/index.html`.
 2. Set the title, the lowercase visible date, the `<time datetime="YYYY-MM-DD">`, the meta description, and the canonical / `og:url` (`https://harrisonshin.com/writing/your-slug/`). Remove `noindex` from the template.
 3. Put the essay in `.prose`. Each paragraph is its own `<p>`. A line that is only a quotation can be a `<blockquote><p>…</p></blockquote>`. Keep the wording as written, including curly quotes and dashes.
-4. Add the post to the top of the list in [`writing/index.html`](writing/index.html) so the newest date is first.
-5. Add the same post to the top of `POSTS` in [`writing/posts.js`](writing/posts.js) (`slug`, `title`, `date`, and a one-sentence `teaser`). Newest first. Each post page reads that list for the newer/older links at the bottom. With only one neighbor missing, that side stays blank. With no neighbors, the nav stays hidden. The homepage shows the first entry under the status line: title, date, teaser, and a read link. A long teaser is one line and ends in an ellipsis. If `teaser` is missing, that line stays hidden. `excerpt` is accepted as another name for the same field.
-6. Add an `<item>` at the top of [`writing/feed.xml`](writing/feed.xml) with the same title, absolute `https://harrisonshin.com` link, and `pubDate`.
+4. Add the post to the top of the list in [`writing/index.html`](writing/index.html) so the newest date is first. Under the title, add a `.post-tags` row. Each tag is a link to `tags/<slug>/`.
+5. Add the same post to the top of `POSTS` in [`writing/posts.js`](writing/posts.js) (`slug`, `title`, `date`, a one-sentence `teaser`, and `tags`). Newest first. `tags` is 1–3 labels from the fixed set below. Each post page reads that list for the newer/older links at the bottom. With only one neighbor missing, that side stays blank. With no neighbors, the nav stays hidden. The homepage shows the first entry under the status line: title, date, teaser, and a read link. A long teaser is one line and ends in an ellipsis. If `teaser` is missing, that line stays hidden. `excerpt` is accepted as another name for the same field.
+6. On the post page, under the date, add the same `.post-tags` row. Each tag links to `../tags/<slug>/`.
+7. If this is the first post to use a tag, add that tag’s page and filter link. See [Tags](#tags).
+8. Add an `<item>` at the top of [`writing/feed.xml`](writing/feed.xml) with the same title, absolute `https://harrisonshin.com` link, and `pubDate`.
+
+## Tags
+
+The tag set is fixed. Use the label in prose and in `tags`. The slug is the label with spaces replaced by hyphens.
+
+| label | slug |
+| --- | --- |
+| grad school | `grad-school` |
+| building | `building` |
+| games | `games` |
+| stoicism | `stoicism` |
+| higher ed | `higher-ed` |
+| tech | `tech` |
+| life | `life` |
+
+Each post has 1–3 tags. A tag with no posts does not appear in the filter row and does not get a page.
+
+`/writing/` has a filter row: `all`, then every tag that has at least one post, in the order of the table above. `all` links to `/writing/` and is marked `aria-current="page"` there. Each tag links to `/writing/tags/<slug>/`. The row is plain HTML, so it works without JavaScript.
+
+A tag page lives at `writing/tags/<slug>/index.html`. It lists that tag’s posts, newest first, with the same pills, the same filter row (the current tag marked `aria-current="page"`), and an “all writing” link back to `/writing/`.
+
+When a tag is used for the first time:
+
+1. Copy an existing page in `writing/tags/` to `writing/tags/<slug>/index.html`.
+2. Set the title, the heading, the description, and the canonical / `og:url` (`https://harrisonshin.com/writing/tags/<slug>/`).
+3. Move `aria-current="page"` to that tag in the filter row. List only posts with that tag, newest first. Pill links on that page are `../<slug>/`. Post links are `../../<post-slug>/`. The “all writing” link is `../../`.
+4. Add the new tag to the filter row on [`writing/index.html`](writing/index.html) and on every tag page, in the table order above.
 
 The template already includes the “all writing” link at the top and “back to writing” in the footer.
 
