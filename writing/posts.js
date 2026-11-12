@@ -4,6 +4,13 @@
 // replaced by hyphens (grad school → grad-school). See WRITING.md.
 var POSTS = [
   {
+    slug: "ai-is-a-car-learn-to-drive",
+    title: "AI Is a Car. Learn to Drive.",
+    date: "2026-11-12",
+    teaser: "In 1888, Bertha Benz proved the car worked. The six arguments against AI I keep hearing, and why they're wrong.",
+    tags: ["tech"]
+  },
+  {
     slug: "polytopia",
     title: "Why The Battle of Polytopia Is the Best Strategy Game You’re Not Playing",
     date: "2026-11-10",
