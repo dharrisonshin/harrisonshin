@@ -26,7 +26,7 @@ The committed samples are a few classics and two shows so the sections render be
 
 ## Music
 
-[`library/music.json`](library/music.json) is a JSON array, in the order it should appear. Edit the file by hand. There is no Notion sync for music yet.
+[`library/music.json`](library/music.json) is a JSON array. Edit the file by hand. There is no Notion sync for music yet. The page sorts by artist, ignoring a leading "The", and the file is kept in that same order.
 
 | field | type |
 | --- | --- |
@@ -37,7 +37,7 @@ The committed samples are a few classics and two shows so the sections render be
 | `note` | string, or null |
 | `link` | `http` or `https` URL, or null |
 
-A row shows the artist. An album or a year is added when it is set. A rating renders as stars. A note renders only when it is present. A link makes the artist name open that URL. The seed lists Alvvays, Beach House, Lord Huron, and Lo Moon, with the optional fields empty.
+A row shows the artist. An album or a year is added when it is set. A rating renders as stars. A note renders only when it is present. A link makes the artist name open that URL. On a wide line the names sit in two columns. An entry with an album, a rating, or a note spans the full width. The list starts with Alvvays, Beach House, Lord Huron, and Lo Moon, plus the artists added later. Optional fields on those rows are empty.
 
 ## Notion sync
 

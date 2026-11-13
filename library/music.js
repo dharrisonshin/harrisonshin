@@ -75,6 +75,13 @@
       var items = Array.isArray(data) ? data.filter(function (item) {
         return item && typeof item.artist === "string" && item.artist.trim();
       }) : [];
+      items.sort(function (a, b) {
+        function key(name) {
+          var n = name.trim().toLowerCase();
+          return n.indexOf("the ") === 0 ? n.slice(4) : n;
+        }
+        return key(a.artist).localeCompare(key(b.artist));
+      });
       root.textContent = "";
       if (!items.length) {
         var empty = document.createElement("p");
@@ -84,7 +91,7 @@
         return;
       }
       var ul = document.createElement("ul");
-      ul.className = "log";
+      ul.className = "log music-list";
       items.forEach(function (item) { ul.appendChild(entry(item)); });
       root.appendChild(ul);
     })

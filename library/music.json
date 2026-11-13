@@ -1,6 +1,30 @@
 [
   {
+    "artist": "The 1975",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
     "artist": "Alvvays",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Ariel Posen",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Atoms for Peace",
     "album": null,
     "year": null,
     "rating": null,
@@ -16,7 +40,55 @@
     "link": null
   },
   {
-    "artist": "Lord Huron",
+    "artist": "The Belair Lip Bombs",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "The Black Keys",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Cannons",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Chromatics",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Chvrches",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Daughter",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Grimes",
     "album": null,
     "year": null,
     "rating": null,
@@ -25,6 +97,190 @@
   },
   {
     "artist": "Lo Moon",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Lord Huron",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Men I Trust",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Mitski",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Muse",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "My Chemical Romance",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Nine Inch Nails",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Nirvana",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Now Now",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Phoebe Bridgers",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Pixies",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Portishead",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Purity Ring",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Queens of the Stone Age",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Radiohead",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Rage Against the Machine",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Slowdive",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Smashing Pumpkins",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "System of a Down",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Vampire Weekend",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Waxahatchee",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "The White Stripes",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Woodkid",
+    "album": null,
+    "year": null,
+    "rating": null,
+    "note": null,
+    "link": null
+  },
+  {
+    "artist": "Yeah Yeah Yeahs",
     "album": null,
     "year": null,
     "rating": null,
