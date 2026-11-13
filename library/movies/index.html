@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>movies &amp; tv · harrison shin</title>
+<title>movies · harrison shin</title>
 <meta name="description" content="Every film Harrison Shin has watched, grouped by the year he last watched it.">
-<meta property="og:title" content="movies &amp; tv · harrison shin">
+<meta property="og:title" content="movies · harrison shin">
 <meta property="og:description" content="Every film Harrison Shin has watched, grouped by the year he last watched it.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://harrisonshin.com/library/movies/">
@@ -31,19 +31,19 @@
   <a class="home" href="../../">harrison shin</a>
   <p class="back"><a href="../">library</a></p>
   <div class="rule" aria-hidden="true"></div>
-  <h1>movies &amp; tv</h1>
+  <h1>movies</h1>
   <div class="prose">
     <p>Every film, grouped by the year I last watched it.</p>
   </div>
   <div class="shelf">
     <div class="movie-bar">
-      <p class="count" id="movie-count" aria-live="polite"></p>
+      <p class="count" data-count aria-live="polite"></p>
       <label class="finder">
-        <span class="sr">search movies and tv</span>
-        <input id="movie-q" type="search" placeholder="search movies" autocomplete="off" enterkeyhint="search">
+        <span class="sr">search movies</span>
+        <input data-search type="search" placeholder="search movies" autocomplete="off" enterkeyhint="search">
       </label>
     </div>
-    <div id="movies" data-mode="all" data-src="../movies.json">
+    <div id="movies" data-catalog data-mode="all" data-src="../movies.json" data-kind="film">
       <noscript><p class="note">movies load from the list with javascript.</p></noscript>
     </div>
   </div>

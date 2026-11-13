@@ -56,7 +56,7 @@ Add a project by copying an `<li>` in [`projects/index.html`](projects/index.htm
 
 ## Library
 
-Books and podcasts on [`library/index.html`](library/index.html) are still headings only. Movies and tv are rendered from [`library/movies.json`](library/movies.json): recently watched on `/library/`, and the full list at [`library/movies/`](library/movies/index.html). See [LIBRARY.md](LIBRARY.md) for the schema and the Notion sync. Do not hand-edit the film rows.
+Books and podcasts on [`library/index.html`](library/index.html) are still headings only. The shelf sections collapse, and they start open. Movies come from [`library/movies.json`](library/movies.json) and shows from [`library/tv.json`](library/tv.json): a short recently watched list on `/library/`, and the full lists at [`library/movies/`](library/movies/index.html) and [`library/tv/`](library/tv/index.html). See [LIBRARY.md](LIBRARY.md) for the schema and the Notion sync. Do not hand-edit those rows.
 
 ## Links
 

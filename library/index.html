@@ -35,16 +35,30 @@
     <p>Everything I’ve read, watched, and listened to, sorted by year, with one takeaway from each.</p>
   </div>
   <div class="shelf">
-    <h2>books</h2>
-    <p class="note">Under construction. I’ll add these as I go.</p>
-    <h2>movies &amp; tv</h2>
-    <h3>recently watched</h3>
-    <div id="movies" data-mode="recent" data-src="movies.json">
-      <noscript><p class="note">movies load from the list with javascript.</p></noscript>
-    </div>
-    <p class="all-films"><a id="all-films" href="movies/">see all films</a></p>
-    <h2>podcasts</h2>
-    <p class="note">Under construction. I’ll add these as I go.</p>
+    <details class="fold" open>
+      <summary><h2>books</h2></summary>
+      <p class="note">Under construction. I’ll add these as I go.</p>
+    </details>
+    <details class="fold" open>
+      <summary><h2>movies</h2></summary>
+      <h3>recently watched</h3>
+      <div id="movies" data-catalog data-mode="recent" data-src="movies.json" data-kind="film" data-all="all-films">
+        <noscript><p class="note">movies load from the list with javascript.</p></noscript>
+      </div>
+      <p class="all-films"><a id="all-films" href="movies/">see all films</a></p>
+    </details>
+    <details class="fold" open>
+      <summary><h2>tv</h2></summary>
+      <h3>recently watched</h3>
+      <div id="tv" data-catalog data-mode="recent" data-src="tv.json" data-kind="show" data-all="all-shows">
+        <noscript><p class="note">shows load from the list with javascript.</p></noscript>
+      </div>
+      <p class="all-films"><a id="all-shows" href="tv/">see all shows</a></p>
+    </details>
+    <details class="fold" open>
+      <summary><h2>podcasts</h2></summary>
+      <p class="note">Under construction. I’ll add these as I go.</p>
+    </details>
   </div>
 </article>
 <script src="movies.js"></script>
