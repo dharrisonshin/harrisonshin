@@ -88,6 +88,14 @@ def as_genres(prop):
     return names
 
 
+def as_takeaway(props):
+    if "Review" in props:
+        review = as_text(props.get("Review"))
+        if review:
+            return review
+    return as_text(props.get("Takeaway"))
+
+
 def movie_from_page(page):
     props = page.get("properties") or {}
     title = as_text(props.get("Title"))
@@ -100,7 +108,7 @@ def movie_from_page(page):
         "genres": as_genres(props.get("Genre")),
         "rating": as_stars(props.get("Rating")),
         "last_watched": as_date(props.get("Last Watched")),
-        "takeaway": as_text(props.get("Takeaway")),
+        "takeaway": as_takeaway(props),
     }
 
 

@@ -56,7 +56,7 @@ Add a project by copying an `<li>` in [`projects/index.html`](projects/index.htm
 
 ## Library
 
-Books and podcasts on [`library/index.html`](library/index.html) are still headings only. Movies and tv are rendered from [`library/movies.json`](library/movies.json). See [LIBRARY.md](LIBRARY.md) for the schema and the Notion sync. Do not hand-edit year groups for movies.
+Books and podcasts on [`library/index.html`](library/index.html) are still headings only. Movies and tv are rendered from [`library/movies.json`](library/movies.json): recently watched on `/library/`, and the full list at [`library/movies/`](library/movies/index.html). See [LIBRARY.md](LIBRARY.md) for the schema and the Notion sync. Do not hand-edit the film rows.
 
 ## Links
 

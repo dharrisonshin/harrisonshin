@@ -38,16 +38,11 @@
     <h2>books</h2>
     <p class="note">Under construction. I’ll add these as I go.</p>
     <h2>movies &amp; tv</h2>
-    <div class="movie-bar">
-      <p class="count" id="movie-count" aria-live="polite"></p>
-      <label class="finder">
-        <span class="sr">search movies and tv</span>
-        <input id="movie-q" type="search" placeholder="search movies" autocomplete="off" enterkeyhint="search">
-      </label>
-    </div>
-    <div id="movies">
+    <h3>recently watched</h3>
+    <div id="movies" data-mode="recent" data-src="movies.json">
       <noscript><p class="note">movies load from the list with javascript.</p></noscript>
     </div>
+    <p class="all-films"><a id="all-films" href="movies/">see all films</a></p>
     <h2>podcasts</h2>
     <p class="note">Under construction. I’ll add these as I go.</p>
   </div>
