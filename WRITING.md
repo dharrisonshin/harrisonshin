@@ -8,7 +8,7 @@ Posts are plain HTML. There is no build step and no framework.
 2. Set the title, the lowercase visible date, the `<time datetime="YYYY-MM-DD">`, the meta description, and the canonical / `og:url` (`https://harrisonshin.com/writing/your-slug/`). Remove `noindex` from the template.
 3. Put the essay in `.prose`. Each paragraph is its own `<p>`. A line that is only a quotation can be a `<blockquote><p>…</p></blockquote>`. Keep the wording as written, including curly quotes and dashes.
 4. Add the post to the top of the list in [`writing/index.html`](writing/index.html) so the newest date is first. Under the title, add a `.post-tags` row. Each tag is a link to `tags/<slug>/`.
-5. Add the same post to the top of `POSTS` in [`writing/posts.js`](writing/posts.js) (`slug`, `title`, `date`, a one-sentence `teaser`, and `tags`). Newest first. `tags` is 1–3 labels from the fixed set below. Each post page reads that list for the newer/older links at the bottom. With only one neighbor missing, that side stays blank. With no neighbors, the nav stays hidden. The homepage shows the first entry under the status line: title, date, teaser, and a read link. A long teaser is one line and ends in an ellipsis. If `teaser` is missing, that line stays hidden. `excerpt` is accepted as another name for the same field.
+5. Add the same post to the top of `POSTS` in [`writing/posts.js`](writing/posts.js) (`slug`, `title`, `date`, a one-sentence `teaser`, and `tags`). Newest first. `tags` is 1–3 labels from the fixed set below. Each post page reads that list for the newer/older links at the bottom. With only one neighbor missing, that side stays blank. With no neighbors, the nav stays hidden. The homepage shows the first entry under the status line: title, date, teaser, and a read link. A long teaser is one line and ends in an ellipsis. If `teaser` is missing, that line stays hidden. `excerpt` is accepted as another name for the same field. Optional `substack` is the URL of that essay on [harrisonshin.substack.com](https://harrisonshin.substack.com). When it is set, put an `also on substack` link to that URL in `.post-foot`, before “back to writing”. When it is absent, leave that link off. The template’s `.signup` form stays on every post.
 6. On the post page, under the date, add the same `.post-tags` row. Each tag links to `../tags/<slug>/`.
 7. If this is the first post to use a tag, add that tag’s page and filter link. See [Tags](#tags).
 8. Add an `<item>` at the top of [`writing/feed.xml`](writing/feed.xml) with the same title, absolute `https://harrisonshin.com` link, and `pubDate`.
@@ -52,23 +52,11 @@ The Pages workflow uploads the repository root, which includes `writing/`, `abou
 
 ## Projects
 
-Add a project by copying an `<li>` in [`projects/index.html`](projects/index.html). Each entry is a name, one or two sentences, and an outbound link (`target="_blank"` and `rel="noopener noreferrer"`). The name voidrunnerz stays lowercase.
+Add a project by copying an `<li>` in [`projects/index.html`](projects/index.html). Each entry is a name, a status (`building` or `live`), one or two sentences, an outbound link (`target="_blank"` and `rel="noopener noreferrer"`), and a screenshot. The name voidrunnerz stays lowercase. If there is no image yet, use an empty `.shot-empty` slot.
 
 ## Library
 
-[`library/index.html`](library/index.html) is a shelf for books, movies & tv, and podcasts. It is under construction: headings only, no entries yet.
-
-Add a real entry under the right heading, inside a year group. Newest year first.
-
-```html
-<h3>2026</h3>
-<ul class="log">
-  <li>
-    <p class="what">Title <span class="who">Creator</span></p>
-    <p class="take">One takeaway.</p>
-  </li>
-</ul>
-```
+Podcasts on [`library/index.html`](library/index.html) are still a heading only. The shelf sections collapse, and they start open. Movies come from [`library/movies.json`](library/movies.json), shows from [`library/tv.json`](library/tv.json), and finished books from [`library/books.json`](library/books.json). Full lists are at [`library/movies/`](library/movies/index.html), [`library/tv/`](library/tv/index.html), and [`library/books/`](library/books/index.html). Music is hand-edited in [`library/music.json`](library/music.json). See [LIBRARY.md](LIBRARY.md) for the schema and the Notion sync. Do not hand-edit the film, show, or book rows.
 
 ## Links
 

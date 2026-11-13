@@ -1,0 +1,62 @@
+# Sync library/movies.json, library/tv.json, and library/books.json from Notion.
+# Then redeploy Pages if a file changed.
+# Runs on main only. A pull request branch does not push or deploy.
+name: Sync movies from Notion
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+# Database ids live here so they are not buried in the script.
+# Both databases must be shared with the integration that owns NOTION_TOKEN.
+env:
+  NOTION_DATABASE_ID: fb0aa94ce43d46bda4a4cfe87c98b02b
+  NOTION_BOOKS_DATABASE_ID: 4d5d72e04b7344f8906d5fbd1d18f5bd
+
+concurrency:
+  group: notion-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Query Notion and write the library files
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: python3 scripts/sync_movies.py
+
+      - name: Commit and push if the library files changed
+        id: commit
+        run: |
+          git add library/movies.json library/tv.json library/books.json
+          if [ -f .github/notion-review-cache.json ]; then
+            git add .github/notion-review-cache.json
+          fi
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "library files are unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Sync movies, tv, and books from Notion."
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Redeploy Pages
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run "Deploy static content to Pages" --ref main

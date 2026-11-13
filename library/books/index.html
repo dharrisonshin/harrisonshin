@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>books · harrison shin</title>
+<meta name="description" content="Books Harrison Shin has finished, with the author and a takeaway when there is one.">
+<meta property="og:title" content="books · harrison shin">
+<meta property="og:description" content="Books Harrison Shin has finished, with the author and a takeaway when there is one.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://harrisonshin.com/library/books/">
+<meta property="og:image" content="https://harrisonshin.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://harrisonshin.com/og-image.png">
+<meta name="twitter:site" content="@dharrisonshin">
+<link rel="canonical" href="https://harrisonshin.com/library/books/">
+<link rel="icon" href="../../favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../../favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../read.css">
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<article class="wrap post">
+  <a class="home" href="../../">harrison shin</a>
+  <p class="back"><a href="../">library</a></p>
+  <div class="rule" aria-hidden="true"></div>
+  <h1>books</h1>
+  <div class="prose">
+    <p>Every book I have finished.</p>
+  </div>
+  <div class="shelf">
+    <div class="movie-bar">
+      <p class="count" data-count aria-live="polite"></p>
+      <label class="finder">
+        <span class="sr">search books</span>
+        <input data-search type="search" placeholder="search books" autocomplete="off" enterkeyhint="search">
+      </label>
+    </div>
+    <div id="books" data-mode="all" data-src="../books.json">
+      <noscript><p class="note">books load from the list with javascript.</p></noscript>
+    </div>
+  </div>
+</article>
+<script src="../books.js"></script>
+<script src="../../read-sky.js"></script>
+</body>
+</html>

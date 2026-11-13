@@ -1,0 +1,20 @@
+[
+  {
+    "title": "The Wire",
+    "year": 2002,
+    "director": "David Simon",
+    "genres": ["crime", "drama"],
+    "rating": 5,
+    "last_watched": "2026-01-08",
+    "takeaway": "the case is the excuse. the city is the subject."
+  },
+  {
+    "title": "Succession",
+    "year": 2018,
+    "director": "Jesse Armstrong",
+    "genres": ["drama"],
+    "rating": 5,
+    "last_watched": "2025-11-02",
+    "takeaway": "nobody in that family can say what they mean."
+  }
+]

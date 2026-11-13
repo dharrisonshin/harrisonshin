@@ -33,24 +33,46 @@
   <h1>library</h1>
   <div class="prose">
     <p>Everything I’ve read, watched, and listened to, sorted by year, with one takeaway from each.</p>
-    <p class="note">Under construction. I’ll add these as I go.</p>
   </div>
   <div class="shelf">
-    <h2>books</h2>
-    <h2>movies &amp; tv</h2>
-    <h2>podcasts</h2>
+    <details class="fold" open>
+      <summary><h2>books</h2></summary>
+      <div id="books" data-mode="recent" data-src="books.json" data-all="all-books">
+        <noscript><p class="note">books load from the list with javascript.</p></noscript>
+      </div>
+      <p class="all-films"><a id="all-books" href="books/">see all books</a></p>
+    </details>
+    <details class="fold" open>
+      <summary><h2>movies</h2></summary>
+      <h3>recently watched</h3>
+      <div id="movies" data-catalog data-mode="recent" data-src="movies.json" data-kind="film" data-all="all-films">
+        <noscript><p class="note">movies load from the list with javascript.</p></noscript>
+      </div>
+      <p class="all-films"><a id="all-films" href="movies/">see all films</a></p>
+    </details>
+    <details class="fold" open>
+      <summary><h2>tv</h2></summary>
+      <h3>recently watched</h3>
+      <div id="tv" data-catalog data-mode="recent" data-src="tv.json" data-kind="show" data-all="all-shows">
+        <noscript><p class="note">shows load from the list with javascript.</p></noscript>
+      </div>
+      <p class="all-films"><a id="all-shows" href="tv/">see all shows</a></p>
+    </details>
+    <details class="fold" open>
+      <summary><h2>music</h2></summary>
+      <div id="music">
+        <noscript><p class="note">music loads from the list with javascript.</p></noscript>
+      </div>
+    </details>
+    <details class="fold" open>
+      <summary><h2>podcasts</h2></summary>
+      <p class="note">Under construction. I’ll add these as I go.</p>
+    </details>
   </div>
-  <!--
-    Add a year group under a heading:
-    <h3>2026</h3>
-    <ul class="log">
-      <li>
-        <p class="what">Title <span class="who">Creator</span></p>
-        <p class="take">One takeaway.</p>
-      </li>
-    </ul>
-  -->
 </article>
+<script src="movies.js"></script>
+<script src="books.js"></script>
+<script src="music.js"></script>
 <script src="../read-sky.js"></script>
 </body>
 </html>
