@@ -356,7 +356,14 @@ def review_for_page(token, page, cache):
 
 
 def collect(token, database_id, cache):
-    raw_pages = query_database(token, database_id)
+    try:
+        raw_pages = query_database(token, database_id, soft_access=True)
+    except NotionAccessError as error:
+        print(
+            "Movies database %s is not shared with the Notion integration (HTTP %s). library/movies.json and library/tv.json were left unchanged."
+            % (database_id, error.code)
+        )
+        return None
     movies = []
     shows = []
     titled = 0
@@ -457,12 +464,14 @@ def main():
         print("NOTION_DATABASE_ID is not set.", file=sys.stderr)
         return 1
     cache = load_cache(CACHE_OUT)
-    movies, shows = collect(token, database_id, cache)
     changed = False
-    changed |= write_if_changed(MOVIES_OUT, dumps(movies))
-    changed |= write_if_changed(TV_OUT, dumps(shows))
-    changed |= write_if_changed(CACHE_OUT, dumps_cache(cache))
-    print("movies: %s. shows: %s." % (len(movies), len(shows)))
+    listed = collect(token, database_id, cache)
+    if listed is not None:
+        movies, shows = listed
+        changed |= write_if_changed(MOVIES_OUT, dumps(movies))
+        changed |= write_if_changed(TV_OUT, dumps(shows))
+        changed |= write_if_changed(CACHE_OUT, dumps_cache(cache))
+        print("movies: %s. shows: %s." % (len(movies), len(shows)))
     books_id = (os.environ.get("NOTION_BOOKS_DATABASE_ID") or "").strip()
     if not books_id:
         print("NOTION_BOOKS_DATABASE_ID is not set. library/books.json was left unchanged.")

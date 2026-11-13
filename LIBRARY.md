@@ -64,7 +64,7 @@ It uses the official API and the `NOTION_TOKEN` repository secret. The script is
 
 Movies and tv come from database `fb0aa94ce43d46bda4a4cfe87c98b02b` (`NOTION_DATABASE_ID` at the top of the workflow).
 
-Finished books come from the Reading list database `4d5d72e04b7344f8906d5fbd1d18f5bd` (`NOTION_BOOKS_DATABASE_ID`). Both databases must be connected to the same Notion integration that owns `NOTION_TOKEN`. If the books database is not shared with that integration, the job logs that and leaves `library/books.json` unchanged. The movie and tv sync still runs.
+Finished books come from the Reading list database `4d5d72e04b7344f8906d5fbd1d18f5bd` (`NOTION_BOOKS_DATABASE_ID`). Both databases must be connected to the same Notion integration that owns `NOTION_TOKEN`. If one database is not shared with that integration, the job logs that and leaves that database's files unchanged. The other database still syncs.
 
 | Notion property | JSON field |
 | --- | --- |
