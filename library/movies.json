@@ -1,1 +1,5890 @@
-[]
+[
+  {
+    "title": "The Nightmare Before Christmas",
+    "year": 1993,
+    "director": "Henry Selick",
+    "genres": [
+      "Animation",
+      "Musical",
+      "Fantasy",
+      "Comedy"
+    ],
+    "rating": 1,
+    "last_watched": "2026-10-31",
+    "takeaway": "I will never understand the hype around this movie. stop motion is cool but that’s about it. i love danny elfman as a composer and performer but this was not it."
+  },
+  {
+    "title": "(500) Days of Summer",
+    "year": 2009,
+    "director": "Marc Webb",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "10 Cloverfield Lane",
+    "year": 2016,
+    "director": "Dan Trachtenberg",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "21",
+    "year": 2008,
+    "director": "Robert Luketic",
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "A Bug's Life",
+    "year": 1998,
+    "director": "John Lasseter, Andrew Stanton",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family",
+      "Adventure"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "A Ghost Story",
+    "year": 2017,
+    "director": "David Lowery",
+    "genres": [
+      "Drama",
+      "Fantasy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "A Girl Walks Home Alone at Night",
+    "year": 2014,
+    "director": "Ana Lily Amirpour",
+    "genres": [
+      "Horror"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "About Time",
+    "year": 2013,
+    "director": "Richard Curtis",
+    "genres": [
+      "Romance",
+      "Comedy",
+      "Fantasy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Adaptation",
+    "year": 2002,
+    "director": "Spike Jonze",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Aladdin",
+    "year": 1992,
+    "director": "John Musker, Ron Clements",
+    "genres": [
+      "Animation",
+      "Musical",
+      "Comedy",
+      "Fantasy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Alien",
+    "year": 1979,
+    "director": "Ridley Scott",
+    "genres": [
+      "Horror",
+      "Sci-Fi",
+      "Thriller",
+      "Adventure"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Almost Famous",
+    "year": 2000,
+    "director": "Cameron Crowe",
+    "genres": [
+      "Musical",
+      "Drama",
+      "Comedy"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "American Beauty",
+    "year": 1999,
+    "director": "Sam Mendes",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Aniara",
+    "year": 2018,
+    "director": "Pella Kagerman, Hugo Lilja",
+    "genres": [
+      "Sci-Fi",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Another Earth",
+    "year": 2011,
+    "director": "Mike Cahill",
+    "genres": [
+      "Sci-Fi",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Ant-Man",
+    "year": 2015,
+    "director": "Peyton Reed, Edgar Wright",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure",
+      "Comedy"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Ant-Man and the Wasp",
+    "year": 2018,
+    "director": "Peyton Reed",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure",
+      "Comedy"
+    ],
+    "rating": 1,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Ant-Man and the Wasp: Quantumania",
+    "year": 2023,
+    "director": "Peyton Reed",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure",
+      "Comedy"
+    ],
+    "rating": 1,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Antz",
+    "year": 1998,
+    "director": "Eric Darnell, Tim Johnson",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family",
+      "Adventure"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Argylle",
+    "year": 2024,
+    "director": "Matthew Vaughn",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Thriller"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Arrival",
+    "year": 2016,
+    "director": "Denis Villeneuve",
+    "genres": [
+      "Sci-Fi",
+      "Drama",
+      "Mystery"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Atlantis: The Lost Empire",
+    "year": 2001,
+    "director": "Gary Trousdale, Kirk Wise",
+    "genres": [
+      "Animation",
+      "Sci-Fi",
+      "Fantasy",
+      "Adventure"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Atonement",
+    "year": 2007,
+    "director": "Joe Wright",
+    "genres": [
+      "Drama",
+      "Romance",
+      "War"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Avengers: Age of Ultron",
+    "year": 2015,
+    "director": "Joss Whedon",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Avengers: Endgame",
+    "year": 2019,
+    "director": "Anthony Russo, Joe Russo",
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Avengers: Infinity War",
+    "year": 2018,
+    "director": "Anthony Russo, Joe Russo",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Baby Driver",
+    "year": 2017,
+    "director": "Edgar Wright",
+    "genres": [
+      "Action",
+      "Crime",
+      "Comedy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Back to the Future",
+    "year": 1985,
+    "director": "Robert Zemeckis",
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Comedy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Back to the Future Part II",
+    "year": 1989,
+    "director": "Robert Zemeckis",
+    "genres": [
+      "Sci-Fi",
+      "Comedy"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Back to the Future Part III",
+    "year": 1990,
+    "director": "Robert Zemeckis",
+    "genres": [
+      "Sci-Fi",
+      "Comedy",
+      "Western"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Backrooms",
+    "year": 2026,
+    "director": "Kane Parsons",
+    "genres": [
+      "Horror",
+      "Sci-Fi",
+      "Mystery"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Bad Times at the El Royale",
+    "year": 2018,
+    "director": "Drew Goddard",
+    "genres": [
+      "Thriller",
+      "Crime",
+      "Drama",
+      "Mystery"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Barbarian",
+    "year": 2022,
+    "director": "Zach Cregger",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Batman Begins",
+    "year": 2005,
+    "director": "Christopher Nolan",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Be Kind Rewind",
+    "year": 2008,
+    "director": "Michel Gondry",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Beauty and the Beast",
+    "year": 1991,
+    "director": "Gary Trousdale, Kirk Wise",
+    "genres": [
+      "Animation",
+      "Romance",
+      "Musical",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Before I Disappear",
+    "year": 2014,
+    "director": "Shawn Christensen",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Begin Again",
+    "year": 2013,
+    "director": "John Carney",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Musical"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Beowulf",
+    "year": 2007,
+    "director": "Robert Zemeckis",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Action",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Bernie",
+    "year": 2011,
+    "director": "Richard Linklater",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Comedy"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Big Fish",
+    "year": 2003,
+    "director": "Tim Burton",
+    "genres": [
+      "Fantasy",
+      "Drama",
+      "Comedy"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Big Hero 6",
+    "year": 2014,
+    "director": "Chris Williams, Don Hall",
+    "genres": [
+      "Animation",
+      "Sci-Fi",
+      "Fantasy",
+      "Action"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Birdman",
+    "year": 2014,
+    "director": "Alejandro Gonzalez Inarritu",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Black Panther",
+    "year": 2018,
+    "director": "Ryan Coogler",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Black Panther: Wakanda Forever",
+    "year": 2022,
+    "director": "Ryan Coogler",
+    "genres": [
+      "Action"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Black Widow",
+    "year": 2021,
+    "director": "Cate Shortland",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure",
+      "Thriller"
+    ],
+    "rating": 1,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "BlackBerry",
+    "year": 2023,
+    "director": "Matt Johnson",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Blade Runner",
+    "year": 1982,
+    "director": "Ridley Scott",
+    "genres": [
+      "Sci-Fi",
+      "Thriller",
+      "Drama"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Blade Runner 2049",
+    "year": 2017,
+    "director": "Denis Villeneuve",
+    "genres": [
+      "Sci-Fi",
+      "Thriller",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Blue Valentine",
+    "year": 2010,
+    "director": "Derek Cianfrance",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Blue Velvet",
+    "year": 1986,
+    "director": "David Lynch",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Drama",
+      "Crime"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Booksmart",
+    "year": 2019,
+    "director": "Olivia Wilde",
+    "genres": [
+      "Comedy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Braveheart",
+    "year": 1995,
+    "director": "Mel Gibson",
+    "genres": [
+      "Drama",
+      "War",
+      "Action",
+      "Adventure"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Brigsby Bear",
+    "year": 2017,
+    "director": "Dave McCary",
+    "genres": [
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Burn After Reading",
+    "year": 2008,
+    "director": "Joel Coen, Ethan Coen",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Crime",
+      "Thriller"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Captain America: Brave New World",
+    "year": 2025,
+    "director": "Julius Onah",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "rating": 1,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Captain America: Civil War",
+    "year": 2016,
+    "director": "Anthony Russo, Joe Russo",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Captain America: The First Avenger",
+    "year": 2011,
+    "director": "Joe Johnston",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "War",
+      "Adventure"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Captain America: The Winter Soldier",
+    "year": 2014,
+    "director": "Anthony Russo, Joe Russo",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Captain Fantastic",
+    "year": 2016,
+    "director": "Matt Ross",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Captain Marvel",
+    "year": 2019,
+    "director": "Ryan Fleck, Anna Boden",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "rating": 1,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Carol",
+    "year": 2015,
+    "director": "Todd Haynes",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Casino Royale",
+    "year": 2006,
+    "director": "Martin Campbell",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Adventure"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Catch Me If You Can",
+    "year": 2002,
+    "director": "Steven Spielberg",
+    "genres": [
+      "Crime",
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Chef",
+    "year": 2014,
+    "director": "Jon Favreau",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Children Who Chase Lost Voices",
+    "year": 2011,
+    "director": "Makoto Shinkai",
+    "genres": [
+      "Animation",
+      "Fantasy",
+      "Adventure"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Chinatown",
+    "year": 1974,
+    "director": "Roman Polanski",
+    "genres": [
+      "Crime",
+      "Mystery",
+      "Thriller",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Chronicle",
+    "year": 2012,
+    "director": "Josh Trank",
+    "genres": [
+      "Action",
+      "Fantasy",
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Click",
+    "year": 2006,
+    "director": "Frank Coraci",
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Clouds of Sils Maria",
+    "year": 2014,
+    "director": "Olivier Assayas",
+    "genres": [
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Cobweb",
+    "year": 2023,
+    "director": "Samuel Bodin",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Coco",
+    "year": 2017,
+    "director": "Lee Unkrich, Adrian Molina",
+    "genres": [
+      "Animation",
+      "Musical",
+      "Fantasy",
+      "Adventure"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Coherence",
+    "year": 2013,
+    "director": "James Ward Byrkit",
+    "genres": [
+      "Sci-Fi",
+      "Thriller",
+      "Crime"
+    ],
+    "rating": 5,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Con Air",
+    "year": 1997,
+    "director": "Simon West",
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Constantine",
+    "year": 2005,
+    "director": "Francis Lawrence",
+    "genres": [
+      "Action",
+      "Horror",
+      "Fantasy",
+      "Drama"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Cries and Whispers",
+    "year": 1972,
+    "director": "Ingmar Bergman",
+    "genres": [
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Crimson Peak",
+    "year": 2015,
+    "director": "Guillermo del Toro",
+    "genres": [
+      "Fantasy",
+      "Romance",
+      "Drama",
+      "Horror"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Dawn of the Planet of the Apes",
+    "year": 2014,
+    "director": "Matt Reeves",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Dead Poets Society",
+    "year": 1989,
+    "director": "Peter Weir",
+    "genres": [
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Deadpool",
+    "year": 2016,
+    "director": "Tim Miller",
+    "genres": [
+      "Action",
+      "Comedy"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Deadpool & Wolverine",
+    "year": 2024,
+    "director": "Shawn Levy",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Sci-Fi"
+    ],
+    "rating": 1,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Deadpool 2",
+    "year": 2018,
+    "director": "David Leitch",
+    "genres": [
+      "Action",
+      "Comedy"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Die Hard",
+    "year": 1988,
+    "director": "John McTiernan",
+    "genres": [
+      "Action",
+      "Crime"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "District 9",
+    "year": 2009,
+    "director": "Neill Blomkamp",
+    "genres": [
+      "Thriller",
+      "Sci-Fi",
+      "Action",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Disturbia",
+    "year": 2007,
+    "director": "D.J. Caruso",
+    "genres": [
+      "Crime",
+      "Horror",
+      "Thriller",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Doctor Strange",
+    "year": 2016,
+    "director": "Scott Derrickson",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Doctor Strange in the Multiverse of Madness",
+    "year": 2022,
+    "director": "Sam Raimi",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "rating": 1,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Dodgeball: A True Underdog Story",
+    "year": 2004,
+    "director": "Rawson Marshall Thurber",
+    "genres": [
+      "Comedy"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Don't Look Up",
+    "year": 2021,
+    "director": "Adam McKay",
+    "genres": [
+      "Comedy",
+      "Sci-Fi",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Don't Think Twice",
+    "year": 2016,
+    "director": "Mike Birbiglia",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Doubt",
+    "year": 2008,
+    "director": "John Patrick Shanley",
+    "genres": [
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Drive",
+    "year": 2011,
+    "director": "Nicolas Winding Refn",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Dumb Money",
+    "year": 2023,
+    "director": "Craig Gillespie",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Dune",
+    "year": 2021,
+    "director": "Denis Villeneuve",
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Dune (1984)",
+    "year": 1984,
+    "director": "David Lynch",
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Fantasy"
+    ],
+    "rating": 1,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Dune: Part Two",
+    "year": 2024,
+    "director": "Denis Villeneuve",
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Dungeons & Dragons: Honor Among Thieves",
+    "year": 2023,
+    "director": "Jonathan Goldstein, John Francis Daley",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Comedy",
+      "Action"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Edge of Tomorrow",
+    "year": 2014,
+    "director": "Doug Liman",
+    "genres": [
+      "Sci-Fi",
+      "Action"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Elemental",
+    "year": 2023,
+    "director": "Peter Sohn",
+    "genres": [
+      "Animation",
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Elf",
+    "year": 2003,
+    "director": "Jon Favreau",
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Family"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Empire of the Sun",
+    "year": 1987,
+    "director": "Steven Spielberg",
+    "genres": [
+      "War",
+      "Drama"
+    ],
+    "rating": 5,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Encanto",
+    "year": 2021,
+    "director": "Jared Bush, Byron Howard, Charise Castro Smith",
+    "genres": [
+      "Animation",
+      "Fantasy",
+      "Musical"
+    ],
+    "rating": 1,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Eternals",
+    "year": 2021,
+    "director": "Chloé Zhao",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure",
+      "Fantasy"
+    ],
+    "rating": 1,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Eternity",
+    "year": 2025,
+    "director": "David Freyne",
+    "genres": [
+      "Romance",
+      "Comedy",
+      "Fantasy",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Ex Machina",
+    "year": 2014,
+    "director": "Alex Garland",
+    "genres": [
+      "Sci-Fi",
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Extra Ordinary",
+    "year": 2019,
+    "director": "Mike Ahern, Enda Loughman",
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Fantasy"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Face/Off",
+    "year": 1997,
+    "director": "John Woo",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Crime"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Fantastic Mr. Fox",
+    "year": 2009,
+    "director": "Wes Anderson",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family",
+      "Adventure"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Fargo",
+    "year": 1996,
+    "director": "Joel Coen, Ethan Coen",
+    "genres": [
+      "Crime",
+      "Comedy",
+      "Thriller"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Fast Color",
+    "year": 2018,
+    "director": "Julia Hart",
+    "genres": [
+      "Thriller",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Fingernails",
+    "year": 2023,
+    "director": "Christos Nikou",
+    "genres": [
+      "Sci-Fi",
+      "Romance"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "First Love",
+    "year": 2019,
+    "director": "Takashi Miike",
+    "genres": [
+      "Action",
+      "Crime",
+      "Comedy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Following",
+    "year": 1998,
+    "director": "Christopher Nolan",
+    "genres": [
+      "Crime",
+      "Thriller",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Frances Ha",
+    "year": 2012,
+    "director": "Noah Baumbach",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Frank",
+    "year": 2014,
+    "director": "Lenny Abrahamson",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "From the World of John Wick: Ballerina",
+    "year": 2025,
+    "director": "Len Wiseman",
+    "genres": [
+      "Action",
+      "Crime"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Frozen",
+    "year": 2013,
+    "director": "Chris Buck, Jennifer Lee",
+    "genres": [
+      "Animation",
+      "Drama",
+      "Comedy",
+      "Musical"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Funny People",
+    "year": 2009,
+    "director": "Judd Apatow",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Game Night",
+    "year": 2018,
+    "director": "John Francis Daley, Jonathan Goldstein",
+    "genres": [
+      "Thriller",
+      "Comedy",
+      "Action",
+      "Mystery"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Gladiator",
+    "year": 2000,
+    "director": "Ridley Scott",
+    "genres": [
+      "Drama",
+      "Action",
+      "Adventure"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Glass Onion: A Knives Out Mystery",
+    "year": 2022,
+    "director": "Rian Johnson",
+    "genres": [
+      "Mystery",
+      "Comedy",
+      "Crime"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Godzilla Minus One",
+    "year": 2023,
+    "director": "Takashi Yamazaki",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Drama",
+      "War"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Gone Baby Gone",
+    "year": 2007,
+    "director": "Ben Affleck",
+    "genres": [
+      "Crime",
+      "Mystery",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Gone Girl",
+    "year": 2014,
+    "director": "David Fincher",
+    "genres": [
+      "Thriller",
+      "Crime",
+      "Drama",
+      "Mystery"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Good Luck, Have Fun, Don't Die",
+    "year": 2026,
+    "director": "Gore Verbinski",
+    "genres": [
+      "Sci-Fi",
+      "Comedy",
+      "Action"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Good Will Hunting",
+    "year": 1997,
+    "director": "Gus Van Sant",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Gran Torino",
+    "year": 2008,
+    "director": "Clint Eastwood",
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Grease",
+    "year": 1978,
+    "director": "Randal Kleiser",
+    "genres": [
+      "Musical",
+      "Comedy",
+      "Romance"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Green Room",
+    "year": 2015,
+    "director": "Jeremy Saulnier",
+    "genres": [
+      "Thriller",
+      "Drama",
+      "Horror"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Gretel and Hansel",
+    "year": 2020,
+    "director": "Oz Perkins",
+    "genres": [
+      "Fantasy",
+      "Horror",
+      "Thriller"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Guardians of the Galaxy",
+    "year": 2014,
+    "director": "James Gunn",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Comedy",
+      "Adventure"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Guardians of the Galaxy Vol. 2",
+    "year": 2017,
+    "director": "James Gunn",
+    "genres": [
+      "Adventure",
+      "Sci-Fi",
+      "Comedy"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Guardians of the Galaxy Vol. 3",
+    "year": 2023,
+    "director": "James Gunn",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Action",
+      "Comedy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Hail, Caesar!",
+    "year": 2016,
+    "director": "Ethan Coen, Joel Coen",
+    "genres": [
+      "Comedy",
+      "Mystery",
+      "Musical"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Hannibal",
+    "year": 2001,
+    "director": "Ridley Scott",
+    "genres": [
+      "Horror",
+      "Thriller",
+      "Drama",
+      "Crime"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Harold and Maude",
+    "year": 1971,
+    "director": "Hal Ashby",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Harry Potter and the Chamber of Secrets",
+    "year": 2002,
+    "director": "Chris Columbus",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Family"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Harry Potter and the Deathly Hallows – Part 1",
+    "year": 2010,
+    "director": "David Yates",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Family"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Harry Potter and the Deathly Hallows – Part 2",
+    "year": 2011,
+    "director": "David Yates",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Family"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Harry Potter and the Goblet of Fire",
+    "year": 2005,
+    "director": "Mike Newell",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Family"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Harry Potter and the Half-Blood Prince",
+    "year": 2009,
+    "director": "David Yates",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Family"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Harry Potter and the Order of the Phoenix",
+    "year": 2007,
+    "director": "David Yates",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Family"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "year": 2004,
+    "director": "Alfonso Cuarón",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Family"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "year": 2001,
+    "director": "Chris Columbus",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Family"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Hellboy",
+    "year": 2004,
+    "director": "Guillermo del Toro",
+    "genres": [
+      "Action",
+      "Fantasy",
+      "Horror"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Hellboy II: The Golden Army",
+    "year": 2008,
+    "director": "Guillermo del Toro",
+    "genres": [
+      "Action",
+      "Fantasy",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Her",
+    "year": 2013,
+    "director": "Spike Jonze",
+    "genres": [
+      "Romance",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Holes",
+    "year": 2003,
+    "director": "Andrew Davis",
+    "genres": [
+      "Drama",
+      "Comedy",
+      "Mystery",
+      "Western"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Home Alone",
+    "year": 1990,
+    "director": "Chris Columbus",
+    "genres": [
+      "Comedy",
+      "Family",
+      "Adventure"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Home Alone 2: Lost in New York",
+    "year": 1992,
+    "director": "Chris Columbus",
+    "genres": [
+      "Comedy",
+      "Family",
+      "Mystery"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Hoppers",
+    "year": 2026,
+    "director": "Daniel Chong",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Sci-Fi",
+      "Action"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Hot Fuzz",
+    "year": 2007,
+    "director": "Edgar Wright",
+    "genres": [
+      "Crime",
+      "Action",
+      "Comedy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Hotel Rwanda",
+    "year": 2004,
+    "director": "Terry George",
+    "genres": [
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Hulk",
+    "year": 2003,
+    "director": "Ang Lee",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Drama"
+    ],
+    "rating": 1,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Hunt for the Wilderpeople",
+    "year": 2016,
+    "director": "Taika Waititi",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "I Kill Giants",
+    "year": 2017,
+    "director": "Anders Walter",
+    "genres": [
+      "Fantasy",
+      "Thriller"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "I Origins",
+    "year": 2014,
+    "director": "Mike Cahill",
+    "genres": [
+      "Sci-Fi",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "I, Robot",
+    "year": 2004,
+    "director": "Alex Proyas",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Crime"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "In the Mood for Love",
+    "year": 2000,
+    "director": "Wong Kar-wai",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "rating": 5,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Inception",
+    "year": 2010,
+    "director": "Christopher Nolan",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Thriller"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Incredibles 2",
+    "year": 2018,
+    "director": "Brad Bird",
+    "genres": [
+      "Animation",
+      "Action",
+      "Comedy",
+      "Adventure"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Ingrid Goes West",
+    "year": 2017,
+    "director": "Matt Spicer",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Inside Llewyn Davis",
+    "year": 2013,
+    "director": "Ethan Coen, Joel Coen",
+    "genres": [
+      "Drama",
+      "Comedy",
+      "Musical"
+    ],
+    "rating": 5,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Inside Man",
+    "year": 2006,
+    "director": "Spike Lee",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Into the Wild",
+    "year": 2007,
+    "director": "Sean Penn",
+    "genres": [
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Iron Man",
+    "year": 2008,
+    "director": "Jon Favreau",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Iron Man 2",
+    "year": 2010,
+    "director": "Jon Favreau",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Iron Man 3",
+    "year": 2013,
+    "director": "Shane Black",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Isle of Dogs",
+    "year": 2018,
+    "director": "Wes Anderson",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Adventure"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "It Comes at Night",
+    "year": 2017,
+    "director": "Trey Edward Shults",
+    "genres": [
+      "Thriller",
+      "Sci-Fi"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "It Follows",
+    "year": 2014,
+    "director": "David Robert Mitchell",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "John Wick",
+    "year": 2014,
+    "director": "Chad Stahelski",
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "John Wick: Chapter 2",
+    "year": 2017,
+    "director": "Chad Stahelski",
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "John Wick: Chapter 3 - Parabellum",
+    "year": 2019,
+    "director": "Chad Stahelski",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Crime"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "John Wick: Chapter 4",
+    "year": 2023,
+    "director": "Chad Stahelski",
+    "genres": [
+      "Action",
+      "Crime",
+      "Adventure"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Jojo Rabbit",
+    "year": 2019,
+    "director": "Taika Waititi",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "War"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Juno",
+    "year": 2007,
+    "director": "Jason Reitman",
+    "genres": [
+      "Drama",
+      "Comedy",
+      "Romance"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Jurassic Park",
+    "year": 1993,
+    "director": "Steven Spielberg",
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Action",
+      "Thriller"
+    ],
+    "rating": 5,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Kingdom of the Planet of the Apes",
+    "year": 2024,
+    "director": "Wes Ball",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Adventure"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Knives Out",
+    "year": 2019,
+    "director": "Rian Johnson",
+    "genres": [
+      "Mystery",
+      "Comedy",
+      "Crime"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "KPop Demon Hunters",
+    "year": 2025,
+    "director": "Chris Appelhans, Maggie Kang",
+    "genres": [
+      "Animation",
+      "Action",
+      "Comedy",
+      "Fantasy"
+    ],
+    "rating": 1,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Kubo and the Two Strings",
+    "year": 2016,
+    "director": "Travis Knight",
+    "genres": [
+      "Animation",
+      "Fantasy",
+      "Adventure",
+      "Family"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Kumiko, the Treasure Hunter",
+    "year": 2014,
+    "director": "David Zellner",
+    "genres": [
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "L.A. Confidential",
+    "year": 1997,
+    "director": "Curtis Hanson",
+    "genres": [
+      "Crime",
+      "Mystery",
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Lady Bird",
+    "year": 2017,
+    "director": "Greta Gerwig",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Last Night in Soho",
+    "year": 2021,
+    "director": "Edgar Wright",
+    "genres": [
+      "Horror",
+      "Thriller",
+      "Mystery"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Leave No Trace",
+    "year": 2018,
+    "director": "Debra Granik",
+    "genres": [
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Limitless",
+    "year": 2011,
+    "director": "Neil Burger",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Sci-Fi",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Lisa Frankenstein",
+    "year": 2024,
+    "director": "Zelda Williams",
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Romance"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Little Miss Sunshine",
+    "year": 2006,
+    "director": "Valerie Faris, Jonathan Dayton",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Little Monsters",
+    "year": 2019,
+    "director": "Abe Forsythe",
+    "genres": [
+      "Comedy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Logan",
+    "year": 2017,
+    "director": "James Mangold",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Longlegs",
+    "year": 2024,
+    "director": "Oz Perkins",
+    "genres": [
+      "Horror",
+      "Thriller",
+      "Crime"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Looper",
+    "year": 2012,
+    "director": "Rian Johnson",
+    "genres": [
+      "Sci-Fi",
+      "Thriller",
+      "Crime",
+      "Action"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Love and Monsters",
+    "year": 2020,
+    "director": "Michael Matthews",
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Comedy"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Mad Max: Fury Road",
+    "year": 2015,
+    "director": "George Miller",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Man from Reno",
+    "year": 2014,
+    "director": "Dave Boyle",
+    "genres": [
+      "Crime",
+      "Mystery"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Me and Earl and the Dying Girl",
+    "year": 2015,
+    "director": "Alfonso Gomez-Rejon",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Meadowland",
+    "year": 2015,
+    "director": "Reed Morano",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Mean Girls",
+    "year": 2004,
+    "director": "Mark Waters",
+    "genres": [
+      "Comedy"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Midnight in Paris",
+    "year": 2011,
+    "director": "Woody Allen",
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Midnight Special",
+    "year": 2016,
+    "director": "Jeff Nichols",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Sci-Fi",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Million Dollar Baby",
+    "year": 2004,
+    "director": "Clint Eastwood",
+    "genres": [
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Minority Report",
+    "year": 2002,
+    "director": "Steven Spielberg",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Thriller"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Mirai",
+    "year": 2018,
+    "director": "Mamoru Hosoda",
+    "genres": [
+      "Animation",
+      "Fantasy",
+      "Family",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Missing",
+    "year": 2023,
+    "director": "Will Merrick, Nicholas D. Johnson",
+    "genres": [
+      "Thriller",
+      "Mystery"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Mistress America",
+    "year": 2015,
+    "director": "Noah Baumbach",
+    "genres": [
+      "Comedy"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Moana",
+    "year": 2016,
+    "director": "John Musker, Ron Clements, Chris Williams, Don Hall",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Musical",
+      "Adventure"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Monsters University",
+    "year": 2013,
+    "director": "Dan Scanlon",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Fantasy",
+      "Family"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Monsters, Inc.",
+    "year": 2001,
+    "director": "Pete Docter, Lee Unkrich, David Silverman",
+    "genres": [
+      "Animation",
+      "Family",
+      "Fantasy",
+      "Comedy"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Moon",
+    "year": 2009,
+    "director": "Duncan Jones",
+    "genres": [
+      "Sci-Fi",
+      "Drama",
+      "Adventure"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Moonlight",
+    "year": 2016,
+    "director": "Barry Jenkins",
+    "genres": [
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Moonrise Kingdom",
+    "year": 2012,
+    "director": "Wes Anderson",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Mother",
+    "year": 2009,
+    "director": "Bong Joon-ho",
+    "genres": [
+      "Drama",
+      "Mystery"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Mr. Brooks",
+    "year": 2007,
+    "director": "Bruce A. Evans",
+    "genres": [
+      "Drama"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Mulholland Drive",
+    "year": 2001,
+    "director": "David Lynch",
+    "genres": [
+      "Thriller",
+      "Drama",
+      "Mystery"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Music and Lyrics",
+    "year": 2007,
+    "director": "Marc Lawrence",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Musical"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "My Neighbor Totoro",
+    "year": 1988,
+    "director": "Hayao Miyazaki",
+    "genres": [
+      "Animation",
+      "Fantasy",
+      "Family"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Nacho Libre",
+    "year": 2006,
+    "director": "Jared Hess",
+    "genres": [
+      "Comedy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Napoleon Dynamite",
+    "year": 2004,
+    "director": "Jared Hess",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Nausicaä of the Valley of the Wind",
+    "year": 1984,
+    "director": "Hayao Miyazaki",
+    "genres": [
+      "Animation",
+      "Sci-Fi",
+      "Adventure",
+      "Fantasy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Never Let Me Go",
+    "year": 2010,
+    "director": "Mark Romanek",
+    "genres": [
+      "Sci-Fi",
+      "Drama",
+      "Romance"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Next",
+    "year": 2007,
+    "director": "Lee Tamahori",
+    "genres": [
+      "Thriller",
+      "Sci-Fi",
+      "Action"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Nightcrawler",
+    "year": 2014,
+    "director": "Dan Gilroy",
+    "genres": [
+      "Crime",
+      "Thriller",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Nimona",
+    "year": 2023,
+    "director": "Nick Bruno, Troy Quane",
+    "genres": [
+      "Animation",
+      "Action",
+      "Comedy",
+      "Fantasy"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "No Country for Old Men",
+    "year": 2007,
+    "director": "Ethan Coen, Joel Coen",
+    "genres": [
+      "Crime",
+      "Thriller",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "No Time to Die",
+    "year": 2021,
+    "director": "Cary Joji Fukunaga",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Adventure"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Nocturnal Animals",
+    "year": 2016,
+    "director": "Tom Ford",
+    "genres": [
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "North by Northwest",
+    "year": 1959,
+    "director": "Alfred Hitchcock",
+    "genres": [
+      "Crime",
+      "Thriller",
+      "Mystery",
+      "Action"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Nosferatu",
+    "year": 2024,
+    "director": "Robert Eggers",
+    "genres": [
+      "Horror",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "O Brother, Where Art Thou?",
+    "year": 2000,
+    "director": "Joel Coen, Ethan Coen",
+    "genres": [
+      "Comedy",
+      "Adventure",
+      "Crime"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Obsession",
+    "year": 2025,
+    "director": "Curry Barker",
+    "genres": [
+      "Horror"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Oldboy",
+    "year": 2003,
+    "director": "Park Chan-wook",
+    "genres": [
+      "Thriller",
+      "Crime",
+      "Drama"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Once",
+    "year": 2007,
+    "director": "John Carney",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Musical"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Once Upon a Time in Mexico",
+    "year": 2003,
+    "director": "Robert Rodriguez",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Crime",
+      "Western"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Only Lovers Left Alive",
+    "year": 2013,
+    "director": "Jim Jarmusch",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Fantasy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Pacific Rim",
+    "year": 2013,
+    "director": "Guillermo del Toro",
+    "genres": [
+      "Action",
+      "Fantasy",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Palm Springs",
+    "year": 2020,
+    "director": "Max Barbakow",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Sci-Fi"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Pan's Labyrinth",
+    "year": 2006,
+    "director": "Guillermo del Toro",
+    "genres": [
+      "Fantasy",
+      "Drama",
+      "War"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Past Lives",
+    "year": 2023,
+    "director": "Celine Song",
+    "genres": [
+      "Drama"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Persona",
+    "year": 1966,
+    "director": "Ingmar Bergman",
+    "genres": [
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Personal Shopper",
+    "year": 2016,
+    "director": "Olivier Assayas",
+    "genres": [
+      "Thriller",
+      "Drama",
+      "Mystery",
+      "Horror"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Phoenix",
+    "year": 2014,
+    "director": "Christian Petzold",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Picture Day",
+    "year": 2012,
+    "director": "Kate Melville",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Pirates of the Caribbean: At World's End",
+    "year": 2007,
+    "director": "Gore Verbinski",
+    "genres": [
+      "Fantasy",
+      "Drama",
+      "Comedy",
+      "Action"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Pirates of the Caribbean: Dead Man's Chest",
+    "year": 2006,
+    "director": "Gore Verbinski",
+    "genres": [
+      "Fantasy",
+      "Comedy",
+      "Action",
+      "Adventure"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Pirates of the Caribbean: On Stranger Tides",
+    "year": 2011,
+    "director": "Rob Marshall",
+    "genres": [
+      "Fantasy",
+      "Comedy",
+      "Action",
+      "Adventure"
+    ],
+    "rating": 1,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+    "year": 2003,
+    "director": "Gore Verbinski",
+    "genres": [
+      "Fantasy",
+      "Comedy",
+      "Action",
+      "Adventure"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Pocahontas",
+    "year": 1995,
+    "director": "Mike Gabriel, Eric Goldberg",
+    "genres": [
+      "Animation",
+      "Romance",
+      "Drama",
+      "Musical"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Ponyo",
+    "year": 2008,
+    "director": "Hayao Miyazaki",
+    "genres": [
+      "Animation",
+      "Fantasy",
+      "Family"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Predator",
+    "year": 1987,
+    "director": "John McTiernan",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Horror",
+      "Thriller"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Premium Rush",
+    "year": 2012,
+    "director": "David Koepp",
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Princess Mononoke",
+    "year": 1997,
+    "director": "Hayao Miyazaki",
+    "genres": [
+      "Animation",
+      "Fantasy",
+      "Adventure"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Prisoners",
+    "year": 2013,
+    "director": "Denis Villeneuve",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "rating": 5,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Project Hail Mary",
+    "year": 2026,
+    "director": "Phil Lord, Christopher Miller",
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Promising Young Woman",
+    "year": 2020,
+    "director": "Emerald Fennell",
+    "genres": [
+      "Drama",
+      "Comedy",
+      "Thriller",
+      "Crime"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Pulp Fiction",
+    "year": 1994,
+    "director": "Quentin Tarantino",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Quantum of Solace",
+    "year": 2008,
+    "director": "Marc Forster",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Adventure"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Raising Arizona",
+    "year": 1987,
+    "director": "Joel Coen, Ethan Coen",
+    "genres": [
+      "Comedy",
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Ratatouille",
+    "year": 2007,
+    "director": "Brad Bird, Jan Pinkava",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Raw",
+    "year": 2016,
+    "director": "Julia Ducournau",
+    "genres": [
+      "Horror",
+      "Drama"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Ready or Not",
+    "year": 2019,
+    "director": "Matt Bettinelli-Olpin, Tyler Gillett",
+    "genres": [
+      "Thriller",
+      "Comedy",
+      "Horror"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Red Dragon",
+    "year": 2002,
+    "director": "Brett Ratner",
+    "genres": [
+      "Thriller",
+      "Horror",
+      "Crime",
+      "Drama"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Requiem for a Dream",
+    "year": 2000,
+    "director": "Darren Aronofsky",
+    "genres": [
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Rise of the Planet of the Apes",
+    "year": 2011,
+    "director": "Rupert Wyatt",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "RoboCop",
+    "year": 1987,
+    "director": "Paul Verhoeven",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Robot & Frank",
+    "year": 2012,
+    "director": "Jake Schreier",
+    "genres": [
+      "Sci-Fi",
+      "Comedy",
+      "Crime",
+      "Drama"
+    ],
+    "rating": 3,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Rocky",
+    "year": 1976,
+    "director": "John G. Avildsen",
+    "genres": [
+      "Drama",
+      "Action"
+    ],
+    "rating": 2,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Rogue One",
+    "year": 2016,
+    "director": "Gareth Edwards",
+    "genres": [
+      "Fantasy",
+      "Action",
+      "Sci-Fi",
+      "War"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Room",
+    "year": 2015,
+    "director": "Lenny Abrahamson",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Ruby Sparks",
+    "year": 2012,
+    "director": "Jonathan Dayton, Valerie Faris",
+    "genres": [
+      "Comedy",
+      "Fantasy"
+    ],
+    "rating": 4,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Rush Hour",
+    "year": 1998,
+    "director": "Brett Ratner",
+    "genres": [
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Rush Hour 2",
+    "year": 2001,
+    "director": "Brett Ratner",
+    "genres": [
+      "Action",
+      "Comedy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Rush Hour 3",
+    "year": 2007,
+    "director": "Brett Ratner",
+    "genres": [
+      "Action",
+      "Comedy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Rushmore",
+    "year": 1998,
+    "director": "Wes Anderson",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Safety Not Guaranteed",
+    "year": 2012,
+    "director": "Colin Trevorrow",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Saint Maud",
+    "year": 2019,
+    "director": "Rose Glass",
+    "genres": [
+      "Horror"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Saving Private Ryan",
+    "year": 1998,
+    "director": "Steven Spielberg",
+    "genres": [
+      "War",
+      "Drama",
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "School of Rock",
+    "year": 2003,
+    "director": "Richard Linklater",
+    "genres": [
+      "Comedy",
+      "Musical",
+      "Family"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Scott Pilgrim vs. the World",
+    "year": 2010,
+    "director": "Edgar Wright",
+    "genres": [
+      "Comedy",
+      "Action",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Scream",
+    "year": 1996,
+    "director": "Wes Craven",
+    "genres": [
+      "Horror",
+      "Mystery"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Searching",
+    "year": 2018,
+    "director": "Aneesh Chaganty",
+    "genres": [
+      "Drama",
+      "Thriller",
+      "Mystery"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Secretary",
+    "year": 2002,
+    "director": "Steven Shainberg",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Comedy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Shang-Chi and the Legend of the Ten Rings",
+    "year": 2021,
+    "director": "Destin Daniel Cretton",
+    "genres": [
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Shaun of the Dead",
+    "year": 2004,
+    "director": "Edgar Wright",
+    "genres": [
+      "Comedy",
+      "Horror"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Shrek",
+    "year": 2001,
+    "director": "Andrew Adamson, Vicky Jenson",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Shrek 2",
+    "year": 2004,
+    "director": "Andrew Adamson, Kelly Asbury, Conrad Vernon",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Signs",
+    "year": 2002,
+    "director": "M. Night Shyamalan",
+    "genres": [
+      "Sci-Fi",
+      "Thriller",
+      "Fantasy",
+      "Horror"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Sinners",
+    "year": 2025,
+    "director": "Ryan Coogler",
+    "genres": [
+      "Horror",
+      "Drama",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Skyfall",
+    "year": 2012,
+    "director": "Sam Mendes",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Sleeping Beauty",
+    "year": 1959,
+    "director": "Clyde Geronimi, Les Clark, Eric Larson, Wolfgang Reitherman",
+    "genres": [
+      "Animation",
+      "Fantasy",
+      "Musical",
+      "Family"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Slow West",
+    "year": 2015,
+    "director": "John Maclean",
+    "genres": [
+      "Western",
+      "Drama",
+      "Romance"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Slumdog Millionaire",
+    "year": 2008,
+    "director": "Danny Boyle, Loveleen Tandan",
+    "genres": [
+      "Romance",
+      "Drama",
+      "Crime"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Small Soldiers",
+    "year": 1998,
+    "director": "Joe Dante",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Comedy",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Snow White and the Seven Dwarfs",
+    "year": 1937,
+    "director": "David Hand, William Cottrell, Wilfred Jackson, Larry Morey, Percival C. Pearce, Ben Sharpsteen",
+    "genres": [
+      "Animation",
+      "Romance",
+      "Fantasy",
+      "Musical"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Snowpiercer",
+    "year": 2013,
+    "director": "Bong Joon-ho",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Thriller"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Solo: A Star Wars Story",
+    "year": 2018,
+    "director": "Ron Howard",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Sonic the Hedgehog",
+    "year": 2020,
+    "director": "Jeff Fowler",
+    "genres": [
+      "Comedy",
+      "Family",
+      "Action",
+      "Sci-Fi"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Sound of My Voice",
+    "year": 2011,
+    "director": "Zal Batmanglij",
+    "genres": [
+      "Thriller"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Spectre",
+    "year": 2015,
+    "director": "Sam Mendes",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Speed",
+    "year": 1994,
+    "director": "Jan de Bont",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Crime"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Spider-Man",
+    "year": 2002,
+    "director": "Sam Raimi",
+    "genres": [
+      "Sci-Fi",
+      "Drama",
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Spider-Man 2",
+    "year": 2004,
+    "director": "Sam Raimi",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Sci-Fi",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Spider-Man 3",
+    "year": 2007,
+    "director": "Sam Raimi",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Sci-Fi",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Spider-Man: Far From Home",
+    "year": 2019,
+    "director": "Jon Watts",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Spider-Man: Homecoming",
+    "year": 2017,
+    "director": "Jon Watts",
+    "genres": [
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Spider-Man: No Way Home",
+    "year": 2021,
+    "director": "Jon Watts",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Spirited Away",
+    "year": 2001,
+    "director": "Hayao Miyazaki",
+    "genres": [
+      "Animation",
+      "Fantasy",
+      "Adventure",
+      "Family"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Star Wars: Episode I – The Phantom Menace",
+    "year": 1999,
+    "director": "George Lucas",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Star Wars: Episode II – Attack of the Clones",
+    "year": 2002,
+    "director": "George Lucas",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Star Wars: Episode III – Revenge of the Sith",
+    "year": 2005,
+    "director": "George Lucas",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Star Wars: Episode IV – A New Hope",
+    "year": 1977,
+    "director": "George Lucas",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Star Wars: Episode IX – The Rise of Skywalker",
+    "year": 2019,
+    "director": "J. J. Abrams",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Star Wars: Episode V – The Empire Strikes Back",
+    "year": 1980,
+    "director": "Irvin Kershner",
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Action",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Star Wars: Episode VI – Return of the Jedi",
+    "year": 1983,
+    "director": "Richard Marquand",
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Fantasy",
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Star Wars: Episode VII – The Force Awakens",
+    "year": 2015,
+    "director": "J. J. Abrams",
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Action",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Star Wars: Episode VIII – The Last Jedi",
+    "year": 2017,
+    "director": "Rian Johnson",
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Action",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Steve Jobs",
+    "year": 2015,
+    "director": "Danny Boyle",
+    "genres": [
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Summer Wars",
+    "year": 2009,
+    "director": "Mamoru Hosoda",
+    "genres": [
+      "Animation",
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Super (2010 American film)",
+    "year": 2010,
+    "director": "James Gunn",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Super 8",
+    "year": 2011,
+    "director": "J. J. Abrams",
+    "genres": [
+      "Thriller",
+      "Horror",
+      "Sci-Fi",
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Swiss Army Man",
+    "year": 2016,
+    "director": "Daniel Kwan, Daniel Scheinert",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Tag",
+    "year": 2018,
+    "director": "Jeff Tomsic",
+    "genres": [
+      "Comedy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Take Shelter",
+    "year": 2011,
+    "director": "Jeff Nichols",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Talk to Me",
+    "year": 2022,
+    "director": "Danny Philippou, Michael Philippou",
+    "genres": [
+      "Horror"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Tangled",
+    "year": 2010,
+    "director": "Byron Howard, Nathan Greno",
+    "genres": [
+      "Animation",
+      "Musical",
+      "Fantasy",
+      "Comedy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Tarzan",
+    "year": 1999,
+    "director": "Chris Buck, Kevin Lima",
+    "genres": [
+      "Animation",
+      "Drama",
+      "Comedy",
+      "Musical"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Taxi Driver",
+    "year": 1976,
+    "director": "Martin Scorsese",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Action",
+      "Thriller"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Terminator 2: Judgment Day",
+    "year": 1991,
+    "director": "James Cameron",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Sci-Fi",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Amazing Spider-Man",
+    "year": 2012,
+    "director": "Marc Webb",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Amazing Spider-Man 2",
+    "year": 2014,
+    "director": "Marc Webb",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Avengers",
+    "year": 2012,
+    "director": "Joss Whedon",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Big Lebowski",
+    "year": 1998,
+    "director": "Joel Coen, Ethan Coen",
+    "genres": [
+      "Comedy",
+      "Crime"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Big Sick",
+    "year": 2017,
+    "director": "Michael Showalter",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Cabin in the Woods",
+    "year": 2011,
+    "director": "Drew Goddard",
+    "genres": [
+      "Sci-Fi",
+      "Drama",
+      "Comedy",
+      "Horror"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Creator",
+    "year": 2023,
+    "director": "Gareth Edwards",
+    "genres": [
+      "Sci-Fi",
+      "Drama",
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Curious Case of Benjamin Button",
+    "year": 2008,
+    "director": "David Fincher",
+    "genres": [
+      "Romance",
+      "Fantasy",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Dark Knight",
+    "year": 2008,
+    "director": "Christopher Nolan",
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Dark Knight Rises",
+    "year": 2012,
+    "director": "Christopher Nolan",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The East",
+    "year": 2013,
+    "director": "Zal Batmanglij",
+    "genres": [
+      "Thriller",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Edge of Seventeen",
+    "year": 2016,
+    "director": "Kelly Fremon Craig",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Fall",
+    "year": 2006,
+    "director": "Tarsem Singh",
+    "genres": [
+      "Fantasy",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Fantastic Four: First Steps",
+    "year": 2025,
+    "director": "Matt Shakman",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Florida Project",
+    "year": 2017,
+    "director": "Sean Baker",
+    "genres": [
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Founder",
+    "year": 2016,
+    "director": "John Lee Hancock",
+    "genres": [
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Game",
+    "year": 1997,
+    "director": "David Fincher",
+    "genres": [
+      "Thriller",
+      "Mystery"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Gift",
+    "year": 2015,
+    "director": "Joel Edgerton",
+    "genres": [
+      "Thriller",
+      "Drama",
+      "Mystery"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Girl Who Leapt Through Time",
+    "year": 2006,
+    "director": "Mamoru Hosoda",
+    "genres": [
+      "Animation",
+      "Sci-Fi",
+      "Romance",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Goonies",
+    "year": 1985,
+    "director": "Richard Donner",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Family",
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Grand Budapest Hotel",
+    "year": 2014,
+    "director": "Wes Anderson",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Great Mouse Detective",
+    "year": 1986,
+    "director": "Ron Clements, Burny Mattinson, John Musker, David Michener",
+    "genres": [
+      "Animation",
+      "Musical",
+      "Mystery",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Greatest Showman",
+    "year": 2017,
+    "director": "Michael Gracey",
+    "genres": [
+      "Musical",
+      "Drama",
+      "Romance"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Green Knight",
+    "year": 2021,
+    "director": "David Lowery",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Half of It",
+    "year": 2020,
+    "director": "Alice Wu",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Hobbit: An Unexpected Journey",
+    "year": 2012,
+    "director": "Peter Jackson",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Hobbit: The Battle of the Five Armies",
+    "year": 2014,
+    "director": "Peter Jackson",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Hobbit: The Desolation of Smaug",
+    "year": 2013,
+    "director": "Peter Jackson",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Holdovers",
+    "year": 2023,
+    "director": "Alexander Payne",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Hudsucker Proxy",
+    "year": 1994,
+    "director": "Joel Coen, Ethan Coen",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Hunger Games",
+    "year": 2012,
+    "director": "Gary Ross",
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Thriller",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Hunger Games: Catching Fire",
+    "year": 2013,
+    "director": "Francis Lawrence",
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Drama",
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Hunger Games: The Ballad of Songbirds & Snakes",
+    "year": 2023,
+    "director": "Francis Lawrence",
+    "genres": [
+      "Sci-Fi",
+      "Drama",
+      "Adventure",
+      "Thriller"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Illusionist",
+    "year": 2006,
+    "director": "Neil Burger",
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Thriller",
+      "Romance"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Incredible Hulk",
+    "year": 2008,
+    "director": "Louis Leterrier",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Incredibles",
+    "year": 2004,
+    "director": "Brad Bird",
+    "genres": [
+      "Animation",
+      "Action",
+      "Family",
+      "Comedy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Insider",
+    "year": 1999,
+    "director": "Michael Mann",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Iron Giant",
+    "year": 1999,
+    "director": "Brad Bird",
+    "genres": [
+      "Animation",
+      "Sci-Fi",
+      "Family",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Jungle Book",
+    "year": 1967,
+    "director": "Wolfgang Reitherman",
+    "genres": [
+      "Animation",
+      "Musical",
+      "Comedy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Killing of a Sacred Deer",
+    "year": 2017,
+    "director": "Yorgos Lanthimos",
+    "genres": [
+      "Drama",
+      "Thriller",
+      "Horror"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Last Samurai",
+    "year": 2003,
+    "director": "Edward Zwick",
+    "genres": [
+      "War",
+      "Drama",
+      "Action",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Lego Movie",
+    "year": 2014,
+    "director": "Christopher Miller, Phil Lord",
+    "genres": [
+      "Comedy",
+      "Sci-Fi",
+      "Action",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Life Aquatic with Steve Zissou",
+    "year": 2004,
+    "director": "Wes Anderson",
+    "genres": [
+      "Comedy",
+      "Adventure",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Lighthouse",
+    "year": 2019,
+    "director": "Robert Eggers",
+    "genres": [
+      "Horror",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Lion King",
+    "year": 1994,
+    "director": "Roger Allers, Rob Minkoff",
+    "genres": [
+      "Animation",
+      "Musical",
+      "Drama",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Lion King II: Simba's Pride",
+    "year": 1998,
+    "director": "Darrell Rooney",
+    "genres": [
+      "Animation",
+      "Drama",
+      "Romance",
+      "Musical"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Little Mermaid",
+    "year": 1989,
+    "director": "John Musker, Ron Clements",
+    "genres": [
+      "Animation",
+      "Romance",
+      "Musical",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Lobster",
+    "year": 2015,
+    "director": "Yorgos Lanthimos",
+    "genres": [
+      "Sci-Fi",
+      "Comedy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "year": 2001,
+    "director": "Peter Jackson",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Lord of the Rings: The Return of the King",
+    "year": 2003,
+    "director": "Peter Jackson",
+    "genres": [
+      "Fantasy",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Lord of the Rings: The Two Towers",
+    "year": 2002,
+    "director": "Peter Jackson",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Martian",
+    "year": 2015,
+    "director": "Ridley Scott",
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Marvels",
+    "year": 2023,
+    "director": "Nia DaCosta",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Matrix",
+    "year": 1999,
+    "director": "Lana Wachowski, Lilly Wachowski",
+    "genres": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Matrix Reloaded",
+    "year": 2003,
+    "director": "Lana Wachowski, Lilly Wachowski",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Sci-Fi"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Matrix Revolutions",
+    "year": 2003,
+    "director": "Lana Wachowski, Lilly Wachowski",
+    "genres": [
+      "Sci-Fi",
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Men Who Stare at Goats",
+    "year": 2009,
+    "director": "Grant Heslov",
+    "genres": [
+      "Comedy",
+      "War"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Mule",
+    "year": 2018,
+    "director": "Clint Eastwood",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Mummy",
+    "year": 1999,
+    "director": "Stephen Sommers",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Mummy Returns",
+    "year": 2001,
+    "director": "Stephen Sommers",
+    "genres": [
+      "Fantasy",
+      "Action",
+      "Horror"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Neon Demon",
+    "year": 2016,
+    "director": "Nicolas Winding Refn",
+    "genres": [
+      "Horror",
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Nice Guys",
+    "year": 2016,
+    "director": "Shane Black",
+    "genres": [
+      "Mystery",
+      "Comedy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Northman",
+    "year": 2022,
+    "director": "Robert Eggers",
+    "genres": [
+      "Action",
+      "Drama",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Notebook",
+    "year": 2004,
+    "director": "Nick Cassavetes",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Number 23",
+    "year": 2007,
+    "director": "Joel Schumacher",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Orphanage",
+    "year": 2007,
+    "director": "J. A. Bayona",
+    "genres": [
+      "Horror",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Peanut Butter Falcon",
+    "year": 2019,
+    "director": "Tyler Nilson, Michael Schwartz",
+    "genres": [
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Prestige",
+    "year": 2006,
+    "director": "Christopher Nolan",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Fantasy",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Princess and the Frog",
+    "year": 2009,
+    "director": "Ron Clements, John Musker",
+    "genres": [
+      "Animation",
+      "Musical",
+      "Drama",
+      "Comedy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Road",
+    "year": 2009,
+    "director": "John Hillcoat",
+    "genres": [
+      "Drama",
+      "Sci-Fi"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Royal Tenenbaums",
+    "year": 2001,
+    "director": "Wes Anderson",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Secret Life of Walter Mitty",
+    "year": 2013,
+    "director": "Ben Stiller",
+    "genres": [
+      "Fantasy",
+      "Drama",
+      "Comedy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Seventh Seal",
+    "year": 1957,
+    "director": "Ingmar Bergman",
+    "genres": [
+      "Fantasy",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Shape of Water",
+    "year": 2017,
+    "director": "Guillermo del Toro",
+    "genres": [
+      "Fantasy",
+      "Romance",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Silence of the Lambs",
+    "year": 1991,
+    "director": "Jonathan Demme",
+    "genres": [
+      "Thriller",
+      "Horror",
+      "Crime",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Social Network",
+    "year": 2010,
+    "director": "David Fincher",
+    "genres": [
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Village",
+    "year": 2004,
+    "director": "M. Night Shyamalan",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Thriller",
+      "Mystery"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Witch",
+    "year": 2015,
+    "director": "Robert Eggers",
+    "genres": [
+      "Horror",
+      "Mystery"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The Wolverine",
+    "year": 2013,
+    "director": "James Mangold",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "The World's End",
+    "year": 2013,
+    "director": "Edgar Wright",
+    "genres": [
+      "Sci-Fi",
+      "Comedy",
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Thelma",
+    "year": 2017,
+    "director": "Joachim Trier",
+    "genres": [
+      "Drama",
+      "Thriller",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Thor",
+    "year": 2011,
+    "director": "Kenneth Branagh",
+    "genres": [
+      "Action",
+      "Fantasy",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Thor: Love and Thunder",
+    "year": 2022,
+    "director": "Taika Waititi",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Thor: Ragnarok",
+    "year": 2017,
+    "director": "Taika Waititi",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Fantasy",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Thor: The Dark World",
+    "year": 2013,
+    "director": "Alan Taylor",
+    "genres": [
+      "Action",
+      "Fantasy",
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Three Billboards Outside Ebbing, Missouri",
+    "year": 2017,
+    "director": "Martin McDonagh",
+    "genres": [
+      "Drama",
+      "Comedy",
+      "Mystery",
+      "Crime"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Thunderbolts*",
+    "year": 2025,
+    "director": "Jake Schreier",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Titanic",
+    "year": 1997,
+    "director": "James Cameron",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Toy Story",
+    "year": 1995,
+    "director": "John Lasseter",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Toy Story 2",
+    "year": 1999,
+    "director": "John Lasseter, Lee Unkrich, Ash Brannon",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Toy Story 3",
+    "year": 2010,
+    "director": "Lee Unkrich",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Treasure Planet",
+    "year": 2002,
+    "director": "John Musker, Ron Clements",
+    "genres": [
+      "Sci-Fi",
+      "Family",
+      "Animation",
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Troy",
+    "year": 2004,
+    "director": "Wolfgang Petersen",
+    "genres": [
+      "War",
+      "Drama",
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "True Grit",
+    "year": 2010,
+    "director": "Ethan Coen, Joel Coen",
+    "genres": [
+      "Western",
+      "Drama",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Turbo Kid",
+    "year": 2015,
+    "director": "Francois Simard, Anouk Whissell, Yoann-Karl Whissell",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Sci-Fi"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Turning Red",
+    "year": 2022,
+    "director": "Domee Shi",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Twelve Monkeys",
+    "year": 1995,
+    "director": "Terry Gilliam",
+    "genres": [
+      "Sci-Fi",
+      "Crime"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Up",
+    "year": 2009,
+    "director": "Pete Docter, Bob Peterson",
+    "genres": [
+      "Animation",
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "V for Vendetta",
+    "year": 2005,
+    "director": "James McTeigue",
+    "genres": [
+      "Thriller",
+      "Sci-Fi",
+      "Action",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Vertigo",
+    "year": 1958,
+    "director": "Alfred Hitchcock",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Drama",
+      "Romance"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Walk the Line",
+    "year": 2005,
+    "director": "James Mangold",
+    "genres": [
+      "Drama",
+      "Musical",
+      "Romance"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Wallace & Gromit: The Curse of the Were-Rabbit",
+    "year": 2005,
+    "director": "Nick Park, Steve Box",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "War for the Planet of the Apes",
+    "year": 2017,
+    "director": "Matt Reeves",
+    "genres": [
+      "Sci-Fi",
+      "Action",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Watchmen",
+    "year": 2009,
+    "director": "Zack Snyder",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Waterworld",
+    "year": 1995,
+    "director": "Kevin Reynolds",
+    "genres": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Weapons",
+    "year": 2025,
+    "director": "Zach Cregger",
+    "genres": [
+      "Horror",
+      "Mystery"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Where the Wild Things Are",
+    "year": 2009,
+    "director": "Spike Jonze",
+    "genres": [
+      "Fantasy",
+      "Drama",
+      "Adventure",
+      "Family"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "While We're Young",
+    "year": 2014,
+    "director": "Noah Baumbach",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Whip It",
+    "year": 2009,
+    "director": "Drew Barrymore",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Whiplash",
+    "year": 2014,
+    "director": "Damien Chazelle",
+    "genres": [
+      "Musical",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Wild",
+    "year": 2014,
+    "director": "Jean-Marc Vallee",
+    "genres": [
+      "Drama",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Wild Hogs",
+    "year": 2007,
+    "director": "Walt Becker",
+    "genres": [
+      "Action"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Wind River",
+    "year": 2017,
+    "director": "Taylor Sheridan",
+    "genres": [
+      "Thriller",
+      "Crime",
+      "Mystery",
+      "Western"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Winter's Bone",
+    "year": 2010,
+    "director": "Debra Granik",
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Wolf Children",
+    "year": 2012,
+    "director": "Mamoru Hosoda",
+    "genres": [
+      "Animation",
+      "Fantasy",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "X-Men",
+    "year": 2000,
+    "director": "Bryan Singer",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "X-Men Origins: Wolverine",
+    "year": 2009,
+    "director": "Gavin Hood",
+    "genres": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "X-Men: Apocalypse",
+    "year": 2016,
+    "director": "Bryan Singer",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "X-Men: Days of Future Past",
+    "year": 2014,
+    "director": "Bryan Singer",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "X-Men: First Class",
+    "year": 2011,
+    "director": "Matthew Vaughn",
+    "genres": [
+      "Action",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "X-Men: The Last Stand",
+    "year": 2006,
+    "director": "Brett Ratner",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Fantasy"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "X2",
+    "year": 2003,
+    "director": "Bryan Singer",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Your Name",
+    "year": 2016,
+    "director": "Makoto Shinkai",
+    "genres": [
+      "Animation",
+      "Romance",
+      "Fantasy",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Zero Dark Thirty",
+    "year": 2012,
+    "director": "Kathryn Bigelow",
+    "genres": [
+      "Thriller",
+      "War",
+      "Drama"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Zombieland",
+    "year": 2009,
+    "director": "Ruben Fleischer",
+    "genres": [
+      "Comedy",
+      "Sci-Fi",
+      "Horror"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Zootopia",
+    "year": 2016,
+    "director": "Byron Howard, Rich Moore, Jared Bush",
+    "genres": [
+      "Animation",
+      "Action",
+      "Comedy",
+      "Adventure"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  },
+  {
+    "title": "Zootopia 2",
+    "year": 2025,
+    "director": "Jared Bush, Byron Howard",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Adventure",
+      "Family"
+    ],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  }
+]
