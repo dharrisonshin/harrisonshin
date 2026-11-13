@@ -1,8 +1,8 @@
 # Library
 
-Movies come from [`library/movies.json`](library/movies.json). Shows come from [`library/tv.json`](library/tv.json). The two files use the same fields. Books and podcasts on `/library/` are still headings only.
+Movies come from [`library/movies.json`](library/movies.json). Shows come from [`library/tv.json`](library/tv.json). The two files use the same fields. Music is hand-edited in [`library/music.json`](library/music.json). Books and podcasts on `/library/` are still headings only.
 
-Books, movies, tv, and podcasts on `/library/` are collapsible. Each section is a `details` element and starts open.
+Books, movies, tv, music, and podcasts on `/library/` are collapsible. Each section is a `details` element and starts open.
 
 ## JSON files
 
@@ -22,7 +22,22 @@ Each file is a JSON array. Each object uses these fields:
 
 `/library/movies/` lists every film. `/library/tv/` lists every show. Each page groups by the year of `last_watched`, newest year first. Entries with no date go under `earlier`, sorted by title. The count and the search box are computed in the browser. Search matches the title, year, director, genres, and review.
 
-The committed samples are a few classics and two shows so the sections render before the first sync. The workflow below replaces both files from Notion.
+The committed samples are a few classics and two shows so the sections render before the first sync. The workflow below replaces both files from Notion. It does not touch `library/music.json`.
+
+## Music
+
+[`library/music.json`](library/music.json) is a JSON array, in the order it should appear. Edit the file by hand. There is no Notion sync for music yet.
+
+| field | type |
+| --- | --- |
+| `artist` | string |
+| `album` | string, or null |
+| `year` | number, or null |
+| `rating` | number from 0 to 5, or null |
+| `note` | string, or null |
+| `link` | `http` or `https` URL, or null |
+
+A row shows the artist. An album or a year is added when it is set. A rating renders as stars. A note renders only when it is present. A link makes the artist name open that URL. The seed lists Alvvays, Beach House, Lord Huron, and Lo Moon, with the optional fields empty.
 
 ## Notion sync
 
