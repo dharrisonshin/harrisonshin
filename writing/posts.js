@@ -4,6 +4,13 @@
 // replaced by hyphens (grad school → grad-school). See WRITING.md.
 var POSTS = [
   {
+    slug: "stuck-at-the-sign-in-screen",
+    title: "Stuck at the Sign-In Screen, or Nine Clicks From Done",
+    date: "2026-11-13",
+    teaser: "I finished four days of comprehensive exams, then got stuck at Microsoft's sign-in screen with a deadline minutes away.",
+    tags: ["grad school", "higher ed", "tech"]
+  },
+  {
     slug: "ai-is-a-car-learn-to-drive",
     title: "AI Is a Car. Learn to Drive.",
     date: "2026-11-12",
