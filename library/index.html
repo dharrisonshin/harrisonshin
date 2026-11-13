@@ -37,7 +37,10 @@
   <div class="shelf">
     <details class="fold" open>
       <summary><h2>books</h2></summary>
-      <p class="note">Under construction. I’ll add these as I go.</p>
+      <div id="books" data-mode="recent" data-src="books.json" data-all="all-books">
+        <noscript><p class="note">books load from the list with javascript.</p></noscript>
+      </div>
+      <p class="all-films"><a id="all-books" href="books/">see all books</a></p>
     </details>
     <details class="fold" open>
       <summary><h2>movies</h2></summary>
@@ -68,6 +71,7 @@
   </div>
 </article>
 <script src="movies.js"></script>
+<script src="books.js"></script>
 <script src="music.js"></script>
 <script src="../read-sky.js"></script>
 </body>

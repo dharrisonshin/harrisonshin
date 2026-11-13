@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pull the Notion movies database into library/movies.json and library/tv.json.
+"""Pull Notion into library/movies.json, library/tv.json, and library/books.json.
 
 Reads NOTION_TOKEN and NOTION_DATABASE_ID from the environment.
 If NOTION_TOKEN is missing, exits 0 without changing the files.
@@ -22,6 +22,7 @@ NOTION_VERSION = "2022-06-28"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MOVIES_OUT = os.path.join(ROOT, "library", "movies.json")
 TV_OUT = os.path.join(ROOT, "library", "tv.json")
+BOOKS_OUT = os.path.join(ROOT, "library", "books.json")
 CACHE_OUT = os.path.join(ROOT, ".github", "notion-review-cache.json")
 PAGE_SIZE = 100
 MAX_PAGES = 50
@@ -249,7 +250,12 @@ def remember(cache, page, found, text):
     }
 
 
-def notion(token, url, body=None):
+class NotionAccessError(Exception):
+    def __init__(self, code):
+        self.code = code
+
+
+def notion(token, url, body=None, soft_access=False):
     data = None if body is None else json.dumps(body).encode("utf-8")
     request = urllib.request.Request(
         url,
@@ -267,6 +273,8 @@ def notion(token, url, body=None):
                 return json.loads(response.read().decode("utf-8"))
         except urllib.error.HTTPError as error:
             detail = error.read().decode("utf-8", "replace")[:500]
+            if soft_access and error.code in (403, 404):
+                raise NotionAccessError(error.code)
             if error.code == 429 and attempt < 5:
                 retry = error.headers.get("Retry-After") if error.headers else None
                 try:
@@ -284,7 +292,7 @@ def notion(token, url, body=None):
     sys.exit(1)
 
 
-def query_database(token, database_id):
+def query_database(token, database_id, soft_access=False):
     pages = []
     cursor = None
     calls = 0
@@ -296,6 +304,7 @@ def query_database(token, database_id):
             token,
             "https://api.notion.com/v1/databases/%s/query" % database_id,
             body,
+            soft_access=soft_access,
         )
         pages.extend(payload.get("results") or [])
         calls += 1
@@ -381,6 +390,48 @@ def collect(token, database_id, cache):
     return sort_entries(movies), sort_entries(shows)
 
 
+def book_from_page(page):
+    props = page.get("properties") or {}
+    status = (as_text(props.get("Status")) or "").casefold()
+    if status != "done":
+        return None
+    title = as_text(props.get("Title"))
+    if not title:
+        return None
+    return {
+        "title": title,
+        "author": as_text(props.get("Author")),
+        "tags": as_genres(props.get("Tags")),
+        "takeaway": as_text(props.get("Takeaways")),
+        "_edited": page.get("last_edited_time") or "",
+    }
+
+
+def sort_books(books):
+    books.sort(key=lambda book: book["title"].casefold())
+    books.sort(key=lambda book: book.get("_edited") or "", reverse=True)
+    for book in books:
+        book.pop("_edited", None)
+    return books
+
+
+def collect_books(token, database_id):
+    try:
+        raw_pages = query_database(token, database_id, soft_access=True)
+    except NotionAccessError as error:
+        print(
+            "Books database %s is not shared with the Notion integration (HTTP %s). library/books.json was left unchanged."
+            % (database_id, error.code)
+        )
+        return None
+    books = []
+    for page in raw_pages:
+        book = book_from_page(page)
+        if book:
+            books.append(book)
+    return sort_books(books)
+
+
 def write_if_changed(path, text):
     previous = ""
     if os.path.exists(path):
@@ -412,6 +463,14 @@ def main():
     changed |= write_if_changed(TV_OUT, dumps(shows))
     changed |= write_if_changed(CACHE_OUT, dumps_cache(cache))
     print("movies: %s. shows: %s." % (len(movies), len(shows)))
+    books_id = (os.environ.get("NOTION_BOOKS_DATABASE_ID") or "").strip()
+    if not books_id:
+        print("NOTION_BOOKS_DATABASE_ID is not set. library/books.json was left unchanged.")
+    else:
+        books = collect_books(token, books_id)
+        if books is not None:
+            changed |= write_if_changed(BOOKS_OUT, dumps(books))
+            print("books: %s." % len(books))
     if changed:
         print("updated library files.")
     else:

@@ -1,4 +1,5 @@
-# Sync library/movies.json and library/tv.json from Notion, then redeploy Pages if they changed.
+# Sync library/movies.json, library/tv.json, and library/books.json from Notion.
+# Then redeploy Pages if a file changed.
 # Runs on main only. A pull request branch does not push or deploy.
 name: Sync movies from Notion
 
@@ -11,9 +12,11 @@ permissions:
   contents: write
   actions: write
 
-# The database id lives here so it is not buried in the script.
+# Database ids live here so they are not buried in the script.
+# Both databases must be shared with the integration that owns NOTION_TOKEN.
 env:
   NOTION_DATABASE_ID: fb0aa94ce43d46bda4a4cfe87c98b02b
+  NOTION_BOOKS_DATABASE_ID: 4d5d72e04b7344f8906d5fbd1d18f5bd
 
 concurrency:
   group: notion-sync
@@ -37,7 +40,7 @@ jobs:
       - name: Commit and push if the library files changed
         id: commit
         run: |
-          git add library/movies.json library/tv.json
+          git add library/movies.json library/tv.json library/books.json
           if [ -f .github/notion-review-cache.json ]; then
             git add .github/notion-review-cache.json
           fi
@@ -48,7 +51,7 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Sync movies and tv from Notion."
+          git commit -m "Sync movies, tv, and books from Notion."
           git push origin HEAD:main
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
