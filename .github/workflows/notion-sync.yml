@@ -1,0 +1,56 @@
+# Sync library/movies.json from Notion, then redeploy Pages if it changed.
+# Runs on main only. A pull request branch does not push or deploy.
+name: Sync movies from Notion
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+# The database id lives here so it is not buried in the script.
+env:
+  NOTION_DATABASE_ID: fb0aa94ce43d46bda4a4cfe87c98b02b
+
+concurrency:
+  group: notion-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Query Notion and write library/movies.json
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: python3 scripts/sync_movies.py
+
+      - name: Commit and push if movies.json changed
+        id: commit
+        run: |
+          if git diff --quiet -- library/movies.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "library/movies.json is unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add library/movies.json
+          git commit -m "Sync movies from Notion."
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Redeploy Pages
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run "Deploy static content to Pages" --ref main

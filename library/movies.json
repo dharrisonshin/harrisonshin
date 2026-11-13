@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Heat",
+    "year": 1995,
+    "director": "Michael Mann",
+    "genres": ["crime", "drama"],
+    "rating": 5,
+    "last_watched": "2026-08-14",
+    "takeaway": "the diner scene is the whole movie. two men who respect each other and still have to finish it."
+  },
+  {
+    "title": "Spirited Away",
+    "year": 2001,
+    "director": "Hayao Miyazaki",
+    "genres": ["animation", "fantasy"],
+    "rating": 5,
+    "last_watched": "2026-03-19",
+    "takeaway": "she gets her name back by doing the work."
+  },
+  {
+    "title": "The Godfather",
+    "year": 1972,
+    "director": "Francis Ford Coppola",
+    "genres": ["crime", "drama"],
+    "rating": 5,
+    "last_watched": "2025-12-02",
+    "takeaway": "a family story that happens to be about power."
+  },
+  {
+    "title": "Mad Max: Fury Road",
+    "year": 2015,
+    "director": "George Miller",
+    "genres": ["action"],
+    "rating": 4,
+    "last_watched": "2025-06-11",
+    "takeaway": "almost no dialogue, and it still tells you everything."
+  },
+  {
+    "title": "Parasite",
+    "year": 2019,
+    "director": "Bong Joon-ho",
+    "genres": ["thriller", "drama"],
+    "rating": null,
+    "last_watched": null,
+    "takeaway": null
+  }
+]

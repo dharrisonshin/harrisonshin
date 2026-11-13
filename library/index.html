@@ -33,24 +33,26 @@
   <h1>library</h1>
   <div class="prose">
     <p>Everything I’ve read, watched, and listened to, sorted by year, with one takeaway from each.</p>
-    <p class="note">Under construction. I’ll add these as I go.</p>
   </div>
   <div class="shelf">
     <h2>books</h2>
+    <p class="note">Under construction. I’ll add these as I go.</p>
     <h2>movies &amp; tv</h2>
+    <div class="movie-bar">
+      <p class="count" id="movie-count" aria-live="polite"></p>
+      <label class="finder">
+        <span class="sr">search movies and tv</span>
+        <input id="movie-q" type="search" placeholder="search movies" autocomplete="off" enterkeyhint="search">
+      </label>
+    </div>
+    <div id="movies">
+      <noscript><p class="note">movies load from the list with javascript.</p></noscript>
+    </div>
     <h2>podcasts</h2>
+    <p class="note">Under construction. I’ll add these as I go.</p>
   </div>
-  <!--
-    Add a year group under a heading:
-    <h3>2026</h3>
-    <ul class="log">
-      <li>
-        <p class="what">Title <span class="who">Creator</span></p>
-        <p class="take">One takeaway.</p>
-      </li>
-    </ul>
-  -->
 </article>
+<script src="movies.js"></script>
 <script src="../read-sky.js"></script>
 </body>
 </html>
