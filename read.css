@@ -103,6 +103,36 @@ h1{
 .entries h2 a{color:#f7f4ec;text-decoration:none}
 .entries h2 a:hover{color:var(--acc)}
 .entries p{margin-top:6px;font-size:0.95em;line-height:1.55;color:rgba(244,241,234,0.8)}
+.lede{
+  margin-top:14px;
+  font-size:0.95rem;
+  letter-spacing:0.04em;
+  line-height:1.5;
+  color:rgba(244,241,234,0.62);
+}
+.status-log{list-style:none;margin-top:36px}
+.status-log[hidden]{display:none !important}
+.status-log li{
+  padding:18px 0;
+  border-top:1px solid rgba(255,255,255,0.14);
+}
+.status-log li:last-child{border-bottom:1px solid rgba(255,255,255,0.14)}
+.status-log time{
+  display:block;
+  font-size:13px;
+  letter-spacing:0.08em;
+  color:var(--acc);
+}
+.status-log-text{
+  margin-top:8px;
+  font-size:1.05rem;
+  letter-spacing:0.02em;
+  line-height:1.5;
+  color:#f7f4ec;
+}
+.status-log-label{font-weight:600;letter-spacing:0.08em}
+.status-log-attr{font-style:italic;font-weight:400;color:rgba(244,241,234,0.78)}
+.status-log .is-current .status-log-text{color:rgba(255,255,255,0.92)}
 .post h1{
   margin-top:22px;
   font-size:clamp(32px, 5vw, 44px);
