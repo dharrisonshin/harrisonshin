@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>status · harrison shin</title>
+<meta name="description" content="Current and previous homepage status updates from Harrison Shin.">
+<meta property="og:title" content="status · harrison shin">
+<meta property="og:description" content="Current and previous homepage status updates from Harrison Shin.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://harrisonshin.com/status/">
+<meta property="og:image" content="https://harrisonshin.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://harrisonshin.com/og-image.png">
+<meta name="twitter:site" content="@dharrisonshin">
+<link rel="canonical" href="https://harrisonshin.com/status/">
+<link rel="icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../read.css">
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="wrap index">
+  <a class="home" href="../">harrison shin</a>
+  <div class="rule" aria-hidden="true"></div>
+  <h1>status</h1>
+  <p class="lede">current and previous homepage captions.</p>
+  <ol class="status-log" id="status-log" hidden></ol>
+  <p class="note" id="status-empty" hidden>no status updates yet.</p>
+  <footer class="post-foot">
+    <a href="../">home</a>
+    <a href="../writing/">writing</a>
+  </footer>
+</div>
+<script src="../read-sky.js"></script>
+<script>
+(function(){
+  var list = document.getElementById('status-log');
+  var empty = document.getElementById('status-empty');
+  if (!list || !empty) return;
+
+  var ISO_WITH_ZONE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d{1,9})?)?(?:Z|[+-]\d{2}:\d{2})$/i;
+
+  function formatUpdated(value){
+    if (typeof value !== 'string' || !ISO_WITH_ZONE.test(value.trim())) return '';
+    var date = new Date(value.trim());
+    if (Number.isNaN(date.getTime())) return '';
+    var parts;
+    try {
+      parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Los_Angeles',
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+      }).formatToParts(date);
+    } catch (e) {
+      return '';
+    }
+    function part(type){
+      var found = parts.find(function(p){ return p.type === type; });
+      return found ? found.value : '';
+    }
+    var month = part('month').toLowerCase();
+    var day = part('day');
+    var year = part('year');
+    var hour = part('hour');
+    var minute = part('minute');
+    var period = part('dayPeriod').toLowerCase().replace(/\./g, '');
+    if (minute.length === 1) minute = '0' + minute;
+    if (!month || !day || !year || !hour || !minute || !period) return '';
+    return month + ' ' + day + ', ' + year + ' · ' + hour + ':' + minute + ' ' + period + ' pt';
+  }
+
+  function normalize(entry){
+    if (!entry || typeof entry !== 'object') return null;
+    var text = typeof entry.text === 'string' ? entry.text.trim() : '';
+    if (!text) return null;
+    var out = { text: text };
+    if (typeof entry.updated === 'string' && entry.updated.trim()) out.updated = entry.updated.trim();
+    if (typeof entry.attribution === 'string' && entry.attribution.trim()) out.attribution = entry.attribution.trim();
+    return out;
+  }
+
+  function entryKey(entry){
+    return (entry.text || '') + '\0' + (entry.updated || '') + '\0' + (entry.attribution || '');
+  }
+
+  function render(entries){
+    list.textContent = '';
+    if (!entries.length){
+      empty.hidden = false;
+      return;
+    }
+    empty.hidden = true;
+    entries.forEach(function(entry, index){
+      var li = document.createElement('li');
+      if (index === 0) li.className = 'is-current';
+      var when = formatUpdated(entry.updated || '');
+      if (when){
+        var time = document.createElement('time');
+        if (entry.updated) time.setAttribute('datetime', entry.updated);
+        time.textContent = when;
+        li.appendChild(time);
+      }
+      var body = document.createElement('p');
+      body.className = 'status-log-text';
+      if (index === 0){
+        var label = document.createElement('span');
+        label.className = 'status-log-label';
+        label.textContent = 'currently: ';
+        body.appendChild(label);
+      }
+      body.appendChild(document.createTextNode(entry.text));
+      if (entry.attribution){
+        var attr = document.createElement('em');
+        attr.className = 'status-log-attr';
+        attr.textContent = ' ' + entry.attribution;
+        body.appendChild(attr);
+      }
+      li.appendChild(body);
+      list.appendChild(li);
+    });
+    list.hidden = false;
+  }
+
+  var bust = '?t=' + Date.now();
+  Promise.all([
+    fetch('../status.json' + bust, { cache: 'no-store' }).then(function(res){
+      if (!res.ok) return null;
+      return res.json();
+    }).catch(function(){ return null; }),
+    fetch('../status-history.json' + bust, { cache: 'no-store' }).then(function(res){
+      if (!res.ok) return [];
+      return res.json();
+    }).catch(function(){ return []; })
+  ]).then(function(parts){
+    var current = normalize(parts[0]);
+    var history = Array.isArray(parts[1]) ? parts[1] : [];
+    var past = [];
+    var seen = Object.create(null);
+    history.forEach(function(item){
+      var entry = normalize(item);
+      if (!entry) return;
+      var k = entryKey(entry);
+      if (seen[k]) return;
+      if (current && entryKey(current) === k) return;
+      seen[k] = true;
+      past.push(entry);
+    });
+    var entries = current ? [current].concat(past) : past;
+    render(entries);
+  });
+})();
+</script>
+</body>
+</html>

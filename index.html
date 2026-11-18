@@ -63,7 +63,12 @@ a.pill:hover{background:var(--accSoft);border-color:rgba(255,255,255,0.8);transf
 .status-attr[hidden]{display:none}
 .status-when{max-width:min(520px,calc(100vw - 48px));font-size:11px;font-weight:400;letter-spacing:0.08em;line-height:1.4;color:rgba(255,255,255,0.6);text-align:center}
 .status-when[hidden]{display:none}
-.latest{position:relative;margin-top:52px;width:min(440px,calc(100vw - 64px));text-align:center}
+.status-past{max-width:min(520px,calc(100vw - 48px));font-size:11px;font-weight:400;letter-spacing:0.08em;line-height:1.4;text-align:center}
+.status-past[hidden]{display:none}
+.status-past a{color:rgba(255,255,255,0.55);text-decoration:none}
+.status-past a:hover{color:var(--acc)}
+.status-past a:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.latest{position:relative;margin-top:84px;width:min(440px,calc(100vw - 64px));text-align:center}
 .latest[hidden]{display:none !important}
 .latest:not([hidden]){display:flex;flex-direction:column;align-items:center;gap:4px}
 .latest-line{max-width:100%;font-size:14px;font-weight:400;letter-spacing:0.02em;line-height:1.4;color:rgba(255,255,255,0.85)}
@@ -106,7 +111,7 @@ button.chip.is-copied .cl{color:var(--acc)}
   .spot{bottom:108px}
   .play{bottom:270px}
   main{padding-bottom:300px}
-  .latest{width:min(340px,max(200px,calc(100vw - 760px)));margin-top:40px}
+  .latest{width:min(340px,max(200px,calc(100vw - 760px)));margin-top:68px}
 }
 @media (max-width:700px){
   html,body{height:auto}
@@ -130,7 +135,8 @@ button.chip.is-copied .cl{color:var(--acc)}
   .status{margin-top:18px;gap:4px}
   .status-now{font-size:14px;letter-spacing:0.06em}
   .status-when{font-size:10.5px;letter-spacing:0.05em}
-  .latest{margin-top:28px;width:min(440px,100%);gap:3px}
+  .status-past{font-size:10.5px;letter-spacing:0.05em}
+  .latest{margin-top:52px;width:min(440px,100%);gap:3px}
   .latest-line{font-size:13.5px}
   .latest-date{font-size:10.5px;letter-spacing:0.05em}
   .latest-teaser{font-size:12.5px}
@@ -162,6 +168,7 @@ button.chip.is-copied .cl{color:var(--acc)}
   <div class="status" id="status" hidden>
     <p class="status-now"><span class="status-dot" aria-hidden="true"></span><span class="status-label">currently:</span> <span id="status-text"></span><em class="status-attr" id="status-attr" hidden></em></p>
     <p class="status-when" id="status-when" hidden></p>
+    <p class="status-past" id="status-past" hidden><a href="status/">previous updates</a></p>
   </div>
   <div class="latest" id="latest" hidden>
     <p class="latest-line"><span class="latest-label">latest:</span> <a class="latest-title" id="latest-title"></a></p>
@@ -460,6 +467,7 @@ button.chip.is-copied .cl{color:var(--acc)}
   const textEl = document.getElementById('status-text');
   const attrEl = document.getElementById('status-attr');
   const whenEl = document.getElementById('status-when');
+  const pastEl = document.getElementById('status-past');
   if (!root || !textEl || !attrEl || !whenEl) return;
 
   // Full ISO 8601 with a timezone, so display doesn't depend on the viewer's zone.
@@ -515,6 +523,7 @@ button.chip.is-copied .cl{color:var(--acc)}
         whenEl.textContent = 'updated ' + when;
         whenEl.hidden = false;
       }
+      if (pastEl) pastEl.hidden = false;
       root.hidden = false;
     })
     .catch(function(){});
