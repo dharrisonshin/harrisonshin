@@ -61,6 +61,9 @@ a.pill:hover{background:var(--accSoft);border-color:rgba(255,255,255,0.8);transf
 .status-label{font-weight:600}
 .status-attr{font-style:italic;font-weight:400}
 .status-attr[hidden]{display:none}
+.status-media{margin:4px 0 2px;max-width:min(320px,calc(100vw - 48px));line-height:0}
+.status-media[hidden]{display:none !important}
+.status-media img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid rgba(255,255,255,0.28);background:rgba(0,0,0,0.35)}
 .status-when{max-width:min(520px,calc(100vw - 48px));font-size:11px;font-weight:400;letter-spacing:0.08em;line-height:1.4;color:rgba(255,255,255,0.6);text-align:center}
 .status-when[hidden]{display:none}
 .status-past{max-width:min(520px,calc(100vw - 48px));font-size:11px;font-weight:400;letter-spacing:0.08em;line-height:1.4;text-align:center}
@@ -135,6 +138,7 @@ button.chip.is-copied .cl{color:var(--acc)}
   .status{margin-top:18px;gap:4px}
   .status-now{font-size:14px;letter-spacing:0.06em}
   .status-when{font-size:10.5px;letter-spacing:0.05em}
+  .status-media{max-width:min(280px,calc(100vw - 36px))}
   .status-past{font-size:10.5px;letter-spacing:0.05em}
   .latest{margin-top:52px;width:min(440px,100%);gap:3px}
   .latest-line{font-size:13.5px}
@@ -167,6 +171,7 @@ button.chip.is-copied .cl{color:var(--acc)}
   </nav>
   <div class="status" id="status" hidden>
     <p class="status-now"><span class="status-dot" aria-hidden="true"></span><span class="status-label">currently:</span> <span id="status-text"></span><em class="status-attr" id="status-attr" hidden></em></p>
+    <figure class="status-media" id="status-media" hidden><img id="status-image" alt=""></figure>
     <p class="status-when" id="status-when" hidden></p>
     <p class="status-past" id="status-past" hidden><a href="status/">previous updates</a></p>
   </div>
@@ -466,12 +471,16 @@ button.chip.is-copied .cl{color:var(--acc)}
   const root = document.getElementById('status');
   const textEl = document.getElementById('status-text');
   const attrEl = document.getElementById('status-attr');
+  const mediaEl = document.getElementById('status-media');
+  const imageEl = document.getElementById('status-image');
   const whenEl = document.getElementById('status-when');
   const pastEl = document.getElementById('status-past');
   if (!root || !textEl || !attrEl || !whenEl) return;
 
   // Full ISO 8601 with a timezone, so display doesn't depend on the viewer's zone.
   const ISO_WITH_ZONE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d{1,9})?)?(?:Z|[+-]\d{2}:\d{2})$/i;
+  // Site-root relative media only (gif/png/jpg/webp). No schemes or parent hops.
+  const STATUS_IMAGE = /^[a-z0-9][a-z0-9._/-]*\.(?:gif|png|jpe?g|webp)$/i;
 
   function formatUpdated(value){
     if (typeof value !== 'string' || !ISO_WITH_ZONE.test(value.trim())) return '';
@@ -504,6 +513,13 @@ button.chip.is-copied .cl{color:var(--acc)}
     return month + ' ' + day + ', ' + hour + ':' + minute + ' ' + period + ' pt';
   }
 
+  function safeImagePath(value){
+    if (typeof value !== 'string') return '';
+    const path = value.trim().replace(/^\/+/, '');
+    if (!path || path.includes('..') || path.includes('\\') || !STATUS_IMAGE.test(path)) return '';
+    return path;
+  }
+
   fetch('status.json?t=' + Date.now(), { cache: 'no-store' })
     .then(function(res){
       if (!res.ok) throw new Error('status unavailable');
@@ -517,6 +533,12 @@ button.chip.is-copied .cl{color:var(--acc)}
       if (attribution){
         attrEl.textContent = ' ' + attribution;
         attrEl.hidden = false;
+      }
+      const imagePath = safeImagePath(data && data.image);
+      if (imagePath && mediaEl && imageEl){
+        imageEl.src = imagePath;
+        imageEl.alt = '';
+        mediaEl.hidden = false;
       }
       const when = formatUpdated(data.updated);
       if (when){

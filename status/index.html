@@ -81,6 +81,15 @@
     return month + ' ' + day + ', ' + year + ' · ' + hour + ':' + minute + ' ' + period + ' pt';
   }
 
+  var STATUS_IMAGE = /^[a-z0-9][a-z0-9._/-]*\.(?:gif|png|jpe?g|webp)$/i;
+
+  function safeImagePath(value){
+    if (typeof value !== 'string') return '';
+    var path = value.trim().replace(/^\/+/, '');
+    if (!path || path.indexOf('..') !== -1 || path.indexOf('\\') !== -1 || !STATUS_IMAGE.test(path)) return '';
+    return path;
+  }
+
   function normalize(entry){
     if (!entry || typeof entry !== 'object') return null;
     var text = typeof entry.text === 'string' ? entry.text.trim() : '';
@@ -88,11 +97,13 @@
     var out = { text: text };
     if (typeof entry.updated === 'string' && entry.updated.trim()) out.updated = entry.updated.trim();
     if (typeof entry.attribution === 'string' && entry.attribution.trim()) out.attribution = entry.attribution.trim();
+    var image = safeImagePath(entry.image);
+    if (image) out.image = image;
     return out;
   }
 
   function entryKey(entry){
-    return (entry.text || '') + '\0' + (entry.updated || '') + '\0' + (entry.attribution || '');
+    return (entry.text || '') + '\0' + (entry.updated || '') + '\0' + (entry.attribution || '') + '\0' + (entry.image || '');
   }
 
   function render(entries){
@@ -128,6 +139,16 @@
         body.appendChild(attr);
       }
       li.appendChild(body);
+      if (entry.image){
+        var media = document.createElement('figure');
+        media.className = 'status-log-media';
+        var img = document.createElement('img');
+        img.src = '../' + entry.image;
+        img.alt = '';
+        img.loading = 'lazy';
+        media.appendChild(img);
+        li.appendChild(media);
+      }
       list.appendChild(li);
     });
     list.hidden = false;

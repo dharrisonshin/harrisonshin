@@ -133,6 +133,15 @@ h1{
 .status-log-label{font-weight:600;letter-spacing:0.08em}
 .status-log-attr{font-style:italic;font-weight:400;color:rgba(244,241,234,0.78)}
 .status-log .is-current .status-log-text{color:rgba(255,255,255,0.92)}
+.status-log-media{margin:12px 0 0;max-width:min(360px,100%);line-height:0}
+.status-log-media img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.28);
+  background:rgba(0,0,0,0.35);
+}
 .post h1{
   margin-top:22px;
   font-size:clamp(32px, 5vw, 44px);

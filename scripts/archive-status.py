@@ -36,11 +36,19 @@ def normalize(entry: object) -> dict | None:
     attribution = entry.get("attribution")
     if isinstance(attribution, str) and attribution.strip():
         out["attribution"] = attribution.strip()
+    image = entry.get("image")
+    if isinstance(image, str) and image.strip():
+        out["image"] = image.strip().lstrip("/")
     return out
 
 
 def key(entry: dict) -> tuple:
-    return (entry.get("text", ""), entry.get("updated", ""), entry.get("attribution", ""))
+    return (
+        entry.get("text", ""),
+        entry.get("updated", ""),
+        entry.get("attribution", ""),
+        entry.get("image", ""),
+    )
 
 
 def previous_status() -> dict | None:
