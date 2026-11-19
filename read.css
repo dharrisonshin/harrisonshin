@@ -509,6 +509,65 @@ h1{
   font-size:0.92em;
   color:rgba(244,241,234,0.78);
 }
+.reader-yt{
+  position:relative;
+  margin-top:12px;
+  width:100%;
+  aspect-ratio:16 / 9;
+  overflow:hidden;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.22);
+  background:#0a0a0a;
+}
+.reader-yt-play{
+  appearance:none;
+  display:block;
+  width:100%;
+  height:100%;
+  padding:0;
+  border:0;
+  background:#000;
+  cursor:pointer;
+  position:relative;
+}
+.reader-yt-thumb{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0.92;
+}
+.reader-yt-play:hover .reader-yt-thumb,
+.reader-yt-play:focus-visible .reader-yt-thumb{opacity:1}
+.reader-yt-icon{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:58px;
+  height:58px;
+  margin:-29px 0 0 -29px;
+  border-radius:50%;
+  background:rgba(0,0,0,0.62);
+  border:1px solid rgba(217,180,90,0.75);
+  box-shadow:0 0 0 1px rgba(0,0,0,0.35);
+}
+.reader-yt-icon::before{
+  content:"";
+  position:absolute;
+  left:23px;
+  top:18px;
+  border-style:solid;
+  border-width:11px 0 11px 16px;
+  border-color:transparent transparent transparent var(--acc);
+}
+.reader-yt-frame{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+.reader-item.has-video .reader-mark{margin-top:4px}
 @media (max-width:600px){
   .reader-item{grid-template-columns:1fr;gap:10px}
   .reader-mark{justify-self:start}

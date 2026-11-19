@@ -33,6 +33,8 @@ Useful feed URL patterns:
 | YouTube channel | `https://www.youtube.com/feeds/videos.xml?channel_id=CHANNEL_ID` |
 | This site | `https://harrisonshin.com/writing/feed.xml` |
 
+For YouTube, set `"kind": "youtube"`. The digest shows a thumbnail; tap play to load an embedded `youtube-nocookie` player in place. Shorts and watch URLs both work. Find a channel id from the channel’s About page or from any video URL’s channel link (`/channel/UC…`).
+
 Email-only newsletters need an RSS URL (Substack usually has one) or a bridge that turns mail into a feed. This reader does not ingest email directly.
 
 After editing feeds, either wait for the morning Action or run it by hand:

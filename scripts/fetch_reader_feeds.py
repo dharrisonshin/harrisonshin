@@ -31,6 +31,11 @@ UTC = timezone.utc
 ATOM_NS = {"atom": "http://www.w3.org/2005/Atom"}
 HTML_TAG = re.compile(r"<[^>]+>")
 WHITESPACE = re.compile(r"\s+")
+# watch?v=, shorts/, embed/, youtu.be/, or bare 11-char id in yt:video:…
+YT_ID_RE = re.compile(
+    r"(?:youtube\.com/(?:watch\?(?:[^#]*&)?v=|shorts/|embed/|v/)|youtu\.be/|yt:video:)([A-Za-z0-9_-]{11})"
+)
+YT_ID_ONLY = re.compile(r"^[A-Za-z0-9_-]{11}$")
 
 
 def load_json(path: Path, default):
@@ -83,6 +88,64 @@ def parse_date(value: str | None) -> datetime | None:
 def item_id(feed_id: str, guid: str, link: str, title: str) -> str:
     seed = guid or link or f"{feed_id}:{title}"
     return hashlib.sha1(seed.encode("utf-8")).hexdigest()[:16]
+
+
+def youtube_id_from_text(*values: str | None) -> str | None:
+    for value in values:
+        if not value:
+            continue
+        text = value.strip()
+        if not text:
+            continue
+        if YT_ID_ONLY.match(text):
+            return text
+        match = YT_ID_RE.search(text)
+        if match:
+            return match.group(1)
+    return None
+
+
+def media_description(entry: ET.Element) -> str:
+    for el in entry.iter():
+        if not isinstance(el.tag, str):
+            continue
+        # YouTube channel feeds put the blurb in MRSS media:description.
+        if el.tag != "{http://search.yahoo.com/mrss/}description":
+            continue
+        text = "".join(el.itertext()).strip()
+        if text:
+            return text
+    return ""
+
+
+def yt_video_id_from_entry(entry: ET.Element) -> str | None:
+    for el in entry.iter():
+        if isinstance(el.tag, str) and el.tag.rsplit("}", 1)[-1] == "videoId":
+            found = local_text(el)
+            if found and YT_ID_ONLY.match(found):
+                return found
+    return None
+
+
+def attach_youtube(item: dict, entry: ET.Element | None = None, guid: str = "") -> dict:
+    """Add videoId when this item is a YouTube watch/shorts URL or yt entry."""
+    video_id = yt_video_id_from_entry(entry) if entry is not None else None
+    if entry is not None:
+        media_desc = media_description(entry)
+        if media_desc and (not item.get("summary") or item.get("kind") == "youtube"):
+            item["summary"] = truncate(strip_html(media_desc))
+    if not video_id:
+        video_id = youtube_id_from_text(item.get("url"), guid)
+    if video_id:
+        item["videoId"] = video_id
+        url = item.get("url") or ""
+        if item.get("kind") in (None, "", "other") and (
+            "youtube.com" in url or "youtu.be" in url or guid.startswith("yt:video:")
+        ):
+            item["kind"] = "youtube"
+        if not url:
+            item["url"] = f"https://www.youtube.com/watch?v={video_id}"
+    return item
 
 
 def fetch_bytes(url: str) -> bytes:
@@ -152,19 +215,18 @@ def parse_rss_items(root: ET.Element, feed: dict) -> list[dict]:
         author = local_text(child(entry, "author", "{http://purl.org/dc/elements/1.1/}creator"))
         if not title and not link:
             continue
-        items.append(
-            {
-                "id": item_id(feed["id"], guid, link, title),
-                "title": title or link,
-                "url": link,
-                "feedId": feed["id"],
-                "feedTitle": feed.get("title") or feed["id"],
-                "kind": feed.get("kind") or "other",
-                "published": published.isoformat() if published else None,
-                "summary": truncate(strip_html(desc)) if desc else "",
-                "author": author or None,
-            }
-        )
+        item = {
+            "id": item_id(feed["id"], guid, link, title),
+            "title": title or link,
+            "url": link,
+            "feedId": feed["id"],
+            "feedTitle": feed.get("title") or feed["id"],
+            "kind": feed.get("kind") or "other",
+            "published": published.isoformat() if published else None,
+            "summary": truncate(strip_html(desc)) if desc else "",
+            "author": author or None,
+        }
+        items.append(attach_youtube(item, entry, guid))
         if len(items) >= MAX_PER_FEED:
             break
     return items
@@ -214,19 +276,18 @@ def parse_atom_items(root: ET.Element, feed: dict) -> list[dict]:
             )
         if not title and not link:
             continue
-        items.append(
-            {
-                "id": item_id(feed["id"], guid, link, title),
-                "title": title or link,
-                "url": link,
-                "feedId": feed["id"],
-                "feedTitle": feed.get("title") or feed["id"],
-                "kind": feed.get("kind") or "other",
-                "published": published.isoformat() if published else None,
-                "summary": truncate(strip_html(desc)) if desc else "",
-                "author": author or None,
-            }
-        )
+        item = {
+            "id": item_id(feed["id"], guid, link, title),
+            "title": title or link,
+            "url": link,
+            "feedId": feed["id"],
+            "feedTitle": feed.get("title") or feed["id"],
+            "kind": feed.get("kind") or "other",
+            "published": published.isoformat() if published else None,
+            "summary": truncate(strip_html(desc)) if desc else "",
+            "author": author or None,
+        }
+        items.append(attach_youtube(item, entry, guid))
         if len(items) >= MAX_PER_FEED:
             break
     return items

@@ -108,6 +108,37 @@
     return kind || "other";
   }
 
+  function youtubeVideoId(item) {
+    if (item.videoId && /^[A-Za-z0-9_-]{11}$/.test(item.videoId)) {
+      return item.videoId;
+    }
+    var url = item.url || "";
+    var match = url.match(
+      /(?:youtube\.com\/(?:watch\?(?:[^#]*&)?v=|shorts\/|embed\/|v\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/
+    );
+    return match ? match[1] : null;
+  }
+
+  function youtubePlayerHtml(item) {
+    var id = youtubeVideoId(item);
+    if (!id) return "";
+    var title = item.title || "YouTube video";
+    return (
+      '<div class="reader-yt" data-youtube-id="' +
+      escapeHtml(id) +
+      '">' +
+      '<button type="button" class="reader-yt-play" aria-label="Play ' +
+      escapeHtml(title) +
+      '">' +
+      '<img class="reader-yt-thumb" src="https://i.ytimg.com/vi/' +
+      escapeHtml(id) +
+      '/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">' +
+      '<span class="reader-yt-icon" aria-hidden="true"></span>' +
+      "</button>" +
+      "</div>"
+    );
+  }
+
   function visibleItems() {
     var list = state.items.slice();
     if (state.kind !== "all") {
@@ -237,6 +268,7 @@
     var d = parseDate(item.published);
     var read = isRead(item.id);
     var time = d ? formatTime(d) : "";
+    var hasPlayer = !!youtubeVideoId(item);
     var summary = item.summary
       ? '<p class="reader-summary">' + escapeHtml(item.summary) + "</p>"
       : "";
@@ -244,6 +276,7 @@
     return (
       '<li class="reader-item' +
       (read ? " is-read" : "") +
+      (hasPlayer ? " has-video" : "") +
       '" data-id="' +
       escapeHtml(item.id) +
       '">' +
@@ -259,6 +292,7 @@
       '" target="_blank" rel="noopener noreferrer">' +
       escapeHtml(item.title || "untitled") +
       "</a>" +
+      youtubePlayerHtml(item) +
       summary +
       "</div>" +
       '<button type="button" class="reader-mark" data-mark="' +
@@ -272,6 +306,28 @@
       "</button>" +
       "</li>"
     );
+  }
+
+  function mountYoutubePlayer(shell) {
+    var id = shell.getAttribute("data-youtube-id");
+    if (!id || !/^[A-Za-z0-9_-]{11}$/.test(id)) return;
+    var iframe = document.createElement("iframe");
+    iframe.className = "reader-yt-frame";
+    iframe.src =
+      "https://www.youtube-nocookie.com/embed/" +
+      encodeURIComponent(id) +
+      "?autoplay=1&rel=0";
+    iframe.title = "YouTube video";
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute(
+      "allow",
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    );
+    iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+    iframe.loading = "lazy";
+    shell.innerHTML = "";
+    shell.appendChild(iframe);
+    shell.classList.add("is-playing");
   }
 
   function render() {
@@ -346,6 +402,25 @@
       var id = mark.getAttribute("data-mark");
       markRead(id, !isRead(id));
       render();
+      return;
+    }
+    var play = event.target.closest(".reader-yt-play");
+    if (play) {
+      event.preventDefault();
+      var shell = play.closest(".reader-yt");
+      var row = play.closest(".reader-item");
+      if (shell) mountYoutubePlayer(shell);
+      if (row) {
+        markRead(row.getAttribute("data-id"), true);
+        row.classList.add("is-read");
+        var markBtn = row.querySelector("[data-mark]");
+        if (markBtn) {
+          markBtn.setAttribute("aria-pressed", "true");
+          markBtn.setAttribute("aria-label", "Mark unread");
+          markBtn.textContent = "unread";
+        }
+        renderMeta();
+      }
       return;
     }
     var title = event.target.closest(".reader-title");

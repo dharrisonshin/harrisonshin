@@ -1,11 +1,22 @@
 {
-  "updated": "2026-11-19T22:01:15.194912Z",
-  "updatedPacific": "2026-11-19 14:01 PST",
+  "updated": "2026-11-19T23:31:16.015839Z",
+  "updatedPacific": "2026-11-19 15:31 PST",
   "keepDays": 14,
-  "feedCount": 5,
-  "itemCount": 100,
+  "feedCount": 6,
+  "itemCount": 105,
   "errors": [],
   "items": [
+    {
+      "id": "039c3cba59ca67b3",
+      "title": "★ Jon McCormack Retires From Apple",
+      "url": "https://daringfireball.net/2026/11/mccormack_retires_from_apple",
+      "feedId": "daring-fireball",
+      "feedTitle": "Daring Fireball",
+      "kind": "blog",
+      "published": "2026-11-19T22:25:12+00:00",
+      "summary": "McCormack was the perfect guy for an essential job, and he leaves big shoes to fill.",
+      "author": "John Gruber"
+    },
     {
       "id": "96ae401b3875b179",
       "title": "Google’s Spark AI Agent Becomes ‘Tasks’",
@@ -113,6 +124,18 @@
       "published": "2026-11-18T20:42:23+00:00",
       "summary": "CEOs typically stay as close as they can to the 50-yard line in the middle of the political playing field. That way, when an election puts the other party in power, they don’t have to move — they just need to turn around.",
       "author": "John Gruber"
+    },
+    {
+      "id": "f51df403c52f3c7e",
+      "title": "Most people don’t understand randomness.",
+      "url": "https://www.youtube.com/watch?v=uXuQF_PPg5U",
+      "feedId": "veritasium",
+      "feedTitle": "Veritasium",
+      "kind": "youtube",
+      "published": "2026-11-18T20:29:44+00:00",
+      "summary": "Is anything random? Sponsored by Hostinger. Go to https://hostinger.com/veritasium and use code VERITASIUM for an additional 10% off. For more on Bell tests, watch our video - https://www.youtube.com/watch?v=NIk_0AW5hFU You can also check out Matthew Bolan’s video on the maths…",
+      "author": "Veritasium",
+      "videoId": "uXuQF_PPg5U"
     },
     {
       "id": "146825d4be591165",
@@ -307,6 +330,18 @@
       "summary": "Datasette Lite is my port of the Datasette Python application to run directly in the browser using WebAssembly and Pyodide . I've released a complete rewrite of Datasette Lite using service workers, and it's now almost indistinguishable from the real server-side application…"
     },
     {
+      "id": "02ba6fddce7c9534",
+      "title": "This is not a thread...",
+      "url": "https://www.youtube.com/shorts/LDloLvb3yno",
+      "feedId": "veritasium",
+      "feedTitle": "Veritasium",
+      "kind": "youtube",
+      "published": "2026-11-17T14:14:54+00:00",
+      "summary": "This isn't a thread, it's a stream of molten tin. Without this tiny stream, the trillion dollar tech industry would grind to a halt. Animated shots of machine courtesy of ASML",
+      "author": "Veritasium",
+      "videoId": "LDloLvb3yno"
+    },
+    {
       "id": "3c2ca9a19d9f788c",
       "title": "Tuesday assorted links",
       "url": "https://marginalrevolution.com/marginalrevolution/2026/11/tuesday-assorted-links-595.html?utm_source=rss&utm_medium=rss&utm_campaign=tuesday-assorted-links-595",
@@ -489,7 +524,8 @@
       "kind": "blog",
       "published": "2026-11-16T16:05:18+00:00",
       "summary": "The Oprah Podcast: In a special holiday episode Oprah brings back one of her legendary traditions with a live audience: ‘Oprah’s Favorite Things!’ Celebrating the 30th anniversary of the iconic list, Oprah surprises an unsuspecting audience full of caregivers with her must-have…",
-      "author": "John Gruber"
+      "author": "John Gruber",
+      "videoId": "j0Rsv1U3Q7A"
     },
     {
       "id": "b1f4725c226c43f1",
@@ -604,7 +640,8 @@
       "kind": "blog",
       "published": "2026-11-14T17:50:00+00:00",
       "summary": "This is so goddamn good. Both informative and hilarious. (She made a fun bonus reel that’s right up my alley too — but watch the main review first.) ★",
-      "author": "John Gruber"
+      "author": "John Gruber",
+      "videoId": "yVTcVtLn2o4"
     },
     {
       "id": "d9a0bb1e038b74b1",
@@ -757,6 +794,18 @@
       "summary": "I finished four days of comprehensive exams, then got stuck at Microsoft's sign-in screen with a deadline minutes away."
     },
     {
+      "id": "b21f5adaadaf3297",
+      "title": "Making Gunpowder From Scratch",
+      "url": "https://www.youtube.com/shorts/V8rT6UI3Crg",
+      "feedId": "veritasium",
+      "feedTitle": "Veritasium",
+      "kind": "youtube",
+      "published": "2026-11-13T14:00:08+00:00",
+      "summary": "The earliest gunpowder recipe contains just 3 natural ingredients... The following demonstration was performed by professionals in a safe and controlled environment; do not attempt at home.",
+      "author": "Veritasium",
+      "videoId": "V8rT6UI3Crg"
+    },
+    {
       "id": "59f065f3b77559d9",
       "title": "Sharp Tech on Video: Nvidia After Jensen Huang, Ominous News for American AI, D.C. Gets Its Revenge",
       "url": "https://stratechery.com/2026/sharp-tech-on-video-nvidia-after-jensen-huang-ominous-news-for-american-ai-d-c-gets-its-revenge/",
@@ -898,17 +947,6 @@
       "author": "John Gruber"
     },
     {
-      "id": "8555644c548ead93",
-      "title": "Nvidia Working With Outside Firm to Identify CEO Candidates",
-      "url": "https://www.bloomberg.com/news/articles/2026-11-11/nvidia-working-with-outside-firm-to-identify-ceo-candidates",
-      "feedId": "daring-fireball",
-      "feedTitle": "Daring Fireball",
-      "kind": "blog",
-      "published": "2026-11-12T03:57:43+00:00",
-      "summary": "Nina Trentmann and Ian King, reporting tonight for Bloomberg: Nvidia Corp.’s board has been working with an outside firm to identify potential replacements for Chief Executive Officer Jensen Huang following reports of multiple extramarital affairs, including one with a woman…",
-      "author": "John Gruber"
-    },
-    {
       "id": "bb485df9f4f59adb",
       "title": "Gemini Decisions API",
       "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/",
@@ -957,6 +995,18 @@
       "kind": "blog",
       "published": "2026-11-11T15:11:59+00:00",
       "summary": "Anthropic's IPO roadshow video Anthropic kicked off their IPO roadshow yesterday, and their roadshow video has some previously unreleased information about how their business works. The section on \"Approach to compute\" with co-founder Tom Brown is particularly interesting…"
+    },
+    {
+      "id": "b85c232e621dc72c",
+      "title": "Why you can't trust a test that's 99% accurate",
+      "url": "https://www.youtube.com/shorts/2QSkkhbl3v4",
+      "feedId": "veritasium",
+      "feedTitle": "Veritasium",
+      "kind": "youtube",
+      "published": "2026-11-11T14:00:12+00:00",
+      "summary": "What does it mean to get a positive result on a medical test? Chances are you might not actually have the disease...",
+      "author": "Veritasium",
+      "videoId": "2QSkkhbl3v4"
     },
     {
       "id": "9bb5dee46031dff0",
@@ -1070,6 +1120,18 @@
       "published": "2026-11-09T11:00:00+00:00",
       "summary": "Nvidia CEO Jensen Huang admitted to an affair with a Chinese spy, and that might not be the end of his troubles. I hope he survives, but his influence will never be the same.",
       "author": "Ben Thompson"
+    },
+    {
+      "id": "b82895a4241f549b",
+      "title": "Why do deserts get cold at night?",
+      "url": "https://www.youtube.com/shorts/rL0qEmTRI-I",
+      "feedId": "veritasium",
+      "feedTitle": "Veritasium",
+      "kind": "youtube",
+      "published": "2026-11-06T14:00:17+00:00",
+      "summary": "The desert ground is blistering hot in the day but just a few hours after nightfall, it's freezing. Why does this happen?",
+      "author": "Veritasium",
+      "videoId": "rL0qEmTRI-I"
     }
   ]
 }

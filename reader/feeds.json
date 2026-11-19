@@ -29,6 +29,12 @@
       "title": "Daring Fireball",
       "url": "https://daringfireball.net/feeds/main",
       "kind": "blog"
+    },
+    {
+      "id": "veritasium",
+      "title": "Veritasium",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA",
+      "kind": "youtube"
     }
   ]
 }
