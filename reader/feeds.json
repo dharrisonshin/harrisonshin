@@ -1,0 +1,34 @@
+{
+  "feeds": [
+    {
+      "id": "harrison-writing",
+      "title": "harrison shin · writing",
+      "url": "https://harrisonshin.com/writing/feed.xml",
+      "kind": "blog"
+    },
+    {
+      "id": "stratechery",
+      "title": "Stratechery",
+      "url": "https://stratechery.com/feed/",
+      "kind": "newsletter"
+    },
+    {
+      "id": "marginal-revolution",
+      "title": "Marginal Revolution",
+      "url": "https://marginalrevolution.com/feed",
+      "kind": "blog"
+    },
+    {
+      "id": "simon-willison",
+      "title": "Simon Willison’s Weblog",
+      "url": "https://simonwillison.net/atom/everything/",
+      "kind": "blog"
+    },
+    {
+      "id": "daring-fireball",
+      "title": "Daring Fireball",
+      "url": "https://daringfireball.net/feeds/main",
+      "kind": "blog"
+    }
+  ]
+}

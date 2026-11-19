@@ -44,7 +44,7 @@ The template already includes the “all writing” link at the top and “back 
 
 Paths inside a post stay relative (`../../read.css`, `../../read-sky.js`, `../../favicon.ico`) so the page works on the project site and on `harrisonshin.com`.
 
-The Pages workflow uploads the repository root, which includes `writing/`, `about/`, `projects/`, `library/`, and `links/`.
+The Pages workflow uploads the repository root, which includes `writing/`, `about/`, `projects/`, `library/`, `reader/`, and `links/`.
 
 ## About (draft)
 
