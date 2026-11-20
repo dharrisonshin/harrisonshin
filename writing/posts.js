@@ -6,6 +6,13 @@
 // When it is set, the post footer links "also on substack" there.
 var POSTS = [
   {
+    slug: "stop-renting-your-music",
+    title: "Stop Renting Your Music: The Case for Owning It Again",
+    date: "2026-11-20",
+    teaser: "Streaming turned my library into a rental, so I ran the numbers on owning the albums I love and started building hearth.",
+    tags: ["building", "tech"]
+  },
+  {
     slug: "stuck-at-the-sign-in-screen",
     title: "Stuck at the Sign-In Screen, or Nine Clicks From Done",
     date: "2026-11-13",
