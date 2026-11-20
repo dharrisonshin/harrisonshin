@@ -1,13 +1,13 @@
 # Reader
 
-A curated RSS/Atom digest at [`/reader/`](reader/). It is meant to feel like a lighter Readwise Reader: one place for newsletters, blogs, and YouTube channels, with a daily digest view, unread filtering, and per-device read state. Anyone can open the page. There is no login.
+A curated RSS/Atom digest at [`/reader/`](reader/). The page heading is feed. It is meant to feel like a lighter Readwise Reader: one place for newsletters, blogs, and YouTube channels, with a daily digest view, an all view of 10 items per page, unread filtering, and per-device read state. Anyone can open the page. There is no login.
 
 ## How it works
 
 1. Edit [`reader/feeds.json`](reader/feeds.json) with the feeds you want.
 2. [`scripts/fetch_reader_feeds.py`](scripts/fetch_reader_feeds.py) downloads those feeds and writes [`reader/items.json`](reader/items.json) (last 14 days).
-3. A GitHub Action (`.github/workflows/reader-digest.yml`) runs that script every morning Pacific time, commits when the digest changes, and redeploys Pages.
-4. [`reader/index.html`](reader/index.html) loads `items.json` in the browser. Mark-as-read is stored in `localStorage` on that phone, iPad, or laptop only.
+3. A GitHub Action (`.github/workflows/reader-digest.yml`) runs that script every hour, commits when the digest or the OPML changes, and redeploys Pages.
+4. [`reader/index.html`](reader/index.html) loads `items.json` in the browser. Opening an item stays on the page: videos play in an embedded player, and articles show sanitized full text from the feed or, when the feed only has a short blurb, text extracted from the public page during the refresh. Each item has an open-original link. Mark-as-read is stored in `localStorage` on that phone, iPad, or laptop only. Back returns to the same list page and scroll position.
 
 ## Add a feed
 
@@ -47,7 +47,7 @@ The fetch script drops any RSS or Atom item whose link, guid, or url contains `/
 
 Email-only newsletters need a public RSS URL (Substack usually has one) or a private bridge. This reader does not ingest email directly. Private bridge addresses stay out of the repo. See below.
 
-After editing feeds, either wait for the morning Action or run it by hand:
+After editing feeds, either wait for the next hourly Action or run it by hand:
 
 ```bash
 python3 scripts/fetch_reader_feeds.py
@@ -86,6 +86,14 @@ To add another private bridge:
 3. Create the Actions secret under that exact name.
 4. Optional `url` on the same object is the public page readers should open. When it is set alongside `url_secret`, the script fetches the secret address and stores `url` on each item.
 
+## OPML export
+
+[`reader/feeds.opml`](reader/feeds.opml) is a public OPML 2.0 file at `/reader/feeds.opml`. Import it into another RSS app. The fetch script rewrites it from `feeds.json` on every run, and the hourly Action commits it when the list changes.
+
+Feeds that use `url_secret` are left out. Private addresses never appear in the file.
+
+The all view lists 10 items per page, with previous, next, and page numbers. Digest and unread stay a single list: digest is one day, and unread is whatever is still open.
+
 ## Phone and iPad
 
 Open `https://harrisonshin.com/reader/` in Safari, then **Share → Add to Home Screen**. The page has a web app manifest and apple touch icon so it opens fullscreen. Read state stays on that device.
@@ -94,7 +102,7 @@ Open `https://harrisonshin.com/reader/` in Safari, then **Share → Add to Home 
 
 - Public RSS/Atom, plus private feeds whose address lives in an Actions secret. No paywalled full-text scraping.
 - No highlights, annotations, or sync across devices.
-- Digest refreshes on the Action schedule (and when you run the script), not continuously.
+- The digest refreshes hourly (and when you run the script), not continuously.
 - Failed feeds are listed under `errors` in `items.json` and skipped until the next run.
 
 The list in `feeds.json` is the set of feeds this reader follows.

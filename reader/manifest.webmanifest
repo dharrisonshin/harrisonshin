@@ -1,7 +1,7 @@
 {
-  "name": "reader · harrison shin",
-  "short_name": "reader",
-  "description": "Daily digest of curated newsletters, blogs, and channels.",
+  "name": "feed · harrison shin",
+  "short_name": "feed",
+  "description": "Hourly digest of curated newsletters, blogs, and channels.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
