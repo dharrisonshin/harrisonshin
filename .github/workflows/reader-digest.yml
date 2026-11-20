@@ -1,0 +1,55 @@
+# Fetch RSS/Atom feeds from reader/feeds.json into reader/items.json.
+# Runs every morning Pacific time and on demand. Main only.
+name: Refresh reader digest
+
+on:
+  schedule:
+    # 15:00 UTC ≈ 7:00 / 8:00 America/Los_Angeles depending on DST
+    - cron: "0 15 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: reader-digest
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Fetch feeds into reader/items.json
+        env:
+          # Private newsletter bridge. Empty when the secret is not set;
+          # the fetch script skips that feed instead of failing.
+          FIVE_BULLET_FRIDAY_FEED_URL: ${{ secrets.FIVE_BULLET_FRIDAY_FEED_URL }}
+        run: python3 scripts/fetch_reader_feeds.py
+
+      - name: Commit and push if the digest changed
+        id: commit
+        run: |
+          git add reader/items.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "reader digest is unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh reader digest."
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Redeploy Pages
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run "Deploy static content to Pages" --ref main

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>reader · harrison shin</title>
+<meta name="description" content="A curated daily digest of newsletters, blogs, and channels Harrison follows.">
+<meta property="og:title" content="reader · harrison shin">
+<meta property="og:description" content="A curated daily digest of newsletters, blogs, and channels Harrison follows.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://harrisonshin.com/reader/">
+<meta property="og:image" content="https://harrisonshin.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://harrisonshin.com/og-image.png">
+<meta name="twitter:site" content="@dharrisonshin">
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="reader">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="canonical" href="https://harrisonshin.com/reader/">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../read.css">
+</head>
+<body class="reader-page">
+<canvas id="sky" aria-hidden="true"></canvas>
+<article class="wrap post reader">
+  <a class="home" href="../">harrison shin</a>
+  <div class="rule" aria-hidden="true"></div>
+  <header class="reader-head">
+    <h1>reader</h1>
+    <p class="reader-lead">A curated feed of newsletters, blogs, and channels. Refreshed daily. Read state stays on this device.</p>
+    <p class="reader-meta" id="reader-meta" hidden></p>
+  </header>
+
+  <div class="reader-toolbar" role="toolbar" aria-label="Reader filters">
+    <div class="reader-views" role="group" aria-label="View">
+      <button type="button" class="reader-chip is-active" data-view="digest" aria-pressed="true">digest</button>
+      <button type="button" class="reader-chip" data-view="unread" aria-pressed="false">unread</button>
+      <button type="button" class="reader-chip" data-view="all" aria-pressed="false">all</button>
+    </div>
+    <div class="reader-kinds" role="group" aria-label="Kind" id="reader-kinds"></div>
+  </div>
+
+  <div class="reader-actions">
+    <button type="button" class="reader-text-btn" id="mark-visible-read">mark visible read</button>
+    <button type="button" class="reader-text-btn" id="mark-all-unread">reset read state</button>
+  </div>
+
+  <div id="reader-root">
+    <noscript><p class="note">The reader needs JavaScript to load the digest.</p></noscript>
+    <p class="note" id="reader-loading">Loading feeds…</p>
+  </div>
+</article>
+<script src="reader.js"></script>
+<script src="../read-sky.js"></script>
+</body>
+</html>
