@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>harrison shin feed</title>
+  </head>
+  <body>
+    <outline type="rss" text="Unsolicited Advice" title="Unsolicited Advice" xmlUrl="https://josephfolley.substack.com/feed" category="newsletter"/>
+    <outline type="rss" text="Morning Brew" title="Morning Brew" xmlUrl="https://www.morningbrew.com/feed.xml" category="newsletter"/>
+    <outline type="rss" text="Adam Savage's Tested" title="Adam Savage's Tested" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFiDJtJKMICpb9B1qf7qjEOA" category="youtube"/>
+    <outline type="rss" text="Sourcery with Molly O'Shea" title="Sourcery with Molly O'Shea" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFryX1BS5mlkAT7rwwJ45jwA" category="youtube"/>
+    <outline type="rss" text="Big Think" title="Big Think" xmlUrl="https://bigthink.com/feed/" category="blog"/>
+    <outline type="rss" text="The Neuron" title="The Neuron" xmlUrl="https://www.theneuron.ai/feed/" category="newsletter"/>
+    <outline type="rss" text="NetworkChuck" title="NetworkChuck" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULF9x0AN7BWHpCDHSm9NiJFJQ" category="youtube"/>
+    <outline type="rss" text="Mental Outlaw" title="Mental Outlaw" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULF7YOGHUfC1Tb6E4pudI9STA" category="youtube"/>
+    <outline type="rss" text="Lenny's Newsletter" title="Lenny's Newsletter" xmlUrl="https://www.lennysnewsletter.com/feed" category="newsletter"/>
+    <outline type="rss" text="Readwise &amp; Reader Changelog" title="Readwise &amp; Reader Changelog" xmlUrl="https://docs.readwise.io/changelog/rss" category="blog"/>
+    <outline type="rss" text="Bullet Journal - The Bullet Journalist" title="Bullet Journal - The Bullet Journalist" xmlUrl="https://bulletjournal.com/blogs/bulletjournalist.atom" category="blog"/>
+    <outline type="rss" text="Myth and Mystery" title="Myth and Mystery" xmlUrl="https://mythandmystery.substack.com/feed" category="newsletter"/>
+    <outline type="rss" text="The Blog of Author Tim Ferriss" title="The Blog of Author Tim Ferriss" xmlUrl="https://tim.blog/feed/" category="blog"/>
+    <outline type="rss" text="Tim Ferriss" title="Tim Ferriss" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFznv7Vf9nBdJYvBagFdAHWw" category="youtube"/>
+    <outline type="rss" text="future/proof" title="future/proof" xmlUrl="https://letters.thedankoe.com/feed" category="newsletter"/>
+    <outline type="rss" text="Casey Neistat" title="Casey Neistat" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFtinbF-Q-fVthA0qrFQTgXQ" category="youtube"/>
+    <outline type="rss" text="Tayla Burrell" title="Tayla Burrell" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFuvd6AzacXSLlCpNySB5OFg" category="youtube"/>
+    <outline type="rss" text="Ottilie" title="Ottilie" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFAuEjBW8MgKN9DyCvjEPFew" category="youtube"/>
+    <outline type="rss" text="Van Neistat" title="Van Neistat" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULF5mPJA4y5G8Z6aNkY6AxgAw" category="youtube"/>
+    <outline type="rss" text="Vitalik Buterin's website" title="Vitalik Buterin's website" xmlUrl="https://vitalik.eth.limo/feed.xml" category="blog"/>
+    <outline type="rss" text="Forte Labs" title="Forte Labs" xmlUrl="https://fortelabs.com/feed/" category="blog"/>
+    <outline type="rss" text="Daily Stoic" title="Daily Stoic" xmlUrl="https://dailystoic.com/feed/" category="blog"/>
+    <outline type="rss" text="Answer in Progress" title="Answer in Progress" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULFqVEHtQoXHmUCfJ-9smpTSg" category="youtube"/>
+    <outline type="rss" text="Base" title="Base" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULF3V0rBqEbyeBCFB7NDkV1XQ" category="youtube"/>
+    <outline type="rss" text="Eric Morrison" title="Eric Morrison" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=UULF0QGKpICdIVWw8ZMVbWyuXA" category="youtube"/>
+  </body>
+</opml>

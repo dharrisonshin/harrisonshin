@@ -6,9 +6,12 @@
   var loadingEl = document.getElementById("reader-loading");
   if (!root) return;
 
+  var PAGE_SIZE = 10;
+
   var state = {
     view: "digest",
     kind: "all",
+    page: 1,
     items: [],
     readIds: loadReadIds(),
     updated: null,
@@ -130,27 +133,53 @@
     return match ? match[1] : null;
   }
 
-  function youtubePlayerHtml(item) {
+  function itemHash(id) {
+    return "#item-" + encodeURIComponent(id);
+  }
+
+  function itemIdFromHash() {
+    var hash = location.hash || "";
+    if (hash.indexOf("#item-") !== 0) return null;
+    try {
+      return decodeURIComponent(hash.slice(6));
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function findItem(id) {
+    for (var i = 0; i < state.items.length; i++) {
+      if (state.items[i].id === id) return state.items[i];
+    }
+    return null;
+  }
+
+  function youtubeThumbHtml(item) {
     var id = youtubeVideoId(item);
     if (!id) return "";
     var title = item.title || "YouTube video";
     return (
-      '<div class="reader-yt" data-youtube-id="' +
-      escapeHtml(id) +
-      '">' +
-      '<button type="button" class="reader-yt-play" aria-label="Play ' +
+      '<a class="reader-open reader-yt-play" href="' +
+      itemHash(item.id) +
+      '" aria-label="Watch ' +
       escapeHtml(title) +
       '">' +
       '<img class="reader-yt-thumb" src="https://i.ytimg.com/vi/' +
       escapeHtml(id) +
       '/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">' +
       '<span class="reader-yt-icon" aria-hidden="true"></span>' +
-      "</button>" +
-      "</div>"
+      "</a>"
     );
   }
 
-  function visibleItems() {
+  function readingHtml(item) {
+    var html = item.contentHtml || "";
+    if (!html) return "";
+    if (/<\s*script|javascript:|on\w+\s*=/i.test(html)) return "";
+    return html;
+  }
+
+  function matchedItems() {
     var list = state.items.filter(function (item) {
       return !isYoutubeShort(item);
     });
@@ -191,6 +220,25 @@
       }
     }
     return list;
+  }
+
+  function pageWindow(list) {
+    if (state.view !== "all") {
+      return { items: list, page: 1, pages: 1 };
+    }
+    var pages = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
+    if (state.page > pages) state.page = pages;
+    if (state.page < 1) state.page = 1;
+    var start = (state.page - 1) * PAGE_SIZE;
+    return {
+      items: list.slice(start, start + PAGE_SIZE),
+      page: state.page,
+      pages: pages,
+    };
+  }
+
+  function visibleItems() {
+    return pageWindow(matchedItems()).items;
   }
 
   function groupByDay(items) {
@@ -285,7 +333,6 @@
     var summary = item.summary
       ? '<p class="reader-summary">' + escapeHtml(item.summary) + "</p>"
       : "";
-    var href = item.url || "#";
     return (
       '<li class="reader-item' +
       (read ? " is-read" : "") +
@@ -300,12 +347,12 @@
       escapeHtml(item.feedTitle || item.feedId || "") +
       (time ? " · <time datetime=\"" + escapeHtml(item.published || "") + "\">" + escapeHtml(time) + "</time>" : "") +
       "</p>" +
-      '<a class="reader-title" href="' +
-      escapeHtml(href) +
-      '" target="_blank" rel="noopener noreferrer">' +
+      '<a class="reader-title reader-open" href="' +
+      itemHash(item.id) +
+      '">' +
       escapeHtml(item.title || "untitled") +
       "</a>" +
-      youtubePlayerHtml(item) +
+      (hasPlayer ? '<div class="reader-yt">' + youtubeThumbHtml(item) + "</div>" : "") +
       summary +
       "</div>" +
       '<button type="button" class="reader-mark" data-mark="' +
@@ -313,45 +360,133 @@
       '" aria-pressed="' +
       (read ? "true" : "false") +
       '" aria-label="' +
-      (read ? "Mark unread" : "Mark read") +
+      (read ? "mark as unread" : "mark as read") +
       '">' +
-      (read ? "unread" : "read") +
+      (read ? "mark as unread" : "mark as read") +
       "</button>" +
       "</li>"
     );
   }
 
-  function mountYoutubePlayer(shell) {
-    var id = shell.getAttribute("data-youtube-id");
-    if (!id || !/^[A-Za-z0-9_-]{11}$/.test(id)) return;
-    var iframe = document.createElement("iframe");
-    iframe.className = "reader-yt-frame";
-    iframe.src =
-      "https://www.youtube-nocookie.com/embed/" +
+  function setReadingChrome(reading) {
+    var nodes = document.querySelectorAll(".reader-head, .reader-toolbar, .reader-actions");
+    for (var i = 0; i < nodes.length; i++) nodes[i].hidden = reading;
+  }
+
+  function watchHtml(item) {
+    var id = youtubeVideoId(item);
+    if (!id) return "";
+    return (
+      '<div class="reader-watch"><iframe src="https://www.youtube-nocookie.com/embed/' +
       encodeURIComponent(id) +
-      "?autoplay=1&rel=0";
-    iframe.title = "YouTube video";
-    iframe.setAttribute("allowfullscreen", "");
-    iframe.setAttribute(
-      "allow",
-      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      '?rel=0" title="' +
+      escapeHtml(item.title || "YouTube video") +
+      '" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>'
     );
-    iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
-    iframe.loading = "lazy";
-    shell.innerHTML = "";
-    shell.appendChild(iframe);
-    shell.classList.add("is-playing");
+  }
+
+  function renderItem(item) {
+    setReadingChrome(true);
+    if (!item) {
+      root.innerHTML =
+        '<article class="reader-piece"><button type="button" class="reader-back">back</button><p class="note">That item is not in this digest.</p></article>';
+      return;
+    }
+    var d = parseDate(item.published);
+    var time = d ? formatTime(d) : "";
+    var author = item.author
+      ? '<p class="reader-byline">' + escapeHtml(item.author) + "</p>"
+      : "";
+    var body = readingHtml(item);
+    var prose = body
+      ? '<div class="reader-prose">' + body + "</div>"
+      : item.summary
+        ? '<p class="reader-kicker">excerpt</p><div class="reader-prose"><p>' +
+          escapeHtml(item.summary) +
+          "</p></div>"
+        : "";
+    var original = item.url
+      ? '<p class="reader-original"><a href="' +
+        escapeHtml(item.url) +
+        '" target="_blank" rel="noopener noreferrer">open original</a></p>'
+      : "";
+    root.innerHTML =
+      '<article class="reader-piece">' +
+      '<button type="button" class="reader-back">back</button>' +
+      '<p class="reader-source"><span class="reader-kind">' +
+      escapeHtml(kindLabel(item.kind)) +
+      "</span> · " +
+      escapeHtml(item.feedTitle || item.feedId || "") +
+      (time ? " · <time datetime=\"" + escapeHtml(item.published || "") + "\">" + escapeHtml(time) + "</time>" : "") +
+      "</p>" +
+      "<h1>" +
+      escapeHtml(item.title || "untitled") +
+      "</h1>" +
+      author +
+      watchHtml(item) +
+      prose +
+      original +
+      "</article>";
+    window.scrollTo(0, 0);
+  }
+
+  function showFromHash() {
+    var id = itemIdFromHash();
+    state.itemId = id;
+    if (id) {
+      markRead(id, true);
+      renderItem(findItem(id));
+      return;
+    }
+    render();
+    var y = state.listScroll || 0;
+    requestAnimationFrame(function () {
+      window.scrollTo(0, y);
+    });
+  }
+
+  function paginationHtml(page, pages) {
+    if (state.view !== "all" || pages < 2) return "";
+    var html = '<nav class="reader-pages" aria-label="Pages">';
+    html +=
+      '<button type="button" class="reader-chip" data-page="prev"' +
+      (page <= 1 ? " disabled" : "") +
+      ">prev</button>";
+    for (var n = 1; n <= pages; n++) {
+      var active = n === page;
+      html +=
+        '<button type="button" class="reader-chip' +
+        (active ? " is-active" : "") +
+        '" data-page="' +
+        n +
+        '"' +
+        (active ? ' aria-current="page"' : "") +
+        ">" +
+        n +
+        "</button>";
+    }
+    html +=
+      '<button type="button" class="reader-chip" data-page="next"' +
+      (page >= pages ? " disabled" : "") +
+      ">next</button>";
+    html += "</nav>";
+    return html;
   }
 
   function render() {
+    if (itemIdFromHash()) {
+      renderItem(findItem(itemIdFromHash()));
+      return;
+    }
+    setReadingChrome(false);
     renderKinds();
     renderMeta();
 
-    var items = visibleItems();
-    if (!items.length) {
+    var matched = matchedItems();
+    if (!matched.length) {
       var empty =
         state.view === "digest"
-          ? "Nothing in today’s digest yet. Feeds refresh once a day. Try unread or all."
+          ? "Nothing in today’s digest yet. Feeds refresh every hour. Try unread or all."
           : state.view === "unread"
             ? "You’re caught up."
             : "No items yet. Add feeds in reader/feeds.json and run the fetch workflow.";
@@ -359,8 +494,11 @@
       return;
     }
 
+    var paging = pageWindow(matched);
+    var items = paging.items;
+    var pager = paginationHtml(paging.page, paging.pages);
     var groups = groupByDay(items);
-    var html = "";
+    var html = pager;
     for (var g = 0; g < groups.length; g++) {
       var group = groups[g];
       html +=
@@ -376,11 +514,14 @@
       }
       html += "</ul></section>";
     }
+    html += pager;
     root.innerHTML = html;
   }
 
   function setView(view) {
     state.view = view;
+    state.page = 1;
+    if (itemIdFromHash()) location.hash = "";
     var buttons = document.querySelectorAll(".reader-views [data-view]");
     for (var i = 0; i < buttons.length; i++) {
       var active = buttons[i].getAttribute("data-view") === view;
@@ -392,7 +533,22 @@
 
   function setKind(kind) {
     state.kind = kind;
+    state.page = 1;
     render();
+  }
+
+  function setPage(next) {
+    var pages = Math.max(1, Math.ceil(matchedItems().length / PAGE_SIZE));
+    var page = next;
+    if (page < 1) page = 1;
+    if (page > pages) page = pages;
+    if (page === state.page) return;
+    state.page = page;
+    render();
+    var toolbar = document.querySelector(".reader-toolbar");
+    if (toolbar && toolbar.scrollIntoView) {
+      toolbar.scrollIntoView({ block: "start" });
+    }
   }
 
   document.querySelector(".reader-views").addEventListener("click", function (event) {
@@ -410,6 +566,15 @@
   }
 
   root.addEventListener("click", function (event) {
+    var pageBtn = event.target.closest("[data-page]");
+    if (pageBtn) {
+      if (pageBtn.disabled) return;
+      var spec = pageBtn.getAttribute("data-page");
+      if (spec === "prev") setPage(state.page - 1);
+      else if (spec === "next") setPage(state.page + 1);
+      else setPage(parseInt(spec, 10) || 1);
+      return;
+    }
     var mark = event.target.closest("[data-mark]");
     if (mark) {
       var id = mark.getAttribute("data-mark");
@@ -417,35 +582,21 @@
       render();
       return;
     }
-    var play = event.target.closest(".reader-yt-play");
-    if (play) {
-      event.preventDefault();
-      var shell = play.closest(".reader-yt");
-      var row = play.closest(".reader-item");
-      if (shell) mountYoutubePlayer(shell);
-      if (row) {
-        markRead(row.getAttribute("data-id"), true);
-        row.classList.add("is-read");
-        var markBtn = row.querySelector("[data-mark]");
-        if (markBtn) {
-          markBtn.setAttribute("aria-pressed", "true");
-          markBtn.setAttribute("aria-label", "Mark unread");
-          markBtn.textContent = "unread";
-        }
-        renderMeta();
-      }
+    var back = event.target.closest(".reader-back");
+    if (back) {
+      if (history.length > 1) history.back();
+      else location.hash = "";
       return;
     }
-    var title = event.target.closest(".reader-title");
-    if (title) {
-      var item = title.closest(".reader-item");
-      if (item) {
-        markRead(item.getAttribute("data-id"), true);
-        // Let the link open; refresh styles after a tick so navigation still happens.
-        setTimeout(render, 0);
-      }
+    var opener = event.target.closest("a.reader-open");
+    if (opener) {
+      state.listScroll = window.scrollY;
+      var row = opener.closest(".reader-item");
+      if (row) markRead(row.getAttribute("data-id"), true);
     }
   });
+
+  window.addEventListener("hashchange", showFromHash);
 
   var markVisible = document.getElementById("mark-visible-read");
   if (markVisible) {
@@ -478,10 +629,11 @@
       state.updated = data.updated || null;
       state.updatedPacific = data.updatedPacific || null;
       if (loadingEl) loadingEl.remove();
-      render();
+      if (itemIdFromHash()) showFromHash();
+      else render();
     })
     .catch(function () {
       root.innerHTML =
-        '<p class="note">Could not load the digest. Run <code>python3 scripts/fetch_reader_feeds.py</code> or wait for the daily GitHub Action.</p>';
+        '<p class="note">Could not load the digest. Run <code>python3 scripts/fetch_reader_feeds.py</code> or wait for the hourly GitHub Action.</p>';
     });
 })();

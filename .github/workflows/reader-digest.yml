@@ -1,11 +1,11 @@
 # Fetch RSS/Atom feeds from reader/feeds.json into reader/items.json.
-# Runs every morning Pacific time and on demand. Main only.
+# Runs hourly and on demand. Main only. Also rewrites reader/feeds.opml.
 name: Refresh reader digest
 
 on:
   schedule:
-    # 15:00 UTC ≈ 7:00 / 8:00 America/Los_Angeles depending on DST
-    - cron: "0 15 * * *"
+    # Top of every hour, UTC.
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -36,7 +36,7 @@ jobs:
       - name: Commit and push if the digest changed
         id: commit
         run: |
-          git add reader/items.json
+          git add reader/items.json reader/feeds.opml
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "reader digest is unchanged."
