@@ -27,6 +27,10 @@ jobs:
           ref: main
 
       - name: Fetch feeds into reader/items.json
+        env:
+          # Private newsletter bridge. Empty when the secret is not set;
+          # the fetch script skips that feed instead of failing.
+          FIVE_BULLET_FRIDAY_FEED_URL: ${{ secrets.FIVE_BULLET_FRIDAY_FEED_URL }}
         run: python3 scripts/fetch_reader_feeds.py
 
       - name: Commit and push if the digest changed

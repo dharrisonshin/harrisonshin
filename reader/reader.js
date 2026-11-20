@@ -108,13 +108,24 @@
     return kind || "other";
   }
 
+  // Full-length videos only. A Short stays hidden even if it is still in items.json.
+  function isYoutubeShort(item) {
+    if (!item) return false;
+    var fields = [item.url, item.link, item.guid];
+    for (var i = 0; i < fields.length; i++) {
+      if (fields[i] && String(fields[i]).indexOf("/shorts/") !== -1) return true;
+    }
+    return false;
+  }
+
   function youtubeVideoId(item) {
+    if (isYoutubeShort(item)) return null;
     if (item.videoId && /^[A-Za-z0-9_-]{11}$/.test(item.videoId)) {
       return item.videoId;
     }
     var url = item.url || "";
     var match = url.match(
-      /(?:youtube\.com\/(?:watch\?(?:[^#]*&)?v=|shorts\/|embed\/|v\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/
+      /(?:youtube\.com\/(?:watch\?(?:[^#]*&)?v=|embed\/|v\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/
     );
     return match ? match[1] : null;
   }
@@ -140,7 +151,9 @@
   }
 
   function visibleItems() {
-    var list = state.items.slice();
+    var list = state.items.filter(function (item) {
+      return !isYoutubeShort(item);
+    });
     if (state.kind !== "all") {
       list = list.filter(function (item) {
         return item.kind === state.kind;
@@ -338,7 +351,7 @@
     if (!items.length) {
       var empty =
         state.view === "digest"
-          ? "Nothing in today’s digest yet. Feeds refresh once a day — try unread or all."
+          ? "Nothing in today’s digest yet. Feeds refresh once a day. Try unread or all."
           : state.view === "unread"
             ? "You’re caught up."
             : "No items yet. Add feeds in reader/feeds.json and run the fetch workflow.";
@@ -458,7 +471,10 @@
       return res.json();
     })
     .then(function (data) {
-      state.items = Array.isArray(data.items) ? data.items : [];
+      var loaded = Array.isArray(data.items) ? data.items : [];
+      state.items = loaded.filter(function (item) {
+        return !isYoutubeShort(item);
+      });
       state.updated = data.updated || null;
       state.updatedPacific = data.updatedPacific || null;
       if (loadingEl) loadingEl.remove();

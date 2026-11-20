@@ -1,39 +1,159 @@
 {
   "feeds": [
     {
-      "id": "harrison-writing",
-      "title": "harrison shin · writing",
-      "url": "https://harrisonshin.com/writing/feed.xml",
-      "kind": "blog"
-    },
-    {
-      "id": "stratechery",
-      "title": "Stratechery",
-      "url": "https://stratechery.com/feed/",
+      "id": "unsolicited-advice",
+      "title": "Unsolicited Advice",
+      "url": "https://josephfolley.substack.com/feed",
       "kind": "newsletter"
     },
     {
-      "id": "marginal-revolution",
-      "title": "Marginal Revolution",
-      "url": "https://marginalrevolution.com/feed",
+      "id": "morning-brew",
+      "title": "Morning Brew",
+      "url": "https://www.morningbrew.com/feed.xml",
+      "kind": "newsletter"
+    },
+    {
+      "id": "adam-savages-tested",
+      "title": "Adam Savage's Tested",
+      "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=UULFiDJtJKMICpb9B1qf7qjEOA",
+      "kind": "youtube"
+    },
+    {
+      "id": "sourcery-molly-oshea",
+      "title": "Sourcery with Molly O'Shea",
+      "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=UULFryX1BS5mlkAT7rwwJ45jwA",
+      "kind": "youtube"
+    },
+    {
+      "id": "big-think",
+      "title": "Big Think",
+      "url": "https://bigthink.com/feed/",
       "kind": "blog"
     },
     {
-      "id": "simon-willison",
-      "title": "Simon Willison’s Weblog",
-      "url": "https://simonwillison.net/atom/everything/",
+      "id": "the-neuron",
+      "title": "The Neuron",
+      "url": "https://www.theneuron.ai/feed/",
+      "kind": "newsletter"
+    },
+    {
+      "id": "networkchuck",
+      "title": "NetworkChuck",
+      "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=UULF9x0AN7BWHpCDHSm9NiJFJQ",
+      "kind": "youtube"
+    },
+    {
+      "id": "mental-outlaw",
+      "title": "Mental Outlaw",
+      "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=UULF7YOGHUfC1Tb6E4pudI9STA",
+      "kind": "youtube"
+    },
+    {
+      "id": "lennys-newsletter",
+      "title": "Lenny's Newsletter",
+      "url": "https://www.lennysnewsletter.com/feed",
+      "kind": "newsletter"
+    },
+    {
+      "id": "readwise-reader-changelog",
+      "title": "Readwise & Reader Changelog",
+      "url": "https://docs.readwise.io/changelog/rss",
       "kind": "blog"
     },
     {
-      "id": "daring-fireball",
-      "title": "Daring Fireball",
-      "url": "https://daringfireball.net/feeds/main",
+      "id": "bullet-journalist",
+      "title": "Bullet Journal - The Bullet Journalist",
+      "url": "https://bulletjournal.com/blogs/bulletjournalist.atom",
       "kind": "blog"
     },
     {
-      "id": "veritasium",
-      "title": "Veritasium",
-      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA",
+      "id": "myth-and-mystery",
+      "title": "Myth and Mystery",
+      "url": "https://mythandmystery.substack.com/feed",
+      "kind": "newsletter"
+    },
+    {
+      "id": "tim-ferriss-blog",
+      "title": "The Blog of Author Tim Ferriss",
+      "url": "https://tim.blog/feed/",
+      "kind": "blog"
+    },
+    {
+      "id": "tim-ferriss",
+      "title": "Tim Ferriss",
+      "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=UULFznv7Vf9nBdJYvBagFdAHWw",
+      "kind": "youtube"
+    },
+    {
+      "id": "five-bullet-friday",
+      "title": "Tim Ferriss' Five Bullet Friday",
+      "url_secret": "FIVE_BULLET_FRIDAY_FEED_URL",
+      "kind": "newsletter"
+    },
+    {
+      "id": "future-proof",
+      "title": "future/proof",
+      "url": "https://letters.thedankoe.com/feed",
+      "kind": "newsletter"
+    },
+    {
+      "id": "casey-neistat",
+      "title": "Casey Neistat",
+      "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=UULFtinbF-Q-fVthA0qrFQTgXQ",
+      "kind": "youtube"
+    },
+    {
+      "id": "tayla-burrell",
+      "title": "Tayla Burrell",
+      "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=UULFuvd6AzacXSLlCpNySB5OFg",
+      "kind": "youtube"
+    },
+    {
+      "id": "ottilie",
+      "title": "Ottilie",
+      "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=UULFAuEjBW8MgKN9DyCvjEPFew",
+      "kind": "youtube"
+    },
+    {
+      "id": "van-neistat",
+      "title": "Van Neistat",
+      "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=UULF5mPJA4y5G8Z6aNkY6AxgAw",
+      "kind": "youtube"
+    },
+    {
+      "id": "vitalik-buterin",
+      "title": "Vitalik Buterin's website",
+      "url": "https://vitalik.eth.limo/feed.xml",
+      "kind": "blog"
+    },
+    {
+      "id": "forte-labs",
+      "title": "Forte Labs",
+      "url": "https://fortelabs.com/feed/",
+      "kind": "blog"
+    },
+    {
+      "id": "daily-stoic",
+      "title": "Daily Stoic",
+      "url": "https://dailystoic.com/feed/",
+      "kind": "blog"
+    },
+    {
+      "id": "answer-in-progress",
+      "title": "Answer in Progress",
+      "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=UULFqVEHtQoXHmUCfJ-9smpTSg",
+      "kind": "youtube"
+    },
+    {
+      "id": "base",
+      "title": "Base",
+      "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=UULF3V0rBqEbyeBCFB7NDkV1XQ",
+      "kind": "youtube"
+    },
+    {
+      "id": "eric-morrison",
+      "title": "Eric Morrison",
+      "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=UULF0QGKpICdIVWw8ZMVbWyuXA",
       "kind": "youtube"
     }
   ]
