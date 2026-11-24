@@ -52,7 +52,7 @@ The Pages workflow uploads the repository root, which includes `writing/`, `abou
 
 ## Projects
 
-Add a project by copying an `<li>` in [`projects/index.html`](projects/index.html). Each entry is a name, a status (`building` or `live`), one or two sentences, an outbound link (`target="_blank"` and `rel="noopener noreferrer"`), and a screenshot. The name voidrunnerz stays lowercase. If there is no image yet, use an empty `.shot-empty` slot.
+Add a project by copying an `<li>` in [`projects/index.html`](projects/index.html). Each entry is a name, a status (`building` or `live`), one or two sentences, an outbound link (`target="_blank"` and `rel="noopener noreferrer"`), and a screenshot. The names voidrunnerz, hearth, and afterglow stay lowercase. If there is no image yet, use an empty `.shot-empty` slot.
 
 ## Library
 

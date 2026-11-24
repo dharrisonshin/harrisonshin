@@ -103,6 +103,8 @@ h1{
 .entries h2 a{color:#f7f4ec;text-decoration:none}
 .entries h2 a:hover{color:var(--acc)}
 .entries p{margin-top:6px;font-size:0.95em;line-height:1.55;color:rgba(244,241,234,0.8)}
+.entries p a{color:var(--acc);text-underline-offset:2px}
+.entries p a:hover{color:#f7f4ec}
 .lede{
   margin-top:14px;
   font-size:0.95rem;
