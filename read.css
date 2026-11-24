@@ -314,7 +314,7 @@ h1{
 .all-films a{color:var(--acc);text-decoration:none}
 .all-films a:hover{color:#f7f4ec}
 .entry-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 10px}
-.entry-link{margin-top:8px;font-size:13px;letter-spacing:0.08em}
+.entries p.entry-link{margin-top:8px;font-size:13px;letter-spacing:0.08em}
 .entry-link a{color:var(--acc);text-decoration:none}
 .entry-link a:hover{color:#f7f4ec}
 .changelog h2:first-child{margin-top:28px}
