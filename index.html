@@ -9,6 +9,7 @@
 <meta property="og:description" content="seeker. builder. stoic. documenting my journey · irvine, ca">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://harrisonshin.com/">
+<link rel="canonical" href="https://harrisonshin.com/">
 <meta property="og:image" content="https://harrisonshin.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -26,7 +27,8 @@
 :root{--acc:#d9b45a;--accSoft:rgba(217,180,90,.16)}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;background:#000;color:#f4f1ea}
-body{font-family:Inter,system-ui,-apple-system,sans-serif;font-weight:400;min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html{overflow-x:clip}
+body{font-family:Inter,system-ui,-apple-system,sans-serif;font-weight:400;min-height:100vh;overflow-x:clip;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 canvas#sky{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
 main{position:relative;z-index:2;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 24px 160px;text-align:center}
 h1{font-weight:300;font-size:clamp(56px,9.2vw,108px);letter-spacing:0.02em;line-height:1;color:#f7f4ec;text-shadow:0 0 48px rgba(255,255,255,0.12)}
@@ -71,16 +73,16 @@ a.pill:hover{background:var(--accSoft);border-color:rgba(255,255,255,0.8);transf
 .status-past a{color:rgba(255,255,255,0.55);text-decoration:none}
 .status-past a:hover{color:var(--acc)}
 .status-past a:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
-.latest{position:relative;margin-top:84px;width:min(440px,calc(100vw - 64px));text-align:center}
+.latest{position:relative;margin-top:84px;width:min(440px,calc(100vw - 64px));max-width:100%;min-width:0;text-align:center}
 .latest[hidden]{display:none !important}
 .latest:not([hidden]){display:flex;flex-direction:column;align-items:center;gap:4px}
-.latest-line{max-width:100%;font-size:14px;font-weight:400;letter-spacing:0.02em;line-height:1.4;color:rgba(255,255,255,0.85)}
+.latest-line{max-width:100%;min-width:0;font-size:14px;font-weight:400;letter-spacing:0.02em;line-height:1.4;color:rgba(255,255,255,0.85)}
 .latest-label{letter-spacing:0.08em;color:rgba(255,255,255,0.6)}
 .latest-title{color:inherit;text-decoration:none}
 .latest-title:hover,.latest-read:hover{color:var(--acc)}
 .latest-title:focus-visible,.latest-read:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
 .latest-date{font-size:11px;letter-spacing:0.08em;color:rgba(255,255,255,0.6)}
-.latest-teaser{width:100%;min-width:0;font-size:13px;letter-spacing:0.01em;line-height:1.4;color:rgba(255,255,255,0.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.latest-teaser{width:100%;max-width:100%;min-width:0;font-size:13px;letter-spacing:0.01em;line-height:1.4;color:rgba(255,255,255,0.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .latest-teaser[hidden]{display:none}
 .latest-read{margin-top:1px;font-size:12px;letter-spacing:0.1em;color:var(--acc);text-decoration:none}
 .latest-read:hover{color:#f7f4ec}
@@ -131,6 +133,7 @@ button.chip.is-copied .cl{color:var(--acc)}
   .status-dot{animation:none;opacity:1}
 }
 @media (max-width:600px){
+  .status::before,.latest::before{width:100%;height:100%}
   .pills{gap:10px;max-width:320px}
   a.pill{padding:10px 16px;font-size:12.5px}
   .tag{font-size:11px;letter-spacing:0.16em}
@@ -172,7 +175,7 @@ button.chip.is-copied .cl{color:var(--acc)}
   </nav>
   <div class="status" id="status" hidden>
     <p class="status-now"><span class="status-dot" aria-hidden="true"></span><span class="status-label">currently:</span> <span id="status-text"></span><em class="status-attr" id="status-attr" hidden></em></p>
-    <figure class="status-media" id="status-media" hidden><img id="status-image" alt=""></figure>
+    <figure class="status-media" id="status-media" hidden><img id="status-image" alt="" width="640" height="312" decoding="async"></figure>
     <p class="status-when" id="status-when" hidden></p>
     <p class="status-past" id="status-past" hidden><a href="status/">previous updates</a></p>
   </div>
@@ -559,7 +562,6 @@ button.chip.is-copied .cl{color:var(--acc)}
   frame.title = 'spotify playlist';
   frame.loading = 'lazy';
   frame.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
-  frame.setAttribute('allowfullscreen', '');
   panel.appendChild(frame);
 })();
 </script>
