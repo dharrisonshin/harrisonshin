@@ -32,7 +32,9 @@
   <div class="rule" aria-hidden="true"></div>
   <h1>status</h1>
   <p class="lede">current and previous homepage captions.</p>
+  <nav class="status-pages" data-status-pages hidden aria-label="status pages"></nav>
   <ol class="status-log" id="status-log" hidden></ol>
+  <nav class="status-pages" data-status-pages hidden aria-label="status pages"></nav>
   <p class="note" id="status-empty" hidden>no status updates yet.</p>
   <footer class="post-foot">
     <a href="../">home</a>
@@ -106,16 +108,77 @@
     return (entry.text || '') + '\0' + (entry.updated || '') + '\0' + (entry.attribution || '') + '\0' + (entry.image || '');
   }
 
-  function render(entries){
+  var PAGE_SIZE = 10;
+  var pageNavs = document.querySelectorAll('[data-status-pages]');
+  var allEntries = [];
+
+  function pageCount(entries){
+    return Math.max(1, Math.ceil(entries.length / PAGE_SIZE));
+  }
+
+  function pageFromLocation(entries){
+    var params = new URLSearchParams(window.location.search);
+    var n = parseInt(params.get('page'), 10);
+    if (!n || n < 1) n = 1;
+    var pages = pageCount(entries);
+    if (n > pages) n = pages;
+    return n;
+  }
+
+  function writePageUrl(page, replace){
+    var url = new URL(window.location.href);
+    if (page <= 1) url.searchParams.delete('page');
+    else url.searchParams.set('page', String(page));
+    var next = url.pathname + url.search + url.hash;
+    var current = window.location.pathname + window.location.search + window.location.hash;
+    if (next === current) return;
+    if (replace) history.replaceState({ page: page }, '', next);
+    else history.pushState({ page: page }, '', next);
+  }
+
+  function fillPageNav(page, pages){
+    var show = allEntries.length > 0;
+    pageNavs.forEach(function(nav){
+      nav.textContent = '';
+      nav.hidden = !show;
+      if (!show) return;
+      var prev = document.createElement('button');
+      prev.type = 'button';
+      prev.setAttribute('data-page', 'prev');
+      prev.textContent = 'prev';
+      if (page <= 1) prev.disabled = true;
+      var num = document.createElement('span');
+      num.setAttribute('aria-current', 'page');
+      num.textContent = String(page);
+      var next = document.createElement('button');
+      next.type = 'button';
+      next.setAttribute('data-page', 'next');
+      next.textContent = 'next';
+      if (page >= pages) next.disabled = true;
+      nav.appendChild(prev);
+      nav.appendChild(num);
+      nav.appendChild(next);
+    });
+  }
+
+  function render(entries, page, replaceUrl){
+    var pages = pageCount(entries);
+    if (page < 1) page = 1;
+    if (page > pages) page = pages;
+    writePageUrl(page, replaceUrl !== false);
     list.textContent = '';
+    fillPageNav(page, pages);
     if (!entries.length){
       empty.hidden = false;
+      list.hidden = true;
       return;
     }
     empty.hidden = true;
-    entries.forEach(function(entry, index){
+    var start = (page - 1) * PAGE_SIZE;
+    entries.slice(start, start + PAGE_SIZE).forEach(function(entry, index){
       var li = document.createElement('li');
-      if (index === 0) li.className = 'is-current';
+      var isCurrent = page === 1 && index === 0;
+      if (isCurrent) li.className = 'is-current';
       var when = formatUpdated(entry.updated || '');
       if (when){
         var time = document.createElement('time');
@@ -125,7 +188,7 @@
       }
       var body = document.createElement('p');
       body.className = 'status-log-text';
-      if (index === 0){
+      if (isCurrent){
         var label = document.createElement('span');
         label.className = 'status-log-label';
         label.textContent = 'currently: ';
@@ -154,6 +217,23 @@
     list.hidden = false;
   }
 
+  function goToPage(page){
+    render(allEntries, page, false);
+    window.scrollTo(0, 0);
+  }
+
+  document.addEventListener('click', function(event){
+    var button = event.target.closest('[data-status-pages] [data-page]');
+    if (!button || button.disabled) return;
+    var page = pageFromLocation(allEntries);
+    if (button.getAttribute('data-page') === 'prev') goToPage(page - 1);
+    else goToPage(page + 1);
+  });
+
+  window.addEventListener('popstate', function(){
+    render(allEntries, pageFromLocation(allEntries), true);
+  });
+
   var bust = '?t=' + Date.now();
   Promise.all([
     fetch('../status.json' + bust, { cache: 'no-store' }).then(function(res){
@@ -178,8 +258,8 @@
       seen[k] = true;
       past.push(entry);
     });
-    var entries = current ? [current].concat(past) : past;
-    render(entries);
+    allEntries = current ? [current].concat(past) : past;
+    render(allEntries, pageFromLocation(allEntries), true);
   });
 })();
 </script>

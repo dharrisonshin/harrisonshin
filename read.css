@@ -142,6 +142,38 @@ h1{
   border:1px solid rgba(255,255,255,0.28);
   background:rgba(0,0,0,0.35);
 }
+.status-pages{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:4px 16px;
+  margin-top:22px;
+}
+.status-pages[hidden]{display:none !important}
+.status-pages button{
+  appearance:none;
+  background:transparent;
+  border:0;
+  margin:0;
+  padding:12px 2px;
+  min-height:44px;
+  font:inherit;
+  font-size:13px;
+  letter-spacing:0.12em;
+  color:rgba(244,241,234,0.8);
+  cursor:pointer;
+}
+.status-pages button:hover{color:var(--acc)}
+.status-pages button:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:2px}
+.status-pages button:disabled{opacity:0.35;cursor:default}
+.status-pages button:disabled:hover{color:rgba(244,241,234,0.8)}
+.status-pages [aria-current="page"]{
+  min-width:1.4em;
+  font-size:13px;
+  letter-spacing:0.12em;
+  text-align:center;
+  color:var(--acc);
+}
 .post h1{
   margin-top:22px;
   font-size:clamp(32px, 5vw, 44px);
