@@ -222,19 +222,177 @@
       root.appendChild(ul);
     }
 
+    var pageSize = parseInt(root.getAttribute("data-page-size"), 10);
+    if (!pageSize || pageSize < 1) pageSize = 10;
+    var year = "all";
+    var page = 1;
+    var yearsNav = newest ? scope.querySelector("[data-years]") : null;
+
+    function readUrl() {
+      var params = new URLSearchParams(location.search);
+      var nextYear = params.get("year") || "all";
+      var nextPage = parseInt(params.get("page"), 10);
+      if (!nextPage || nextPage < 1) nextPage = 1;
+      return { year: nextYear, page: nextPage };
+    }
+
+    function hrefFor(nextYear, nextPage) {
+      var params = new URLSearchParams();
+      if (nextYear && nextYear !== "all") params.set("year", nextYear);
+      if (nextPage > 1) params.set("page", String(nextPage));
+      var qs = params.toString();
+      return location.pathname + (qs ? "?" + qs : "");
+    }
+
+    function writeUrl(mode) {
+      var url = hrefFor(year, page);
+      if (url === location.pathname + location.search) return;
+      if (mode === "push") history.pushState({ year: year, page: page }, "", url);
+      else history.replaceState({ year: year, page: page }, "", url);
+    }
+
+    function watchedYear(item) {
+      return isDate(item.last_watched) ? item.last_watched.slice(0, 4) : "";
+    }
+
+    function yearOk(value) {
+      if (value === "all" || value === "undated") return true;
+      return /^\d{4}$/.test(value);
+    }
+
+    function matchesYear(item) {
+      if (year === "all") return true;
+      if (year === "undated") return !isDate(item.last_watched);
+      return watchedYear(item) === year;
+    }
+
+    function knownYears() {
+      var found = {};
+      var undated = false;
+      items.forEach(function (item) {
+        if (isDate(item.last_watched)) found[item.last_watched.slice(0, 4)] = true;
+        else undated = true;
+      });
+      return {
+        years: Object.keys(found).sort(function (a, b) { return Number(b) - Number(a); }),
+        undated: undated
+      };
+    }
+
+    function buildYears() {
+      if (!yearsNav) return;
+      var known = knownYears();
+      yearsNav.textContent = "";
+      function add(id, label) {
+        var a = document.createElement("a");
+        a.href = hrefFor(id, 1);
+        a.setAttribute("data-year", id);
+        a.textContent = label;
+        yearsNav.appendChild(a);
+      }
+      add("all", "all");
+      known.years.forEach(function (value) { add(value, value); });
+      if (known.undated) add("undated", "undated");
+      yearsNav.hidden = false;
+    }
+
+    function markYears() {
+      if (!yearsNav) return;
+      var links = yearsNav.querySelectorAll("a");
+      for (var i = 0; i < links.length; i++) {
+        if (links[i].getAttribute("data-year") === year) links[i].setAttribute("aria-current", "true");
+        else links[i].removeAttribute("aria-current");
+      }
+    }
+
+    function pageTokens(current, pages) {
+      if (pages <= 7) {
+        var all = [];
+        for (var i = 1; i <= pages; i++) all.push(i);
+        return all;
+      }
+      var keep = {};
+      keep[1] = true;
+      keep[pages] = true;
+      for (var n = current - 2; n <= current + 2; n++) {
+        if (n >= 1 && n <= pages) keep[n] = true;
+      }
+      var nums = Object.keys(keep).map(Number).sort(function (a, b) { return a - b; });
+      var out = [];
+      for (var j = 0; j < nums.length; j++) {
+        if (j && nums[j] - nums[j - 1] > 1) out.push("gap");
+        out.push(nums[j]);
+      }
+      return out;
+    }
+
+    function pager(current, pages) {
+      var nav = document.createElement("nav");
+      nav.className = "film-pages";
+      nav.setAttribute("aria-label", "pages");
+      function edge(label, target, enabled) {
+        if (!enabled) {
+          var span = document.createElement("span");
+          span.className = "is-disabled";
+          span.textContent = label;
+          nav.appendChild(span);
+          return;
+        }
+        var a = document.createElement("a");
+        a.href = hrefFor(year, target);
+        a.setAttribute("data-page", label);
+        a.textContent = label;
+        nav.appendChild(a);
+      }
+      edge("prev", current - 1, current > 1);
+      pageTokens(current, pages).forEach(function (token) {
+        if (token === "gap") {
+          var gap = document.createElement("span");
+          gap.className = "gap";
+          gap.textContent = "…";
+          nav.appendChild(gap);
+          return;
+        }
+        var a = document.createElement("a");
+        a.href = hrefFor(year, token);
+        a.setAttribute("data-page", String(token));
+        a.textContent = String(token);
+        if (token === current) a.setAttribute("aria-current", "page");
+        nav.appendChild(a);
+      });
+      edge("next", current + 1, current < pages);
+      return nav;
+    }
+
     function renderFlat(query) {
-      var shown = filtered(query);
+      var q = (query || "").trim().toLowerCase();
+      var matched = items.filter(function (item) {
+        if (q && haystack(item).indexOf(q) === -1) return false;
+        return matchesYear(item);
+      });
+      var total = items.length;
+      if (countEl) {
+        if (q || year !== "all") countEl.textContent = matched.length + " of " + total + " " + word;
+        else countEl.textContent = total + " " + plural(kind, total);
+      }
+      matched.sort(byTitle);
+      matched.sort(byWatched);
+      var pages = Math.max(1, Math.ceil(matched.length / pageSize));
+      if (page > pages) page = pages;
+      if (page < 1) page = 1;
+      var shown = matched.slice((page - 1) * pageSize, page * pageSize);
       root.textContent = "";
       if (!shown.length) {
         root.appendChild(emptyNote(items.length ? "nothing matches." : "no " + word + " yet."));
-        return;
+      } else {
+        var ul = document.createElement("ul");
+        ul.className = "log";
+        shown.forEach(function (item) { ul.appendChild(entry(item, root, true)); });
+        root.appendChild(ul);
       }
-      shown.sort(byTitle);
-      shown.sort(byWatched);
-      var ul = document.createElement("ul");
-      ul.className = "log";
-      shown.forEach(function (item) { ul.appendChild(entry(item, root, true)); });
-      root.appendChild(ul);
+      if (pages > 1) root.appendChild(pager(page, pages));
+      markYears();
+      writeUrl("replace");
     }
 
     function filtered(query) {
@@ -297,7 +455,48 @@
     }
 
     if (!src) return;
-    if (input) input.addEventListener("input", render);
+    if (newest) {
+      var initial = readUrl();
+      year = yearOk(initial.year) ? initial.year : "all";
+      page = initial.page;
+      if (yearsNav) {
+        yearsNav.addEventListener("click", function (event) {
+          var link = event.target.closest("a[data-year]");
+          if (!link) return;
+          event.preventDefault();
+          year = link.getAttribute("data-year") || "all";
+          page = 1;
+          writeUrl("push");
+          render();
+          if (scope.scrollIntoView) scope.scrollIntoView({ block: "start" });
+        });
+      }
+      root.addEventListener("click", function (event) {
+        var link = event.target.closest("a[data-page]");
+        if (!link) return;
+        event.preventDefault();
+        var spec = link.getAttribute("data-page");
+        if (spec === "prev") page -= 1;
+        else if (spec === "next") page += 1;
+        else page = parseInt(spec, 10) || 1;
+        writeUrl("push");
+        render();
+        if (scope.scrollIntoView) scope.scrollIntoView({ block: "start" });
+      });
+      window.addEventListener("popstate", function () {
+        var next = readUrl();
+        year = yearOk(next.year) ? next.year : "all";
+        page = next.page;
+        render();
+      });
+    }
+    if (input) input.addEventListener("input", function () {
+      if (newest) {
+        page = 1;
+        writeUrl("replace");
+      }
+      render();
+    });
 
     fetch(src)
       .then(function (res) {
@@ -308,6 +507,16 @@
         items = Array.isArray(data) ? data.filter(function (item) {
           return item && typeof item.title === "string" && item.title.trim();
         }) : [];
+        if (newest) {
+          var known = knownYears();
+          var allowed = year === "all" || (year === "undated" && known.undated) || known.years.indexOf(year) !== -1;
+          if (!allowed) {
+            year = "all";
+            page = 1;
+            writeUrl("replace");
+          }
+          buildYears();
+        }
         render();
       })
       .catch(fail);

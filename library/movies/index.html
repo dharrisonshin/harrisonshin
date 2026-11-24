@@ -44,7 +44,8 @@
         <input data-search type="search" placeholder="search movies" autocomplete="off" enterkeyhint="search">
       </label>
     </div>
-    <div id="movies" data-catalog data-mode="all" data-order="newest" data-src="../letterboxd.json" data-kind="film">
+    <nav class="year-filters" data-years aria-label="year watched" hidden></nav>
+    <div id="movies" data-catalog data-mode="all" data-order="newest" data-page-size="10" data-src="../letterboxd.json" data-kind="film">
       <noscript><p class="note">movies load from the list with javascript.</p></noscript>
     </div>
   </div>
