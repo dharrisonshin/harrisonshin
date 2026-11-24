@@ -35,43 +35,77 @@
       .toLowerCase();
   }
 
+  function starValue(n) {
+    if (typeof n !== "number" || !isFinite(n) || n < 0 || n > 5) return null;
+    return Math.round(n * 2) / 2;
+  }
+
   function stars(n) {
+    var halves = Math.round(n * 2);
+    var full = Math.floor(halves / 2);
+    var half = halves % 2 === 1;
+    var empty = 5 - full - (half ? 1 : 0);
     var p = document.createElement("p");
     p.className = "stars";
     var label = document.createElement("span");
     label.className = "sr";
-    label.textContent = n + " of 5 stars";
+    label.textContent = (halves % 2 ? String(halves / 2) : String(full)) + " of 5 stars";
     var visual = document.createElement("span");
     visual.setAttribute("aria-hidden", "true");
     var on = document.createElement("span");
     on.className = "on";
-    on.textContent = "★★★★★".slice(0, n);
+    on.textContent = "★★★★★".slice(0, full) + (half ? "½" : "");
     visual.appendChild(on);
-    if (n < 5) visual.appendChild(document.createTextNode("☆☆☆☆☆".slice(0, 5 - n)));
+    if (empty > 0) visual.appendChild(document.createTextNode("☆☆☆☆☆".slice(0, empty)));
     p.appendChild(label);
     p.appendChild(visual);
     return p;
   }
 
-  function addStars(li, item) {
-    if (typeof item.rating === "number" && item.rating >= 0 && item.rating <= 5) {
-      li.appendChild(stars(Math.round(item.rating)));
-    }
+  function addStars(parent, item) {
+    var n = starValue(item.rating);
+    if (n !== null) parent.appendChild(stars(n));
   }
 
-  function addTake(li, item) {
+  function addTake(parent, item) {
     if (typeof item.takeaway === "string" && item.takeaway.trim()) {
       var take = document.createElement("p");
       take.className = "take";
       take.textContent = item.takeaway.trim();
-      li.appendChild(take);
+      parent.appendChild(take);
     }
+  }
+
+  function addMeta(parent, item, withDate) {
+    var bits = [];
+    if (withDate && isDate(item.last_watched)) bits.push(formatDate(item.last_watched));
+    if (item.liked === true) bits.push("liked");
+    if (item.rewatch === true) bits.push("rewatch");
+    if (!bits.length) return;
+    var when = document.createElement("p");
+    when.className = "when";
+    when.textContent = bits.join(" · ");
+    parent.appendChild(when);
+  }
+
+  function isHttp(value) {
+    return typeof value === "string" && /^https?:\/\//i.test(value.trim());
+  }
+
+  function titleNode(item) {
+    if (!isHttp(item.link)) return document.createTextNode(item.title);
+    var a = document.createElement("a");
+    a.href = item.link.trim();
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.textContent = item.title;
+    return a;
   }
 
   function whatLine(item, withDirector) {
     var what = document.createElement("p");
     what.className = "what";
-    what.appendChild(document.createTextNode(item.title));
+    what.appendChild(titleNode(item));
     var bits = [];
     if (typeof item.year === "number") bits.push(String(item.year));
     if (withDirector && item.director) bits.push(item.director);
@@ -84,25 +118,53 @@
     return what;
   }
 
-  function recentEntry(item) {
-    var li = document.createElement("li");
-    li.appendChild(whatLine(item, false));
-    addStars(li, item);
-    if (isDate(item.last_watched)) {
-      var when = document.createElement("p");
-      when.className = "when";
-      when.textContent = formatDate(item.last_watched);
-      li.appendChild(when);
+  function posterUrl(root, item) {
+    var poster = typeof item.poster === "string" ? item.poster.trim() : "";
+    if (!poster || poster.indexOf("..") !== -1) return "";
+    if (isHttp(poster)) return poster;
+    var src = root.getAttribute("data-src") || "";
+    var slash = src.lastIndexOf("/");
+    var prefix = slash >= 0 ? src.slice(0, slash + 1) : "";
+    return prefix + poster.replace(/^\//, "");
+  }
+
+  function fill(li, item, withDirector, withDate, root) {
+    var parent = li;
+    var src = posterUrl(root, item);
+    if (src) {
+      parent = document.createElement("div");
+      parent.className = "film-copy";
+      var img = document.createElement("img");
+      img.className = "poster";
+      img.src = src;
+      img.alt = "";
+      img.width = 56;
+      img.height = 84;
+      img.loading = "lazy";
+      img.decoding = "async";
+      img.addEventListener("error", function () {
+        img.remove();
+        li.classList.remove("with-poster");
+      });
+      li.classList.add("with-poster");
+      li.appendChild(img);
+      li.appendChild(parent);
     }
-    addTake(li, item);
+    parent.appendChild(whatLine(item, withDirector));
+    addStars(parent, item);
+    addMeta(parent, item, withDate);
+    addTake(parent, item);
+  }
+
+  function recentEntry(item, root) {
+    var li = document.createElement("li");
+    fill(li, item, false, true, root);
     return li;
   }
 
-  function entry(item) {
+  function entry(item, root, withDate) {
     var li = document.createElement("li");
-    li.appendChild(whatLine(item, true));
-    addStars(li, item);
-    addTake(li, item);
+    fill(li, item, true, withDate, root);
     return li;
   }
 
@@ -117,10 +179,24 @@
     return String(a.title).localeCompare(String(b.title));
   }
 
+  function byWatched(a, b) {
+    var ad = isDate(a.last_watched) ? a.last_watched : "";
+    var bd = isDate(b.last_watched) ? b.last_watched : "";
+    if (ad === bd) return 0;
+    return bd.localeCompare(ad);
+  }
+
+  function recentLimit(root) {
+    var raw = parseInt(root.getAttribute("data-limit"), 10);
+    if (!raw || raw < 1) return RECENT;
+    return raw;
+  }
+
   function mount(root) {
     var mode = root.getAttribute("data-mode") || "all";
     var src = root.getAttribute("data-src");
     var kind = root.getAttribute("data-kind") === "show" ? "show" : "film";
+    var newest = root.getAttribute("data-order") === "newest";
     var scope = root.closest(".shelf") || document;
     var countEl = scope.querySelector("[data-count]");
     var input = scope.querySelector("[data-search]");
@@ -133,8 +209,8 @@
     function renderRecent() {
       var dated = items.filter(function (item) { return isDate(item.last_watched); });
       dated.sort(byTitle);
-      dated.sort(function (a, b) { return String(b.last_watched).localeCompare(String(a.last_watched)); });
-      var shown = dated.slice(0, RECENT);
+      dated.sort(byWatched);
+      var shown = dated.slice(0, recentLimit(root));
       root.textContent = "";
       if (!shown.length) {
         root.appendChild(emptyNote(items.length ? "nothing watched yet." : "no " + word + " yet."));
@@ -142,21 +218,40 @@
       }
       var ul = document.createElement("ul");
       ul.className = "log";
-      shown.forEach(function (item) { ul.appendChild(recentEntry(item)); });
+      shown.forEach(function (item) { ul.appendChild(recentEntry(item, root)); });
       root.appendChild(ul);
     }
 
-    function renderAll(query) {
+    function renderFlat(query) {
+      var shown = filtered(query);
+      root.textContent = "";
+      if (!shown.length) {
+        root.appendChild(emptyNote(items.length ? "nothing matches." : "no " + word + " yet."));
+        return;
+      }
+      shown.sort(byTitle);
+      shown.sort(byWatched);
+      var ul = document.createElement("ul");
+      ul.className = "log";
+      shown.forEach(function (item) { ul.appendChild(entry(item, root, true)); });
+      root.appendChild(ul);
+    }
+
+    function filtered(query) {
       var q = (query || "").trim().toLowerCase();
       var shown = items.filter(function (item) {
         return !q || haystack(item).indexOf(q) !== -1;
       });
-      var n = shown.length;
       var total = items.length;
       if (countEl) {
-        if (q) countEl.textContent = n + " of " + total + " " + word;
+        if (q) countEl.textContent = shown.length + " of " + total + " " + word;
         else countEl.textContent = total + " " + plural(kind, total);
       }
+      return shown;
+    }
+
+    function renderAll(query) {
+      var shown = filtered(query);
       root.textContent = "";
       if (!shown.length) {
         root.appendChild(emptyNote(items.length ? "nothing matches." : "no " + word + " yet."));
@@ -174,14 +269,12 @@
         return Number(b) - Number(a);
       }).forEach(function (key) {
         var list = groups[key].slice().sort(byTitle);
-        if (key !== "earlier") {
-          list.sort(function (a, b) { return String(b.last_watched).localeCompare(String(a.last_watched)); });
-        }
+        if (key !== "earlier") list.sort(byWatched);
         var h = document.createElement("h3");
         h.textContent = key;
         var ul = document.createElement("ul");
         ul.className = "log";
-        list.forEach(function (item) { ul.appendChild(entry(item)); });
+        list.forEach(function (item) { ul.appendChild(entry(item, root, false)); });
         root.appendChild(h);
         root.appendChild(ul);
       });
@@ -190,6 +283,7 @@
     function render() {
       if (allLink) allLink.textContent = "see all " + word + " (" + items.length + ")";
       if (mode === "recent") renderRecent();
+      else if (newest) renderFlat(input ? input.value : "");
       else renderAll(input ? input.value : "");
     }
 

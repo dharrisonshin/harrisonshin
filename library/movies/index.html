@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>movies · harrison shin</title>
-<meta name="description" content="Every film Harrison Shin has watched, grouped by the year he last watched it.">
+<meta name="description" content="Every film Harrison Shin has watched, newest first.">
 <meta property="og:title" content="movies · harrison shin">
-<meta property="og:description" content="Every film Harrison Shin has watched, grouped by the year he last watched it.">
+<meta property="og:description" content="Every film Harrison Shin has watched, newest first.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://harrisonshin.com/library/movies/">
 <meta property="og:image" content="https://harrisonshin.com/og-image.png">
@@ -33,8 +33,9 @@
   <div class="rule" aria-hidden="true"></div>
   <h1>movies</h1>
   <div class="prose">
-    <p>Every film, grouped by the year I last watched it.</p>
+    <p>Every film, newest first.</p>
   </div>
+  <p class="credit"><a href="https://letterboxd.com/smackushin/" target="_blank" rel="noopener noreferrer">on Letterboxd</a></p>
   <div class="shelf">
     <div class="movie-bar">
       <p class="count" data-count aria-live="polite"></p>
@@ -43,7 +44,7 @@
         <input data-search type="search" placeholder="search movies" autocomplete="off" enterkeyhint="search">
       </label>
     </div>
-    <div id="movies" data-catalog data-mode="all" data-src="../movies.json" data-kind="film">
+    <div id="movies" data-catalog data-mode="all" data-order="newest" data-src="../letterboxd.json" data-kind="film">
       <noscript><p class="note">movies load from the list with javascript.</p></noscript>
     </div>
   </div>

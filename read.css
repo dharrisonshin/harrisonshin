@@ -255,6 +255,23 @@ h1{
 .log .take{margin-top:4px;color:rgba(244,241,234,0.82);font-size:0.95em;line-height:1.5;white-space:pre-line}
 .log a{color:#f7f4ec;text-decoration:none}
 .log a:hover{color:var(--acc)}
+.log li.with-poster{
+  display:grid;
+  grid-template-columns:56px minmax(0,1fr);
+  column-gap:14px;
+  align-items:start;
+}
+.log li.with-poster .poster{
+  width:56px;
+  height:84px;
+  margin-top:2px;
+  object-fit:cover;
+  border-radius:6px;
+  border:1px solid rgba(255,255,255,0.28);
+  background:rgba(0,0,0,0.35);
+}
+.log .film-copy{min-width:0}
+.log .film-copy .what{overflow-wrap:anywhere}
 .sr{
   position:absolute;
   width:1px;
@@ -313,6 +330,9 @@ h1{
 .all-films{margin-top:16px;font-size:15px;letter-spacing:0.04em}
 .all-films a{color:var(--acc);text-decoration:none}
 .all-films a:hover{color:#f7f4ec}
+.credit{margin-top:12px;font-size:13px;letter-spacing:0.08em}
+.credit a{color:var(--acc);text-decoration:none}
+.credit a:hover{color:#f7f4ec}
 .entry-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 10px}
 .status{
   font-size:11.5px;

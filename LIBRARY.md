@@ -1,8 +1,8 @@
 # Library
 
-Movies come from [`library/movies.json`](library/movies.json). Shows come from [`library/tv.json`](library/tv.json). The two files use the same fields. Finished books come from [`library/books.json`](library/books.json). Music is hand-edited in [`library/music.json`](library/music.json). Podcasts on `/library/` are still a heading only.
+Movies on `/library/` and `/library/movies/` come from [`library/letterboxd.json`](library/letterboxd.json). That file is Harrison's public Letterboxd diary and watched list, merged with any film already in [`library/movies.json`](library/movies.json) that Letterboxd does not have. Shows come from [`library/tv.json`](library/tv.json). Movies and shows use the same base fields. Finished books come from [`library/books.json`](library/books.json). Music is hand-edited in [`library/music.json`](library/music.json). Podcasts on `/library/` are still a heading only.
 
-Books, movies, tv, music, and podcasts on `/library/` are collapsible. Each section is a `details` element and starts open.
+Books, movies, tv, music, and podcasts on `/library/` are collapsible. Each section is a `details` element and starts collapsed. The order is movies, books, tv, music, then podcasts.
 
 ## JSON files
 
@@ -18,11 +18,36 @@ Each file is a JSON array. Each object uses these fields:
 | `last_watched` | `YYYY-MM-DD`, or null |
 | `takeaway` | string, or null. This is the review. |
 
-`/library/` shows a recently watched list for movies and another for tv. Each list is the 10 entries with a `last_watched` date, newest first. A row is the title, the year, stars when there is a rating, the date, and the review when it is present. A blank review is left off the row. Under the movies list, `see all films (N)` links to `/library/movies/`. Under the tv list, `see all shows (N)` links to `/library/tv/`.
+`/library/` shows the 5 most recently watched films, newest first, and up to 10 shows with a `last_watched` date, newest first. A film row is the poster when there is one, the title, the year, stars when there is a rating, the date, and `liked` or `rewatch` when Letterboxd says so. The title links to the Letterboxd film page when that link is set. A review is included when it is present. A blank review is left off the row. Under the movies list, `see all films (N)` links to `/library/movies/`, and `on Letterboxd` links to his profile. Under the tv list, `see all shows (N)` links to `/library/tv/`.
 
-`/library/movies/` lists every film. `/library/tv/` lists every show. Each page groups by the year of `last_watched`, newest year first. Entries with no date go under `earlier`, sorted by title. The count and the search box are computed in the browser. Search matches the title, year, director, genres, and review.
+`/library/movies/` lists every film, newest watched first. Films with no date stay at the end, sorted by title. The page also links to his Letterboxd profile. `/library/tv/` lists every show and groups by the year of `last_watched`, newest year first. Entries with no date go under `earlier`, sorted by title. The count and the search box are computed in the browser. Search matches the title, year, director, genres, and review.
 
-The committed samples are a few classics, two shows, and four finished books so the sections render before the first sync. The workflow below replaces the movie, tv, and book files from Notion. It does not touch `library/music.json`.
+The Notion workflow below still writes `library/movies.json`, along with the tv and book files. The library pages do not read `library/movies.json` directly. The Letterboxd script reads it so films that are not on Letterboxd stay on the site. It does not touch `library/music.json`.
+
+## Letterboxd
+
+[`scripts/fetch_letterboxd.py`](scripts/fetch_letterboxd.py) updates `library/letterboxd.json`.
+
+The hourly job in [`.github/workflows/reader-digest.yml`](.github/workflows/reader-digest.yml) fetches `https://letterboxd.com/smackushin/rss/`. It keeps diary entries and skips lists and reviews that have no watched date. It merges those entries into `library/letterboxd.json` by film. Films already in the file that are not in that pull stay, because the feed only has recent items. The job commits `library/letterboxd.json`, `library/posters/`, and `.github/letterboxd-poster-cache.json` only when something changed, then redeploys Pages.
+
+A full backfill reads the public diary at `https://letterboxd.com/smackushin/films/diary/` and the watched list at `https://letterboxd.com/smackushin/films/`, following pagination with a pause between requests:
+
+```
+python3 scripts/fetch_letterboxd.py --full
+```
+
+If Letterboxd challenges the request, save the pages and pass them with `--pages-dir`. If a fetch fails, or the pages come back short, the script leaves the last good file in place and exits successfully so the site build does not break.
+
+Letterboxd supplies the title, year, rating, watched date, liked flag, rewatch flag, film link, and poster. Posters are saved under `library/posters/`. A film from `library/movies.json` that is not on Letterboxd stays in the file. When the same film is in both, Letterboxd wins for the rating, date, liked flag, rewatch flag, link, and poster. The director, genres, and review stay from the library file.
+
+| field | type |
+| --- | --- |
+| `link` | Letterboxd film URL, or omitted |
+| `poster` | path under `library/`, such as `posters/tony-2026.jpg`, or omitted |
+| `liked` | boolean, present for Letterboxd films |
+| `rewatch` | boolean, present for Letterboxd films |
+
+Rating may be a half star, such as `3.5`.
 
 ## Books
 
