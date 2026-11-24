@@ -420,6 +420,16 @@ h1{
   color:rgba(244,241,234,0.45);
 }
 .entry-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 10px}
+.entries p.entry-link{margin-top:8px;font-size:13px;letter-spacing:0.08em}
+.entry-link a{color:var(--acc);text-decoration:none}
+.entry-link a:hover{color:#f7f4ec}
+.changelog h2:first-child{margin-top:28px}
+.changelog .changelog-date{
+  margin-top:-0.35em;
+  font-size:13px;
+  letter-spacing:0.08em;
+  color:var(--acc);
+}
 .status{
   font-size:11.5px;
   letter-spacing:0.08em;
