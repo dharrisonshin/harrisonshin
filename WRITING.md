@@ -56,7 +56,7 @@ Add a project by copying an `<li>` in [`projects/index.html`](projects/index.htm
 
 ## Library
 
-Podcasts on [`library/index.html`](library/index.html) are still a heading only. The shelf sections collapse, and they start open. Movies come from [`library/movies.json`](library/movies.json), shows from [`library/tv.json`](library/tv.json), and finished books from [`library/books.json`](library/books.json). Full lists are at [`library/movies/`](library/movies/index.html), [`library/tv/`](library/tv/index.html), and [`library/books/`](library/books/index.html). Music is hand-edited in [`library/music.json`](library/music.json). See [LIBRARY.md](LIBRARY.md) for the schema and the Notion sync. Do not hand-edit the film, show, or book rows.
+Podcasts on [`library/index.html`](library/index.html) are still a heading only. The shelf sections collapse, and they start collapsed. The order is movies, books, tv, music, then podcasts. Movies come from [`library/letterboxd.json`](library/letterboxd.json), shows from [`library/tv.json`](library/tv.json), and finished books from [`library/books.json`](library/books.json). Full lists are at [`library/movies/`](library/movies/index.html), [`library/tv/`](library/tv/index.html), and [`library/books/`](library/books/index.html). Music is hand-edited in [`library/music.json`](library/music.json). See [LIBRARY.md](LIBRARY.md) for the schema, the Letterboxd sync, and the Notion sync. Do not hand-edit the film, show, or book rows.
 
 ## Links
 

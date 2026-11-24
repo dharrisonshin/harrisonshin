@@ -1,4 +1,5 @@
 # Fetch RSS/Atom feeds from reader/feeds.json into reader/items.json.
+# Also merges the Letterboxd diary RSS into library/letterboxd.json.
 # Runs hourly and on demand. Main only. Also rewrites reader/feeds.opml.
 name: Refresh reader digest
 
@@ -33,6 +34,9 @@ jobs:
           FIVE_BULLET_FRIDAY_FEED_URL: ${{ secrets.FIVE_BULLET_FRIDAY_FEED_URL }}
         run: python3 scripts/fetch_reader_feeds.py
 
+      - name: Fetch Letterboxd diary into library/letterboxd.json
+        run: python3 scripts/fetch_letterboxd.py
+
       - name: Commit and push if the digest changed
         id: commit
         run: |
@@ -48,8 +52,29 @@ jobs:
           git push origin HEAD:main
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
+      - name: Commit and push if the Letterboxd diary changed
+        id: letterboxd
+        run: |
+          git add library/letterboxd.json
+          if [ -d library/posters ]; then
+            git add library/posters
+          fi
+          if [ -f .github/letterboxd-poster-cache.json ]; then
+            git add .github/letterboxd-poster-cache.json
+          fi
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "letterboxd diary is unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Sync movies from Letterboxd."
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
       - name: Redeploy Pages
-        if: steps.commit.outputs.changed == 'true'
+        if: steps.commit.outputs.changed == 'true' || steps.letterboxd.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run "Deploy static content to Pages" --ref main
