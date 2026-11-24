@@ -1,6 +1,6 @@
 # harrison shin
 
-Personal site for Harrison Shin — seeker, builder, stoic, documenting his journey in Irvine, CA. A starfield homepage (bio, link pills, a current-status caption, a Spotify playlist, and ko-fi / base support chips) plus a plain-HTML writing section. Inter is loaded from Google Fonts.
+Personal site for Harrison Shin: seeker, builder, stoic, documenting his journey in Irvine, CA. A starfield homepage (bio, link pills, a current-status caption, a Spotify playlist, and ko-fi / base support chips) plus a plain-HTML writing section. Inter is loaded from Google Fonts.
 
 ## Status
 
@@ -12,10 +12,10 @@ The playlist at the lower left is the compact Spotify embed. On wide screens it 
 
 ## Deploy
 
-The site is the repository root (`index.html`, `status.json`, `status-history.json`, `about/`, `projects/`, `writing/`, `library/`, `reader/`, `links/`, `status/` including `status/media/`, favicons, and `og-image.png`). There is no build step. `.nojekyll` is included so GitHub Pages skips Jekyll and publishes the files as they are. The Pages workflow uploads that root (excluding `.git` and `.github`), so those folders ship with the site. See [WRITING.md](WRITING.md) to add a post, a project, or a link, [LIBRARY.md](LIBRARY.md) for movies, and [READER.md](READER.md) for the curated RSS digest. The about page there is marked as a draft.
+The site is the repository root (`index.html`, `CNAME`, `404.html`, `status.json`, `status-history.json`, `about/`, `projects/`, `writing/`, `library/`, `reader/`, `links/`, `status/` including `status/media/`, favicons, and `og-image.png`). There is no build step. `.nojekyll` is included so GitHub Pages skips Jekyll and publishes the files as they are. The Pages workflow uploads that root (excluding `.git` and `.github`), so those folders ship with the site. See [WRITING.md](WRITING.md) to add a post, a project, or a link, [LIBRARY.md](LIBRARY.md) for movies, and [READER.md](READER.md) for the curated RSS digest. The about page there is marked as a draft.
 
-Image and icon URLs in the page are relative, so the same files work on the project site:
+`CNAME` contains `harrisonshin.com`. GitHub Pages serves the custom domain from that file. Unknown paths use `404.html`. The project URL redirects to the custom domain:
 
 https://dharrisonshin.github.io/harrisonshin/
 
-Open Graph tags stay on absolute `https://harrisonshin.com` URLs. This repo has no `CNAME`; add one only after `harrisonshin.com` is pointed at GitHub Pages.
+Image and icon URLs in the page are relative, so the same files work before that redirect. Open Graph tags stay on absolute `https://harrisonshin.com` URLs.
